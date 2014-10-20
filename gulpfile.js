@@ -1,5 +1,6 @@
 var aws = require("aws-sdk");
 var crypto = require("crypto");
+var del = require("del");
 var fs = require("fs");
 var gulp = require("gulp");
 var hl = require("highland");
@@ -20,13 +21,17 @@ var l10nAll = function (next) {
         .resume();
 };
 
+gulp.task("clean", function (next) {
+    del("dist", next);
+});
+
 gulp.task("i18n", function () {
     (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach(function (key) {
         l10nObj[key] = JSON.parse(fs.readFileSync("l10n/" + key + ".json", "utf8"));
     });
 });
 
-gulp.task("styles", ["i18n"], l10nAll.bind(function (l10n) {
+gulp.task("styles", ["clean", "i18n"], l10nAll.bind(function (l10n) {
     var opts = {
         compress: true,
         globalVars: {
@@ -37,7 +42,7 @@ gulp.task("styles", ["i18n"], l10nAll.bind(function (l10n) {
     return gulp.src("page/*.less")
         .pipe(less(opts))
         .pipe(hl())
-        .map(function (file) {
+        .doto(function (file) {
             var type = path.extname(file.path);
             var name = path.basename(file.path, type);
             var hash = crypto
@@ -48,13 +53,11 @@ gulp.task("styles", ["i18n"], l10nAll.bind(function (l10n) {
             
             file.path = path.dirname(file.path) + "/" + name + "-" + hash + type;
             fileObj[name + type.slice(1)] = "/" + file.relative;
-            
-            return file;
         })
         .pipe(gulp.dest("dist/" + l10n));
 }));
 
-gulp.task("pages", ["i18n"], l10nAll.bind(function (l10n) {
+gulp.task("pages", ["clean", "i18n"], l10nAll.bind(function (l10n) {
     var opts = {};
     
     opts.locals = l10nObj[l10n];
@@ -63,6 +66,10 @@ gulp.task("pages", ["i18n"], l10nAll.bind(function (l10n) {
     
     return gulp.src("page/!(global).jade")
         .pipe(jade(opts))
+        .pipe(hl())
+        .doto(function (file) {
+            file.path = file.path.slice(0, -5);
+        })
         .pipe(gulp.dest("dist/" + l10n));
 }));
 

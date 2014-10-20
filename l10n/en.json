@@ -1,5 +1,6 @@
 {
     "meta": {
-        "code": "en"
+        "code": "en",
+        "bucket": "com.honeyscreen.en"
     }
 }

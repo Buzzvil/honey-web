@@ -1,6 +1,7 @@
 var aws = require("aws-sdk");
 var crypto = require("crypto");
 var del = require("del");
+var express = require("express");
 var fs = require("fs");
 var gulp = require("gulp");
 var hl = require("highland");

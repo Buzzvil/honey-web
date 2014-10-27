@@ -1,6 +1,48 @@
 {
     "meta": {
         "code": "en",
-        "bucket": "com.honeyscreen.en"
+        "bucket": "com.honeyscreen.en",
+        "cloudkey": "E2ZQ9P41RBE10E",
+        "title": "Honeyscreen"
+    },
+    
+    "header": {
+        "intro": "Intro",
+        "support": "FAQs",
+        "company": "About",
+        "advertise": "Advertise"
+    },
+    "footer": {
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy"
+    },
+    "contact": {
+        "email": "",
+        "facebook": "",
+        "twitter": "",
+        "blog": "",
+        "googlestore": "",
+        "applestore": ""
+    },
+    
+    "index": {
+        "intro": {
+            "big": "Sweet rewards on your first screen",
+            "sub": [
+                "Get popular content and points every hour.",
+                "Enjoy every minute of your personalized first screen."
+            ]
+        },
+        
+        "outro": {
+            "big": "무료로 경험하는 모바일 세상",
+            "sub": [
+                "통신비, 음악 감상, 게임, 영화 예매 등",
+                "사람들이 스마트폰을 사용하면서",
+                "돈을 내는 이 모든 것들을",
+                "공짜로 이용할 수 있게 하는 것,",
+                "이것이 바로 저희가 꿈꾸는 꿈입니다"
+            ]
+        }
     }
 }

@@ -1,6 +1,48 @@
 {
     "meta": {
         "code": "ko",
-        "bucket": "com.honeyscreen.ko"
+        "bucket": "com.honeyscreen.ko",
+        "cloudkey": "E1R9N0LC53KYI1",
+        "title": "허니스크린"
+    },
+    
+    "header": {
+        "intro": "서비스소개",
+        "support": "고객문의",
+        "company": "회사소개",
+        "advertise": "광고주"
+    },
+    "footer": {
+        "terms": "이용약관",
+        "privacy": "개인정보취급방"
+    },
+    "contact": {
+        "email": "",
+        "facebook": "",
+        "twitter": "",
+        "blog": "",
+        "googlestore": "",
+        "applestore": ""
+    },
+    
+    "index": {
+        "intro": {
+            "big": "첫 화면 속 달콤한 혜택",
+            "sub": [
+                "인기있는 정보와 매 시간 쌓이는 적립금",
+                "매 순간이 즐거운 나만의 첫 화면"
+            ]
+        },
+        
+        "outro": {
+            "big": "무료로 경험하는 모바일 세상",
+            "sub": [
+                "통신비, 음악 감상, 게임, 영화 예매 등",
+                "사람들이 스마트폰을 사용하면서",
+                "돈을 내는 이 모든 것들을",
+                "공짜로 이용할 수 있게 하는 것,",
+                "이것이 바로 저희가 꿈꾸는 꿈입니다"
+            ]
+        }
     }
 }

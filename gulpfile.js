@@ -15,14 +15,7 @@ aws.config.update({
 });
 
 var GZcall = hl.wrapCallback(zlib.gzip.bind(zlib));
-
-var S3call = hl.wrapCallback(function (opts, next) {
-    new aws.S3().putObject(opts, next);
-});
-
-var CFcall = hl.wrapCallback(function (opts, next) {
-    new aws.CloudFront().createInvalidation(opts, next);
-});
+var S3call = hl.wrapCallback(new aws.S3().putObject.bind(new aws.S3()));
 
 var l10nObj = {};
 var fileObj = {};
@@ -98,7 +91,7 @@ gulp.task("upload", ["pages"], l10nAll.bind(function (l10n) {
     var list = gulp.src("dist/" + l10n + "/*").pipe(hl());
     
     var cc = {
-        "": "no-cache",
+        "": "public, max-age=900",
         ".css": "public, max-age=2592000"
     };
     
@@ -123,28 +116,6 @@ gulp.task("upload", ["pages"], l10nAll.bind(function (l10n) {
                 ContentEncoding: "gzip",
                 ContentLanguage: l10nObj[l10n].meta.code,
                 ContentType: ct[type]
-            });
-        });
-}));
-
-gulp.task("publish", ["upload"], l10nAll.bind(function (l10n) {
-    return gulp.src("dist/" + l10n + "/!(*.*)")
-        .pipe(hl())
-        .collect()
-        .flatMap(function (arr) {
-            arr = arr.map(function (val) {
-                return "/" + val.relative;
-            });
-            
-            return CFcall({
-                DistributionId: l10nObj[l10n].meta.cloudkey,
-                InvalidationBatch: {
-                    CallerReference: "gulp" + Date.now(),
-                    Paths: {
-                        Quantity: arr.length,
-                        Items: arr
-                    }
-                }
             });
         });
 }));

@@ -1,0 +1,251 @@
+///////////////////////////////////////////////////////////////////////////////
+// Setup
+///////////////////////////////////////////////////////////////////////////////
+// Core variables and mixins
+@import "node_modules/bootstrap/less/variables";
+@import "node_modules/bootstrap/less/mixins";
+
+// Reset and dependencies
+@import "node_modules/bootstrap/less/normalize";
+@import "node_modules/bootstrap/less/print";
+
+// Core CSS
+@import "node_modules/bootstrap/less/scaffolding";
+@import "node_modules/bootstrap/less/type";
+@import "node_modules/bootstrap/less/grid";
+
+// Components
+@import "node_modules/bootstrap/less/responsive-embed";
+
+// Utility classes
+@import "node_modules/bootstrap/less/utilities";
+@import "node_modules/bootstrap/less/responsive-utilities";
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Global
+///////////////////////////////////////////////////////////////////////////////
+body {
+    position: relative;
+}
+
+.container-gray {
+    background-color: #F5F5F5;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Navigation
+///////////////////////////////////////////////////////////////////////////////
+#nav-head-outer,
+#nav-foot-outer {
+    position: absolute;
+    width: 100%;
+    z-index: @zindex-navbar;
+    
+    > .backdrop {
+        background-color: #000;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        
+        .opacity(0.25);
+    }
+}
+
+#nav-head,
+#nav-foot {
+    color: #FFF;
+    position: relative;
+    
+    > ul {
+        margin: 0;
+        padding: 0;
+        
+        > li {
+            display: inline-block;
+        }
+    }
+}
+
+#nav-head {
+    font-size: 16px;
+    letter-spacing: -2px;
+    line-height: 16px;
+    
+    > a {
+        margin: 19px 0;
+    }
+}
+
+#nav-foot-outer {
+    bottom: 0;
+}
+
+#nav-foot {
+    font-size: 12px;
+    
+    .opacity(0.70);
+}
+
+.nav-text {
+    line-height: 20px;
+    margin: 20px 15px;
+    
+    &:first-child {
+        margin-left: 0;
+    }
+    
+    &:last-child {
+        margin-right: 0;
+    }
+    
+    > a {
+        color: inherit;
+    }
+}
+
+.nav-icon {
+    margin: 18px 0 19px 15px;
+    vertical-align: top;
+}
+
+@media (max-width: @screen-xs-max) {
+    #nav-head {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    #nav-foot {
+        text-align: center;
+        
+        > ul + ul {
+            margin-top: -20px;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .nav-left {
+        float: left;
+    }
+    
+    .nav-right {
+        float: right;
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Page: Index
+///////////////////////////////////////////////////////////////////////////////
+#index-intro-outer {
+    background-image: url("@{i}bg_top.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #FFF;
+}
+
+#index-outro-outer {
+    background-image: url("@{i}bg_bottom.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #FFF;
+}
+
+#index-outro {
+    text-align: center;
+}
+
+@media (max-width: @screen-xs-max) {
+    #index-intro {
+        margin: 132px 0 30px 0;
+        text-align: center;
+        
+        > a + a {
+            display: block;
+            margin: 20px 15px 0 15px;
+        }
+        
+        > h1 {
+            letter-spacing: -4px;
+            margin: 0;
+        }
+        
+        > p {
+            font-size: 20px;
+            letter-spacing: -2px;
+            margin: 15px 0 30px 0;
+        }
+    }
+    
+    #index-video {
+        padding: 0;
+    }
+    
+    #index-outro {
+        padding-bottom: 130px;
+        
+        > h2 {
+            border-bottom: 2px solid #FECC25;
+            display: inline-block;
+            letter-spacing: -4px;
+            margin: 30px 0 20px 0;
+            padding-bottom: 20px;
+        }
+        
+        > p {
+            font-size: 20px;
+            letter-spacing: -2px;
+            line-height: 35px;
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    #index-intro {
+        margin: 220px 0 160px 0;
+        
+        > a + a {
+            margin-left: 60px;
+        }
+        
+        > h1 {
+            font-size: 55px;
+            letter-spacing: -4px;
+            margin: 0;
+        }
+        
+        > p {
+            font-size: 30px;
+            letter-spacing: -2px;
+            margin: 40px 0 60px 0;
+        }
+    }
+    
+    #index-video-outer {
+        padding: 60px 0;
+    }
+    
+    #index-outro {
+        padding-bottom: 220px;
+        
+        > h2 {
+            border-bottom: 3px solid #FECC25;
+            display: inline-block;
+            font-size: 50px;
+            letter-spacing: -4px;
+            margin: 160px 0 40px 0;
+            padding-bottom: 40px;
+        }
+        
+        > p {
+            font-size: 35px;
+            font-weight: 300;
+            letter-spacing: -2px;
+            line-height: 60px;
+            margin: 0;
+        }
+    }
+}

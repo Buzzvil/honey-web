@@ -44,11 +44,11 @@ gulp.task("i18n", function () {
 gulp.task("styles", ["clean", "i18n"], l10nAll.bind(function (l10n) {
     var opts = {
         compress: true,
-        globalVars: {
-            i: JSON.stringify("/i/"),
-            I: JSON.stringify("/i/" + l10n + "/")
-        }
+        globalVars: l10nObj[l10n].style
     };
+    
+    opts.globalVars.i = JSON.stringify("/i/");
+    opts.globalVars.I = JSON.stringify("/i/" + l10n + "/");
     
     return gulp.src("page/*.less")
         .pipe(less(opts))

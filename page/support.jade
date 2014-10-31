@@ -1,0 +1,27 @@
+extends global
+
+block meta
+    title #{support.title} - #{meta.title}
+
+block content
+    div#support-outer: div.container#support-main
+        h1 #{support.intro.big}
+        p: each line in support.intro.sub
+            span #{line}
+        
+        div.container-fluid: div.row#support-buttons
+            each cat, key in support.faqs
+                div.col-xs-4.col-sm-2: a(href="#support-faqs-#{key}")
+                    div: img(src="#{i}support/ic-#{key}.png", width="61", height="61")
+                    | #{cat.name}
+        
+        div#support-faqs: each cat, key in support.faqs
+            div(id="support-faqs-#{key}")
+            each question in cat.list
+                dt: a #{question.q}
+                dd #{question.a}
+        
+        div#support-contact
+            p: each line in support.contact.sub
+                span #{line} 
+            a.btn(href="mailto:#{contact.email}", target="_blank") #{support.contact.btn}

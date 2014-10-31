@@ -4,7 +4,7 @@ block meta
     title #{support.title} - #{meta.title}
 
 block content
-    div#support-outer: div.container#support-main
+    div#support-outer: div.container#support-inner
         h1 #{support.intro.big}
         p: each line in support.intro.sub
             span #{line}
@@ -19,9 +19,9 @@ block content
             div(id="support-faqs-#{key}")
             each question in cat.list
                 dt: a #{question.q}
-                dd #{question.a}
+                dd.bg-gray #{question.a}
         
-        div#support-contact
+        div.bg-gray#support-contact
             p: each line in support.contact.sub
                 span #{line} 
             a.btn(href="mailto:#{contact.email}", target="_blank") #{support.contact.btn}

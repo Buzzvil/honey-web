@@ -1,75 +1,157 @@
 ///////////////////////////////////////////////////////////////////////////////
 // Setup
 ///////////////////////////////////////////////////////////////////////////////
-// Core variables and mixins
 @import "node_modules/bootstrap/less/variables";
 @import "node_modules/bootstrap/less/mixins";
 
-// Reset and dependencies
 @import "node_modules/bootstrap/less/normalize";
-@import "node_modules/bootstrap/less/print";
 
-// Core CSS
 @import "node_modules/bootstrap/less/scaffolding";
 @import "node_modules/bootstrap/less/type";
 @import "node_modules/bootstrap/less/grid";
+@import "node_modules/bootstrap/less/forms";
 @import "node_modules/bootstrap/less/buttons";
 
-// Components
+@import "node_modules/bootstrap/less/component-animations";
+@import "node_modules/bootstrap/less/navs";
+@import "node_modules/bootstrap/less/navbar";
 @import "node_modules/bootstrap/less/responsive-embed";
 
-// Utility classes
 @import "node_modules/bootstrap/less/utilities";
 @import "node_modules/bootstrap/less/responsive-utilities";
 
-@link-color: @text-color;
-@link-hover-color: #FF960D;
+@honey-color: #FECC25;
+@honey-color-light: lighten(@honey-color, 10%);
+@honey-link: #FF960D;
+@honey-link-alt: #FFEA00;
+
+@link-hover-color: @honey-link;
 @link-hover-decoration: none;
 
 @font-family-base: @l10n-font-family;
 
 @font-size-base: 16px;
 
+@navbar-height: 60px;
+@navbar-margin-bottom: 0;
+@navbar-padding-horizontal: 10px;
+
+@navbar-default-border: #FFF;
+
+@navbar-default-link-color: #FFF;
+@navbar-default-link-hover-color: @honey-link-alt;
+
+@navbar-default-toggle-hover-bg: @honey-color-light;
+@navbar-default-toggle-icon-bar-bg: #FFF;
+@navbar-default-toggle-border-color: transparent;
+
+@nav-link-padding: @navbar-padding-horizontal;
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // Global
 ///////////////////////////////////////////////////////////////////////////////
+a {
+    color: inherit;
+    
+    .transition(~"color 100ms");
+}
+
 body {
     position: relative;
+}
+
+img {
+    vertical-align: top;
 }
 
 p > span {
     display: block;
 }
 
-.container-gray {
+.backdrop {
+    background-color: #000;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    
+    .opacity(0.25);
+}
+
+.bg-gray {
     background-color: #F5F5F5;
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Navigation
+// Nav: Head
 ///////////////////////////////////////////////////////////////////////////////
-#nav-head-outer,
-#nav-foot-outer {
-    position: absolute;
-    width: 100%;
-    z-index: @zindex-navbar;
+.navbar {
+    border: none;
+}
+
+.navbar-text > a {
+    display: inline-block;
     
-    > .backdrop {
-        background-color: #000;
-        height: 100%;
-        position: absolute;
-        width: 100%;
-        
-        .opacity(0.25);
+    .transition(~"opacity 100ms");
+    
+    &:hover,
+    &:active {
+        .opacity(0.75);
     }
 }
 
-#nav-head,
+@media (max-width: @screen-xs-max) {
+    .navbar {
+        background-color: @honey-color;
+    }
+    
+    .navbar-text {
+        text-align: center;
+        
+        > a {
+            margin: 0 30px;
+            
+            > img {
+                height: 46px;
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .navbar {
+        background-color: transparent;
+    }
+    
+    .navbar-text {
+        margin: 18px 5px 19px 5px;
+        
+        > a {
+            padding: 0 5px;
+        }
+    }
+    
+    #nav-head-outer {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Nav: Foot
+///////////////////////////////////////////////////////////////////////////////
+#nav-foot-outer {
+    bottom: 0;
+}
+
 #nav-foot {
     color: #FFF;
-    position: relative;
+    font-size: @font-size-small;
+    
+    .opacity(0.75);
     
     > ul {
         margin: 0;
@@ -77,55 +159,27 @@ p > span {
         
         > li {
             display: inline-block;
+            margin: 20px 15px;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+            
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            > a:hover,
+            > a:active {
+                color: @honey-link-alt;
+            }
         }
     }
 }
 
-#nav-head {
-    letter-spacing: -2px;
-    line-height: 16px;
-    
-    > a {
-        margin: 19px 0;
-    }
-}
-
-#nav-foot-outer {
-    bottom: 0;
-}
-
-#nav-foot {
-    font-size: @font-size-small;
-    
-    .opacity(0.70);
-}
-
-.nav-text {
-    line-height: 20px;
-    margin: 20px 15px;
-    
-    &:first-child {
-        margin-left: 0;
-    }
-    
-    &:last-child {
-        margin-right: 0;
-    }
-    
-    > a {
-        color: inherit;
-    }
-}
-
-.nav-icon {
-    margin: 18px 0 19px 15px;
-    vertical-align: top;
-}
-
 @media (max-width: @screen-xs-max) {
-    #nav-head {
-        margin-top: 20px;
-        text-align: center;
+    #nav-foot-outer {
+        position: relative;
     }
     
     #nav-foot {
@@ -138,11 +192,16 @@ p > span {
 }
 
 @media (min-width: @screen-sm-min) {
-    .nav-left {
+    #nav-foot-outer {
+        position: absolute;
+        width: 100%;
+    }
+    
+    #nav-foot > :first-child {
         float: left;
     }
     
-    .nav-right {
+    #nav-foot > :last-child {
         float: right;
     }
 }
@@ -199,7 +258,7 @@ p > span {
         padding-bottom: 130px;
         
         > h2 {
-            border-bottom: 2px solid #FECC25;
+            border-bottom: 2px solid @honey-color;
             display: inline-block;
             letter-spacing: -4px;
             margin: 30px 0 20px 0;
@@ -244,7 +303,7 @@ p > span {
         padding-bottom: 220px;
         
         > h2 {
-            border-bottom: 3px solid #FECC25;
+            border-bottom: 3px solid @honey-color;
             display: inline-block;
             font-size: 50px;
             letter-spacing: -4px;
@@ -276,7 +335,6 @@ p > span {
     }
     
     > dd {
-        background-color: #F5F5F5;
         padding: 20px 30px;
     }
 }
@@ -290,14 +348,13 @@ p > span {
         display: block;
         margin-bottom: 15px;
         
-        .transition(~"color 100ms");
-        
-        &:hover > div, &:active > div {
-            background-color: lighten(#FECC25, 10%);
+        &:hover > div,
+        &:active > div {
+            background-color: @honey-color-light;
         }
         
         > div {
-            background-color: #FECC25;
+            background-color: @honey-color;
             border-radius: @border-radius-base;
             margin-bottom: 5px;
             padding: 10px 0;
@@ -309,7 +366,6 @@ p > span {
 }
 
 #support-contact {
-    background-color: #F5F5F5;
     border-top: @support-border;
     padding: 30px 0;
     text-align: center;
@@ -322,12 +378,21 @@ p > span {
 }
 
 @media (max-width: @screen-xs-max) {
-    #support-main {
-        padding: 100px 0;
+    #support-inner {
+        padding: 0;
+        
+        > h1 {
+            text-align: center;
+        }
+        
+        > p {
+            text-align: center;
+        }
     }
     
     #support-buttons {
         border-bottom: @support-border;
+        border-top: @support-border;
         font-size: @font-size-small;
     }
     
@@ -344,7 +409,7 @@ p > span {
         padding: 90px 0;
     }
     
-    #support-main {
+    #support-inner {
         > h1 {
             border-right: 1px solid rgba(255, 255, 255, 0.30);
             color: #FFF;

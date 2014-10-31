@@ -7,14 +7,13 @@ block content
     div#index-intro-outer: div.container: div.row
         div.col-sm-12#index-intro
             h1 #{index.intro.big}
-            p.
-                #{index.intro.sub[0]}<br>
-                #{index.intro.sub[1]}
+            p: each line in index.intro.sub
+                span #{line}
             
             a(href=contact.googlestore, target="_blank")
-                img(src="#{i}app_02.png", width="214", height="64")
+                img(src="#{i}index/dl-google.png", width="214", height="64")
             a(href=contact.applestore, target="_blank")
-                img(src="#{i}app_01.png", width="214", height="64")
+                img(src="#{i}index/dl-apple.png", width="214", height="64")
             
             a.visible-xs-inline-block(href=contact.facebook, target="_blank")
                 img(src="#{i}sns_b_01.png", width="40", height="46")
@@ -35,5 +34,4 @@ block content
         div.col-sm-12#index-outro
             h2 #{index.outro.big}
             p: each line in index.outro.sub
-                | #{line}
-                br
+                span #{line}

@@ -1,10 +1,10 @@
 extends global
 
 block meta
-    title #{terms.title} - #{meta.title}
+    title #{footer.terms} - #{meta.title}
 
 block content
     div#other-outer: div.container#other-inner
-        h1 #{terms.title}
+        h1 #{footer.terms}
         
-        div#other-text !{terms.html}
+        div#other-text !{terms}

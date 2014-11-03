@@ -40,8 +40,8 @@ gulp.task("i18n", function () {
         var privacy = fs.readFileSync("l10n/" + key + ".privacy.md", "utf8");
         
         l10nObj[key] = JSON.parse(json);
-        l10nObj[key].terms.html = marked(terms);
-        l10nObj[key].privacy.html = marked(privacy);
+        l10nObj[key].terms = marked(terms);
+        l10nObj[key].privacy = marked(privacy);
     });
 });
 

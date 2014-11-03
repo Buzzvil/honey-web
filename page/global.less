@@ -20,7 +20,8 @@
 @import "node_modules/bootstrap/less/utilities";
 @import "node_modules/bootstrap/less/responsive-utilities";
 
-@honey-border: 1px solid #D8D1D1;
+@honey-border-color: #D8D1D1;
+@honey-border: 1px solid @honey-border-color;
 @honey-color: #FECC25;
 @honey-color-light: lighten(@honey-color, 10%);
 @honey-link: #FF960D;
@@ -47,6 +48,8 @@
 @navbar-default-toggle-border-color: transparent;
 
 @nav-link-padding: @navbar-padding-horizontal;
+
+@hr-border: @honey-border-color;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -455,7 +458,11 @@ p > span {
 #other-text {
     padding: 30px;
     
-    > p:last-child {
+    > :first-child {
+        margin-top: 0;
+    }
+    
+    > :last-child {
         margin-bottom: 0;
     }
 }

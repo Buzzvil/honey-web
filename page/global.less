@@ -20,6 +20,7 @@
 @import "node_modules/bootstrap/less/utilities";
 @import "node_modules/bootstrap/less/responsive-utilities";
 
+@honey-border: 1px solid #D8D1D1;
 @honey-color: #FECC25;
 @honey-color-light: lighten(@honey-color, 10%);
 @honey-link: #FF960D;
@@ -325,8 +326,6 @@ p > span {
 ///////////////////////////////////////////////////////////////////////////////
 // Page: Support
 ///////////////////////////////////////////////////////////////////////////////
-@support-border: 1px solid #D8D1D1;
-
 #support-faqs {
     > dt {
         background-color: #FFF;
@@ -340,7 +339,7 @@ p > span {
 }
 
 #support-buttons {
-    border-bottom: @support-border;
+    border-bottom: @honey-border;
     padding-top: 15px;
     text-align: center;
     
@@ -366,7 +365,7 @@ p > span {
 }
 
 #support-contact {
-    border-top: @support-border;
+    border-top: @honey-border;
     padding: 30px 0;
     text-align: center;
     
@@ -391,13 +390,13 @@ p > span {
     }
     
     #support-buttons {
-        border-bottom: @support-border;
-        border-top: @support-border;
+        border-bottom: @honey-border;
+        border-top: @honey-border;
         font-size: @font-size-small;
     }
     
     #support-contact {
-        border-top: @support-border;
+        border-top: @honey-border;
     }
 }
 
@@ -428,23 +427,70 @@ p > span {
     
     #support-buttons {
         background: #FFF;
-        border: @support-border;
+        border: @honey-border;
         
         .border-top-radius(@border-radius-base);
     }
     
     #support-faqs {
-        border-left: @support-border;
-        border-right: @support-border;
+        border-left: @honey-border;
+        border-right: @honey-border;
     }
     
     #support-contact {
-        border: @support-border;
+        border: @honey-border;
         
         .border-bottom-radius(@border-radius-base);
         
         > p > span {
             display: inline;
         }
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Page: Other
+///////////////////////////////////////////////////////////////////////////////
+#other-text {
+    padding: 30px;
+    
+    > p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    #other-inner {
+        padding: 0;
+        
+        > h1 {
+            margin: 30px 0 0 0;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    #other-outer {
+        background-image: url("@{i}other/bg-head.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        padding: 90px 0;
+    }
+    
+    #other-inner > h1 {
+        color: #FFF;
+        display: inline-block;
+        font-size: 48px;
+        line-height: 48px;
+        margin: 0 30px 30px 0;
+        padding-right: 30px;
+    }
+    
+    #other-text {
+        background-color: #FFF;
+        border: @honey-border;
+        border-radius: @border-radius-base;
     }
 }

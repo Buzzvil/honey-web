@@ -1,0 +1,10 @@
+extends global
+
+block meta
+    title #{privacy.title} - #{meta.title}
+
+block content
+    div#other-outer: div.container#other-inner
+        h1 #{privacy.title}
+        
+        div#other-text !{privacy.html}

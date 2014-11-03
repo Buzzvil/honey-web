@@ -1,0 +1,10 @@
+extends global
+
+block meta
+    title #{terms.title} - #{meta.title}
+
+block content
+    div#other-outer: div.container#other-inner
+        h1 #{terms.title}
+        
+        div#other-text !{terms.html}

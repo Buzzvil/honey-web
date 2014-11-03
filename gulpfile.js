@@ -4,18 +4,17 @@ var del = require("del");
 var express = require("express");
 var fs = require("fs");
 var gulp = require("gulp");
+var gzip = require("gulp-gzip");
 var hl = require("highland");
 var jade = require("gulp-jade");
 var less = require("gulp-less");
 var marked = require("marked");
 var path = require("path");
-var zlib = require("zlib");
 
 aws.config.update({
     region: "ap-northeast-1"
 });
 
-var GZcall = hl.wrapCallback(zlib.gzip.bind(zlib));
 var S3call = hl.wrapCallback(new aws.S3().putObject.bind(new aws.S3()));
 
 var l10nObj = {};
@@ -95,8 +94,6 @@ gulp.task("pages", ["styles"], l10nAll.bind(function (l10n) {
 }));
 
 gulp.task("upload", ["pages"], l10nAll.bind(function (l10n) {
-    var list = gulp.src("dist/" + l10n + "/*").pipe(hl());
-    
     var cc = {
         "": "public, max-age=900",
         ".css": "public, max-age=2592000"
@@ -107,18 +104,16 @@ gulp.task("upload", ["pages"], l10nAll.bind(function (l10n) {
         ".css": "text/css; charset=UTF-8"
     };
     
-    return list
-        .fork()
-        .pluck("contents")
-        .flatMap(GZcall)
-        .zip(list.fork())
-        .flatMap(function (zip) {
-            var type = path.extname(zip[1].path);
+    return gulp.src("dist/" + l10n + "/*")
+        .pipe(gzip({ append: false }))
+        .pipe(hl())
+        .flatMap(function (file) {
+            var type = path.extname(file.path);
             
             return S3call({
                 Bucket: l10nObj[l10n].meta.bucket,
-                Key: zip[1].relative,
-                Body: zip[0],
+                Key: file.relative,
+                Body: file.contents,
                 CacheControl: cc[type],
                 ContentEncoding: "gzip",
                 ContentLanguage: l10nObj[l10n].meta.code,

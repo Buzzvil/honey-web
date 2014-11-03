@@ -7,6 +7,7 @@ var gulp = require("gulp");
 var hl = require("highland");
 var jade = require("gulp-jade");
 var less = require("gulp-less");
+var marked = require("marked");
 var path = require("path");
 var zlib = require("zlib");
 
@@ -37,7 +38,13 @@ gulp.task("clean", function (next) {
 
 gulp.task("i18n", function () {
     (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach(function (key) {
-        l10nObj[key] = JSON.parse(fs.readFileSync("l10n/" + key + ".json", "utf8"));
+        var json = fs.readFileSync("l10n/" + key + ".json", "utf8");
+        var terms = fs.readFileSync("l10n/" + key + ".terms.md", "utf8");
+        var privacy = fs.readFileSync("l10n/" + key + ".privacy.md", "utf8")
+        
+        l10nObj[key] = JSON.parse(json);
+        l10nObj[key].terms.html = marked(terms);
+        l10nObj[key].privacy.html = marked(privacy);
     });
 });
 

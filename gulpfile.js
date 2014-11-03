@@ -1,5 +1,4 @@
 var aws = require("aws-sdk");
-var crypto = require("crypto");
 var del = require("del");
 var express = require("express");
 var fs = require("fs");
@@ -9,7 +8,8 @@ var hl = require("highland");
 var jade = require("gulp-jade");
 var less = require("gulp-less");
 var marked = require("marked");
-var path = require("path");
+
+del.sync("dist");
 
 aws.config.update({
     region: "ap-northeast-1"
@@ -18,8 +18,6 @@ aws.config.update({
 var S3call = hl.wrapCallback(new aws.S3().putObject.bind(new aws.S3()));
 
 var l10nObj = {};
-var fileObj = {};
-
 var l10nAll = function (next) {
     hl(Object.keys(l10nObj))
         .map(this)
@@ -30,10 +28,6 @@ var l10nAll = function (next) {
         .once("end", next)
         .resume();
 };
-
-gulp.task("clean", function (next) {
-    del("dist", next);
-});
 
 gulp.task("i18n", function () {
     (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach(function (key) {
@@ -47,7 +41,7 @@ gulp.task("i18n", function () {
     });
 });
 
-gulp.task("styles", ["clean", "i18n"], l10nAll.bind(function (l10n) {
+gulp.task("styles", ["i18n"], l10nAll.bind(function (l10n) {
     var opts = {
         compress: true,
         globalVars: l10nObj[l10n].style
@@ -58,30 +52,16 @@ gulp.task("styles", ["clean", "i18n"], l10nAll.bind(function (l10n) {
     
     return gulp.src("page/*.less")
         .pipe(less(opts))
-        .pipe(hl())
-        .doto(function (file) {
-            var type = path.extname(file.path);
-            var name = path.basename(file.path, type);
-            var hash = crypto
-                .createHash("md5")
-                .update(file.contents)
-                .digest("hex")
-                .slice(0, 12);
-            
-            file.path = path.dirname(file.path) + "/" + name + "-" + hash + type;
-            fileObj[name + type.slice(1)] = "/" + file.relative;
-        })
         .pipe(gulp.dest("dist/" + l10n));
 }));
 
-gulp.task("pages", ["styles"], l10nAll.bind(function (l10n) {
+gulp.task("pages", ["i18n"], l10nAll.bind(function (l10n) {
     var opts = {
         locals: l10nObj[l10n]
     };
     
     opts.locals.i = "/i/";
     opts.locals.I = "/i/" + l10n + "/";
-    opts.locals.files = fileObj;
     opts.locals.gakey = process.env.GANALYTICS_KEY;
     
     return gulp.src("page/!(global).jade")
@@ -93,43 +73,39 @@ gulp.task("pages", ["styles"], l10nAll.bind(function (l10n) {
         .pipe(gulp.dest("dist/" + l10n));
 }));
 
-gulp.task("upload", ["pages"], l10nAll.bind(function (l10n) {
-    var cc = {
-        "": "public, max-age=900",
-        ".css": "public, max-age=2592000"
-    };
-    
-    var ct = {
+gulp.task("upload", ["styles", "pages"], l10nAll.bind(function (l10n) {
+    var type = {
         "": "text/html; charset=UTF-8",
-        ".css": "text/css; charset=UTF-8"
+        ".css": "text/css",
+        ".js": "application/javascript"
     };
     
     return gulp.src("dist/" + l10n + "/*")
         .pipe(gzip({ append: false }))
         .pipe(hl())
         .flatMap(function (file) {
-            var type = path.extname(file.path);
-            
             return S3call({
                 Bucket: l10nObj[l10n].meta.bucket,
                 Key: file.relative,
                 Body: file.contents,
-                CacheControl: cc[type],
+                CacheControl: "public, max-age=900",
                 ContentEncoding: "gzip",
                 ContentLanguage: l10nObj[l10n].meta.code,
-                ContentType: ct[type]
+                ContentType: type[(file.relative.match(/\.[^.]+/) || [""])[0]]
             });
         });
 }));
 
 gulp.task("watch", function () {
-    gulp.watch(["page/*.*", "l10n/*.json"], ["pages"]);
+    gulp.watch("l10n/*.*", ["styles", "pages"]);
+    gulp.watch("page/*.less", ["styles"]);
+    gulp.watch("page/*.jade", ["pages"]);
     
     express()
         .use(express.static("dist/" + process.env.L10N, {
             index: "index",
             setHeaders: function (res, file) {
-                if (!path.extname(file)) {
+                if (!/\./.test(file)) {
                     res.type("html");
                 }
             }
@@ -137,5 +113,3 @@ gulp.task("watch", function () {
         .use("/i", express.static("../honeyscreen-website-media"))
         .listen(9100);
 });
-
-gulp.task("default", ["pages"]);

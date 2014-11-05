@@ -60,15 +60,20 @@ gulp.task("styles", ["i18n"], l10nify(function (l10n) {
 }));
 
 gulp.task("scripts", ["i18n"], l10nify(function (l10n) {
-    var files = [
+    var global = gulp.src([
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/bootstrap/js/transition.js",
         "node_modules/bootstrap/js/collapse.js",
         "page/global.js"
-    ];
+    ]).pipe(concat("global.js"));
     
-    return gulp.src(files)
-        .pipe(concat("global.js"))
+    var legacy = gulp.src([
+        "page/legacy/shiv.js",
+        "page/legacy/respond.js"
+    ]).pipe(concat("legacy.js"));
+    
+    return hl([global, legacy])
+        .merge()
         .pipe(uglify())
         .pipe(gulp.dest("dist/" + l10n));
 }));

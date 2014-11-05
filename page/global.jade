@@ -15,7 +15,7 @@ html(lang=meta.code)
     body
         div#nav-head-outer
             div.backdrop.hidden-xs
-            div.navbar.navbar-default.navbar-static-top(role="navigation"): div.container
+            nav.navbar.navbar-default.navbar-static-top(role="navigation"): div.container
                 div.navbar-header
                     button.navbar-toggle.collapsed(data-toggle="collapse", data-target=".navbar-collapse")
                         span.icon-bar
@@ -24,11 +24,13 @@ html(lang=meta.code)
                     
                     a.navbar-brand(href="/"): img(src="#{i}logo.png", width="221", height="22")
                 
-                div.collapse.navbar-collapse: ul.nav.navbar-nav.navbar-right
-                    li: a(href="/#index-video") #{header.intro}
-                    li: a(href="/support") #{header.support}
-                    li: a(href="/advertise") #{header.advertise}
-                    li: a(href="/about") #{header.about}
+                div.collapse.navbar-collapse.navbar-right
+                    ul.nav.navbar-nav
+                        li: a(href="/#index-video") #{header.intro}
+                        li: a(href="/support") #{header.support}
+                        li: a(href="/advertise") #{header.advertise}
+                        li: a(href="/about") #{header.about}
+                        li: a(href="http://www.adhours.com/partner_user/login/") #{header.signin}
                     
                     p.navbar-text
                         a(href=contact.facebook, target="_blank")
@@ -42,7 +44,7 @@ html(lang=meta.code)
         
         div#nav-foot-outer
             div.backdrop
-            div.container#nav-foot(role="navigation")
+            nav.container#nav-foot(role="navigation")
                 ul.nav-left
                     li © Buzzvil
                     li: a(href="/terms") #{footer.terms}

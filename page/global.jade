@@ -1,3 +1,5 @@
+- var navbarOpts = ["navbar", "navbar-default", "navbar-static-top"]
+
 mixin break(arr, postfix)
     each str in arr
         span #{str}#{postfix}
@@ -19,7 +21,7 @@ html(lang=meta.code)
     body
         div#nav-head-outer
             div.backdrop.hidden-xs
-            nav.navbar.navbar-default.navbar-static-top(role="navigation"): div.container
+            nav(class=navbarOpts, role="navigation"): div.container
                 div.navbar-header
                     button.navbar-toggle.collapsed(data-toggle="collapse", data-target=".navbar-collapse")
                         span.icon-bar

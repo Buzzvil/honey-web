@@ -20,6 +20,7 @@
 @import "node_modules/bootstrap/less/utilities";
 @import "node_modules/bootstrap/less/responsive-utilities";
 
+@honey-background: #F5F5F5;
 @honey-border-color: #D8D1D1;
 @honey-border: 1px solid @honey-border-color;
 @honey-color: #FECC25;
@@ -31,18 +32,19 @@
 @link-hover-decoration: none;
 
 @font-family-base: @l10n-font-family;
-
 @font-size-base: 16px;
+
+@input-border-focus: @honey-color;
+
+@input-color-placeholder: @honey-border-color;
 
 @navbar-height: 60px;
 @navbar-margin-bottom: 0;
 @navbar-padding-horizontal: 10px;
 
 @navbar-default-border: #FFF;
-
 @navbar-default-link-color: #FFF;
 @navbar-default-link-hover-color: @honey-link-alt;
-
 @navbar-default-toggle-hover-bg: @honey-color-light;
 @navbar-default-toggle-icon-bar-bg: #FFF;
 @navbar-default-toggle-border-color: transparent;
@@ -63,14 +65,11 @@ a {
 
 body {
     position: relative;
+    text-rendering: optimizelegibility;
 }
 
 img {
     vertical-align: top;
-}
-
-p > span {
-    display: block;
 }
 
 .backdrop {
@@ -83,7 +82,31 @@ p > span {
 }
 
 .bg-gray {
-    background-color: #F5F5F5;
+    background-color: @honey-background;
+}
+
+.break-force > span {
+    display: block;
+    
+    &:after {
+        content: "\00A0";
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .break-maybe > span:after {
+        content: " ";
+    }
+    
+    .break-small > span {
+        display: block;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .break-maybe > span {
+        display: block;
+    }
 }
 
 
@@ -94,14 +117,13 @@ p > span {
     border: none;
 }
 
-.navbar-brand,
 .navbar-text > a {
     display: inline-block;
     
     .transition(~"opacity 100ms");
     
     &:hover,
-    &:active {
+    &:focus {
         .opacity(0.75);
     }
 }
@@ -109,18 +131,20 @@ p > span {
 @media (max-width: @screen-xs-max) {
     .navbar {
         background-color: @honey-color;
+        box-shadow: 0 0 3px @honey-border-color;
+    }
+    
+    .navbar-nav {
+        float: left;
     }
     
     .navbar-text {
-        text-align: center;
+        float: right;
+        margin-top: 12px;
+        width: 44px;
         
         > a {
-            margin: 0 30px;
-            
-            > img {
-                height: 46px;
-                width: 40px;
-            }
+            padding: 10px 12px;
         }
     }
 }
@@ -330,29 +354,28 @@ p > span {
 ///////////////////////////////////////////////////////////////////////////////
 // Page: Support
 ///////////////////////////////////////////////////////////////////////////////
-#support-faqs {
-    > dt {
-        background-color: #FFF;
-        font-weight: normal;
-        padding: 20px 30px;
-    }
-    
-    > dd {
-        padding: 20px 30px;
-    }
+#support-search {
+    .border-bottom-radius(0);
+    .box-shadow(none);
+    .input-size(60px, 0, 20px, @font-size-large, @line-height-large, 0);
+    .transition(~"border-color 100ms");
 }
 
 #support-buttons {
     border-bottom: @honey-border;
-    padding-top: 15px;
+    padding: 20px 10px 0 10px;
     text-align: center;
+    
+    > div {
+        padding: 0 10px;
+    }
     
     > div > a {
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         
         &:hover > div,
-        &:active > div {
+        &:focus > div {
             background-color: @honey-color-light;
         }
         
@@ -368,13 +391,35 @@ p > span {
     }
 }
 
+#support-faqs {
+    > a {
+        border-top: 1px solid @honey-background;
+        cursor: pointer;
+        display: block;
+        padding: 20px;
+        
+        &:first-child,
+        &.first {
+            border: none;
+        }
+    }
+    
+    > div {
+        overflow: hidden;
+        
+        > p {
+            margin: 20px;
+        }
+    }
+}
+
 #support-contact {
     border-top: @honey-border;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
     
     > a {
-        .button-size(8px; 32px; 26px; 26px; @border-radius-base);
+        .button-size(6px, 32px, @font-size-large, @line-height-large, @border-radius-base);
         .button-variant(#FFF, #6D6D6D, #6D6D6D);
         .transition(~"background-color 100ms");
     }
@@ -384,13 +429,16 @@ p > span {
     #support-inner {
         padding: 0;
         
-        > h1 {
-            text-align: center;
-        }
-        
+        > h1,
         > p {
+            margin: 20px;
             text-align: center;
         }
+    }
+    
+    #support-search {
+        border: none;
+        border-top: @honey-border;
     }
     
     #support-buttons {
@@ -414,12 +462,13 @@ p > span {
     
     #support-inner {
         > h1 {
-            border-right: 1px solid rgba(255, 255, 255, 0.30);
+            border-right: @honey-border;
+            border-right-color: rgba(255, 255, 255, 0.25);
             color: #FFF;
             display: inline-block;
             font-size: 48px;
             line-height: 48px;
-            margin: 0 30px 30px 0;
+            margin: 0 30px 30px 20px;
             padding-right: 30px;
         }
         
@@ -429,14 +478,15 @@ p > span {
         }
     }
     
-    #support-buttons {
-        background: #FFF;
-        border: @honey-border;
+    #support-search {
+        border-color: @honey-border;
         
         .border-top-radius(@border-radius-base);
     }
     
+    #support-buttons,
     #support-faqs {
+        background-color: #FFF;
         border-left: @honey-border;
         border-right: @honey-border;
     }
@@ -457,7 +507,7 @@ p > span {
 // Page: Other
 ///////////////////////////////////////////////////////////////////////////////
 #other-text {
-    padding: 30px;
+    padding: 20px;
     
     > :first-child {
         margin-top: 0;
@@ -492,7 +542,7 @@ p > span {
         display: inline-block;
         font-size: 48px;
         line-height: 48px;
-        margin: 0 30px 30px 0;
+        margin: 0 30px 30px 20px;
         padding-right: 30px;
     }
     

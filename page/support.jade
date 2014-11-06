@@ -1,27 +1,28 @@
 extends global
 
 block meta
-    title #{support.title} - #{meta.title}
+    title #{header.support} - #{meta.title}
 
 block content
     div#support-outer: div.container#support-inner
         h1 #{support.intro.big}
-        p: each line in support.intro.sub
-            span #{line}
+        p.break-maybe: +break(support.intro.sub)
+        
+        input.form-control#support-search(type="search", placeholder=support.search, autofocus)
         
         div.container-fluid: div.row#support-buttons
             each cat, key in support.faqs
-                div.col-xs-4.col-sm-2: a(href="#support-faqs-#{key}")
+                div.col-xs-4.col-sm-2: a(href="#q-#{key}")
                     div: img(src="#{i}support/ic-#{key}.png", width="61", height="61")
                     | #{cat.name}
         
         div#support-faqs: each cat, key in support.faqs
-            div(id="support-faqs-#{key}")
-            each question in cat.list
-                dt: a #{question.q}
-                dd.bg-gray #{question.a}
+            each question, idx in cat.list
+                a(data-toggle="collapse", data-target="#q-#{key}-#{idx}") #{question.q}
+                
+                div.bg-gray.collapse(id="q-#{key}-#{idx}")
+                    p.break-force: +break(question.a)
         
         div.bg-gray#support-contact
-            p: each line in support.contact.sub
-                span #{line} 
+            p.break-small: +break(support.contact.sub, " ")
             a.btn(href="mailto:#{contact.email}", target="_blank") #{support.contact.btn}

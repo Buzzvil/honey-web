@@ -62,6 +62,7 @@ gulp.task("styles", ["i18n"], l10nify(function (l10n) {
 gulp.task("scripts", ["i18n"], l10nify(function (l10n) {
     var global = gulp.src([
         "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/jquery-keystop/jquery.keystop.min.js",
         "node_modules/bootstrap/js/transition.js",
         "node_modules/bootstrap/js/collapse.js",
         "page/global.js"

@@ -516,6 +516,18 @@ img {
     > :last-child {
         margin-bottom: 0;
     }
+    
+    .row {
+        border-left: @honey-border;
+        border-top: @honey-border;
+        
+        > div {
+            border-bottom: @honey-border;
+            border-right: @honey-border;
+            padding: 10px;
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width: @screen-xs-max) {

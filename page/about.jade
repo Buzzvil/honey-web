@@ -1,0 +1,47 @@
+extends global
+
+block meta
+    - navbarOpts.push("navbar-noshadow", "navbar-dark")
+    
+    title #{header.about} - #{meta.title}
+
+block content
+    div#about-intro-outer: div.container#about-intro
+        img.img-responsive.center-block(src="#{i}about/buzzvil.png", width="356", height="92")
+        
+        h2.break-maybe: +break(["We're a team of people who aspire to", "change the world by dreaming the impossible"])
+        
+        div.row
+            div.col-xs-6: a.btn(href="http://buzzvil.com") Buzzvil.com
+            div.col-xs-6: a.btn(href="http://blog.buzzvil.com") Buzzvil Blog
+    
+    div.container#about-main
+        div.blip
+        h3.break-maybe: +break(about.sub)
+        
+        h4 Seoul
+        p
+            img(src="#{i}ic-mail.png", width="19", height="20")
+            a(href="mailto:contact@honeyscreen.com", target="_blank") contact@honeyscreen.com
+        p
+            img(src="#{i}ic-place.png", width="19", height="20")
+            a(href="https://www.google.com/maps/place/272+Seokchonhosu-ro,+Songpa-gu,+Seoul,+South+Korea/@37.5099336,127.1059156,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca59fc2df4013:0x27d10e76d956e776", target="_blank") 서울특별시 송파구 석촌호수로 272 (송파동 32, 대림빌딩 3층)
+        div.embed-responsive: iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12659.658171349469!2d127.1059156!3d37.509933649999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca59fc2df4013%3A0x27d10e76d956e776!2s272+Seokchonhosu-ro%2C+Songpa-gu%2C+Seoul%2C+South+Korea!5e0!3m2!1sen!2s!4v1415261314226")
+        
+        h4 Tokyo
+        p
+            img(src="#{i}ic-mail.png", width="19", height="20")
+            a(href="mailto:contact.tw@honeyscreen.com", target="_blank") contact.tw@honeyscreen.com
+        p
+            img(src="#{i}ic-place.png", width="19", height="20")
+            a(href="https://www.google.com/maps/place/Japan,+%E3%80%92150-0044+T%C5%8Dky%C5%8D-to,+Shibuya-ku,+Shinsench%C5%8D,+8%E2%88%9216+%E6%B8%8B%E8%B0%B7%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9/@35.6552572,139.6937595,17z/data=!3m1!4b1!4m2!3m1!1s0x60188b55a7e6d7b5:0xaff179d1e13cec4", target="_blank") 東京都渋谷区神泉町8-16 渋谷ファーストプレイス8F Buzzvil
+        div.embed-responsive: iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3241.8828761604555!2d139.69375949999997!3d35.655257199999994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b55a7e6d7b5%3A0xaff179d1e13cec4!2zSmFwYW4sIOOAkjE1MC0wMDQ0IFTFjWt5xY0tdG8sIFNoaWJ1eWEta3UsIFNoaW5zZW5jaMWNLCA44oiSMTYg5riL6LC344OV44Kh44O844K544OI44OX44Os44Kk44K5!5e0!3m2!1sen!2s!4v1415261824726")
+        
+        h4 Taipei
+        p
+            img(src="#{i}ic-mail.png", width="19", height="20")
+            a(href="mailto:contact.jp@honeyscreen.com", target="_blank") contact.jp@honeyscreen.com
+        p
+            img(src="#{i}ic-place.png", width="19", height="20")
+            a(href="https://www.google.com/maps/place/Chex/@25.059492,121.522652,17z/data=!3m1!4b1!4m2!3m1!1s0x3442a94257c17819:0x3f2732ccce931cc3", target="_blank") 104台北市中山區中山北路二段96號嘉新第二大樓9F Buzzvil
+        div.embed-responsive: iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3614.2506605006192!2d121.52265200000001!3d25.059491999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94257c17819%3A0x3f2732ccce931cc3!2sChex!5e0!3m2!1sen!2s!4v1415261910709")

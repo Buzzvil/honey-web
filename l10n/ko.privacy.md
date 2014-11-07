@@ -111,7 +111,7 @@
 
 - 허니스크린 광고주는 수시로 발생하는 제휴로 인하여 개인정보취급방침 개정이 어려워 서비스제공업체 리스트를 다음의 링크를 통해 제공합니다.
 
-[서비스업체 확인하기] 
+[[서비스업체 확인하기](#privacy-companies)]
 
 ③ “회사”와 관련한 제휴 계약 등을 신규 체결 또는 상기 기재된 개인정보 제공업체와의 기존 계약을 해지할 수 있으며 그 경우 개인정보 제공업체에 변경이 생길 수 있습니다. 이에 대한 변경사항은 “회사” 웹 페이지를 통해 공지하고 별도의 고객동의를 득하고 업체에게 제공됩니다.
 
@@ -214,3 +214,129 @@
 공고일자 : 2014년 6월 3일
 
 시행일자 : 2014년 6월 20일
+
+<hr id="privacy-companies">
+
+서비스업체 확인하기
+
+<div class="container-fluid"><div class="row">
+    <div class="col-sm-4 col-md-3">(주) 가우리커뮤니케이션</div>
+    <div class="col-sm-4 col-md-3">(주) 나스미디어</div>
+    <div class="col-sm-4 col-md-3">(주) 디엠씨미디어</div>
+    <div class="col-sm-4 col-md-3">(주) 마더브레인</div>
+    <div class="col-sm-4 col-md-3">(주) 메조미디어</div>
+    <div class="col-sm-4 col-md-3">(주) 소셜 구루</div>
+    <div class="col-sm-4 col-md-3">(주) 언와이어드코리아</div>
+    <div class="col-sm-4 col-md-3">(주) 에프닷베이직</div>
+    <div class="col-sm-4 col-md-3">(주) 엠포스</div>
+    <div class="col-sm-4 col-md-3">(주) 엠피아커뮤니케이션</div>
+    <div class="col-sm-4 col-md-3">(주) 오에이치커뮤니케이션즈</div>
+    <div class="col-sm-4 col-md-3">(주) 작시스코리아</div>
+    <div class="col-sm-4 col-md-3">(주) 커뮤니케이션소울</div>
+    <div class="col-sm-4 col-md-3">(주) 케이티엠하우스</div>
+    <div class="col-sm-4 col-md-3">(주) 허니엠인터랙티브</div>
+    <div class="col-sm-4 col-md-3">(주) 딤커뮤니케이션</div>
+    <div class="col-sm-4 col-md-3">(주) 마이테이블</div>
+    <div class="col-sm-4 col-md-3">넥스브레인 (주)</div>
+    <div class="col-sm-4 col-md-3">미스터탐커뮤니케티션즈</div>
+    <div class="col-sm-4 col-md-3">에버씨앤엠</div>
+    <div class="col-sm-4 col-md-3">에이샵커뮤니케이션</div>
+    <div class="col-sm-4 col-md-3">유씨 (UC)</div>
+    <div class="col-sm-4 col-md-3">인크로스 주식회사</div>
+    <div class="col-sm-4 col-md-3">제이앤에스</div>
+    <div class="col-sm-4 col-md-3">주식회사 네프미디어</div>
+    <div class="col-sm-4 col-md-3">주식회사 넥스트앱스</div>
+    <div class="col-sm-4 col-md-3">주식회사 더블업커뮤니케이션</div>
+    <div class="col-sm-4 col-md-3">주식회사 소셜브레인케이</div>
+    <div class="col-sm-4 col-md-3">주식회사 에그커뮤니케이션즈</div>
+    <div class="col-sm-4 col-md-3">주식회사 에스티플랜</div>
+    <div class="col-sm-4 col-md-3">주식회사 윙메이트</div>
+    <div class="col-sm-4 col-md-3">주식회사 유코프</div>
+    <div class="col-sm-4 col-md-3">주식회사 지니스커뮤니케이션</div>
+    <div class="col-sm-4 col-md-3">주식회사 케이지모빌리언스</div>
+    <div class="col-sm-4 col-md-3">주식회사 트렌디앱</div>
+    <div class="col-sm-4 col-md-3">주식회사 티앤케이팩토리</div>
+    <div class="col-sm-4 col-md-3">주식회사 폰플</div>
+    <div class="col-sm-4 col-md-3">주식회사 하이애드원</div>
+    <div class="col-sm-4 col-md-3">허밍스토리(주)</div>
+    <div class="col-sm-4 col-md-3">주식회사 윙메이트</div>
+    <div class="col-sm-4 col-md-3">(주) 딤커뮤니케이션</div>
+    <div class="col-sm-4 col-md-3">서비스인주식회사</div>
+    <div class="col-sm-4 col-md-3">주식회사 메이블</div>
+    <div class="col-sm-4 col-md-3">디노커뮤니케이션즈(주)</div>
+    <div class="col-sm-4 col-md-3">프레인</div>
+    <div class="col-sm-4 col-md-3">정원컨설팅</div>
+    <div class="col-sm-4 col-md-3">크레모아커뮤니케이션즈</div>
+    <div class="col-sm-4 col-md-3">양유</div>
+    <div class="col-sm-4 col-md-3">웨버 샌드윅 코리아</div>
+    <div class="col-sm-4 col-md-3">(주) 이엠스타</div>
+    <div class="col-sm-4 col-md-3">티제이튠 주식회사</div>
+    <div class="col-sm-4 col-md-3">(주) 아인해즈</div>
+    <div class="col-sm-4 col-md-3">스마티언</div>
+    <div class="col-sm-4 col-md-3">(주) 플레이몹스</div>
+    <div class="col-sm-4 col-md-3">레오플</div>
+    <div class="col-sm-4 col-md-3">브릭스 그룹</div>
+    <div class="col-sm-4 col-md-3">주식회사 수커뮤니케이션</div>
+    <div class="col-sm-4 col-md-3">(주) 신시아</div>
+    <div class="col-sm-4 col-md-3">(주) 씨이랩</div>
+    <div class="col-sm-4 col-md-3">(주) 더문에이앤디</div>
+    <div class="col-sm-4 col-md-3">(주) 디오텍</div>
+    <div class="col-sm-4 col-md-3">(주) 마이스</div>
+    <div class="col-sm-4 col-md-3">(주) 모바일페이스</div>
+    <div class="col-sm-4 col-md-3">(주) 뷰리플</div>
+    <div class="col-sm-4 col-md-3">(주) 비에스케이코퍼레이션</div>
+    <div class="col-sm-4 col-md-3">(주) 알앤알 코퍼레이션</div>
+    <div class="col-sm-4 col-md-3">(주) 에리트베이직</div>
+    <div class="col-sm-4 col-md-3">(주) 에스티앤컴퍼니</div>
+    <div class="col-sm-4 col-md-3">(주) 여행박사</div>
+    <div class="col-sm-4 col-md-3">(주) 오에이치커뮤니케이션즈</div>
+    <div class="col-sm-4 col-md-3">(주) 위메이드엔터테인먼트</div>
+    <div class="col-sm-4 col-md-3">(주) 티엠티알</div>
+    <div class="col-sm-4 col-md-3">(주) 넥슨코리아</div>
+    <div class="col-sm-4 col-md-3">(주) 세비아 (SEBIA CO. LTD)</div>
+    <div class="col-sm-4 col-md-3">(주) 에스와이에스리테일</div>
+    <div class="col-sm-4 col-md-3">(주) 이베이코리아</div>
+    <div class="col-sm-4 col-md-3">(주) 인터파크INT</div>
+    <div class="col-sm-4 col-md-3">(투) 투엔에프</div>
+    <div class="col-sm-4 col-md-3">듀오정보주식회사</div>
+    <div class="col-sm-4 col-md-3">메리트가구</div>
+    <div class="col-sm-4 col-md-3">아이프리스튜디오 주식회사</div>
+    <div class="col-sm-4 col-md-3">주식회사 글로우데이즈</div>
+    <div class="col-sm-4 col-md-3">주식회사 네시삼십삼분</div>
+    <div class="col-sm-4 col-md-3">주식회사 롤링스퀘어</div>
+    <div class="col-sm-4 col-md-3">주식회사 싱크싱크</div>
+    <div class="col-sm-4 col-md-3">주식회사 아이지에이웍스</div>
+    <div class="col-sm-4 col-md-3">주식회사 아이케어헬스</div>
+    <div class="col-sm-4 col-md-3">주식회사 애드웨이즈한국</div>
+    <div class="col-sm-4 col-md-3">주식회사 엑스몬 게임즈</div>
+    <div class="col-sm-4 col-md-3">주식회사 오올블루</div>
+    <div class="col-sm-4 col-md-3">주식회사 왓이프</div>
+    <div class="col-sm-4 col-md-3">주식회사 위드위시</div>
+    <div class="col-sm-4 col-md-3">주식회사 인포러스</div>
+    <div class="col-sm-4 col-md-3">주식회사 프로그램스</div>
+    <div class="col-sm-4 col-md-3">코세아 관광학원</div>
+    <div class="col-sm-4 col-md-3">코세아항공승무원학원</div>
+    <div class="col-sm-4 col-md-3">패션그룹형지(주)</div>
+    <div class="col-sm-4 col-md-3">한국생산성본부</div>
+    <div class="col-sm-4 col-md-3">한성대학교산학협력단</div>
+    <div class="col-sm-4 col-md-3">헤븐리아이디어</div>
+    <div class="col-sm-4 col-md-3">(주) 디지털조선일보</div>
+    <div class="col-sm-4 col-md-3">텐핑거스</div>
+    <div class="col-sm-4 col-md-3">이에쓰씨컴퍼니</div>
+    <div class="col-sm-4 col-md-3">넥스문</div>
+    <div class="col-sm-4 col-md-3">주식회사 퓨쳐스트림(cauly)</div>
+    <div class="col-sm-4 col-md-3">탭조이</div>
+    <div class="col-sm-4 col-md-3">(주) 스타일위키</div>
+    <div class="col-sm-4 col-md-3">서울데이트팝</div>
+    <div class="col-sm-4 col-md-3">(주) 리너스</div>
+    <div class="col-sm-4 col-md-3">애드투페이퍼</div>
+    <div class="col-sm-4 col-md-3">맥케이</div>
+    <div class="col-sm-4 col-md-3">앱하마</div>
+    <div class="col-sm-4 col-md-3">스폰서페이</div>
+    <div class="col-sm-4 col-md-3">지엔씨미디어</div>
+    <div class="col-sm-4 col-md-3">엑소더스주식회사</div>
+    <div class="col-sm-4 col-md-3">MKB KOREA</div>
+    <div class="col-sm-4 col-md-3">소프트스펠</div>
+    <div class="col-sm-4 col-md-3">주식회사 하이브로</div>
+    <div class="col-sm-4 col-md-3">위버플</div>
+</div></div>

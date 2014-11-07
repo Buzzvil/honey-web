@@ -20,6 +20,10 @@
 @import "node_modules/bootstrap/less/utilities";
 @import "node_modules/bootstrap/less/responsive-utilities";
 
+@buzzvil-black: #404041;
+@buzzvil-black-light: lighten(@buzzvil-black, 10%);
+@buzzvil-color: #B50007;
+
 @honey-background: #F5F5F5;
 @honey-border-color: #D8D1D1;
 @honey-border: 1px solid @honey-border-color;
@@ -131,7 +135,19 @@ img {
 @media (max-width: @screen-xs-max) {
     .navbar {
         background-color: @honey-color;
-        box-shadow: 0 0 3px @honey-border-color;
+        
+        &:not(.navbar-noshadow) {
+            .box-shadow(0 0 3px @honey-border-color);
+        }
+    }
+    
+    .navbar-dark {
+        background-color: @buzzvil-black;
+        
+        .navbar-toggle:hover,
+        .navbar-toggle:focus {
+            background-color: @buzzvil-black-light;
+        }
     }
     
     .navbar-nav {
@@ -152,6 +168,8 @@ img {
 @media (min-width: @screen-sm-min) {
     .navbar {
         background-color: transparent;
+        position: absolute;
+        width: 100%;
     }
     
     .navbar-text {
@@ -160,11 +178,6 @@ img {
         > a {
             padding: 18px 5px 19px 5px;
         }
-    }
-    
-    #nav-head-outer {
-        position: absolute;
-        width: 100%;
     }
 }
 
@@ -199,7 +212,7 @@ img {
             }
             
             > a:hover,
-            > a:active {
+            > a:focus {
                 color: @honey-link-alt;
             }
         }

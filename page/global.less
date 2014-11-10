@@ -127,15 +127,51 @@ img {
 
 
 ///////////////////////////////////////////////////////////////////////////////
+// Icons
+///////////////////////////////////////////////////////////////////////////////
+.ic {
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    
+    -ms-behavior: url("@{i}backgroundsize.htc");
+}
+
+.ic-logo {
+    background-image: data-uri("@{f}logo.png");
+    background-size: 221px 22px;
+}
+
+.ic-social-facebook {
+    background-image: data-uri("@{f}ic-social-facebook.png");
+    background-size: 20px 23px;
+}
+
+.ic-social-twitter {
+    background-image: data-uri("@{f}ic-social-twitter.png");
+    background-size: 20px 23px;
+}
+
+.ic-social-blog {
+    background-image: data-uri("@{f}ic-social-blog.png");
+    background-size: 20px 23px;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
 // Nav: Head
 ///////////////////////////////////////////////////////////////////////////////
 .navbar {
     border: none;
 }
 
+.navbar-brand {
+    height: 60px;
+    width: 241px;
+}
+
 .navbar-text > a {
-    display: inline-block;
-    
     .transition(~"opacity 100ms");
     
     &:hover,
@@ -172,7 +208,8 @@ img {
         width: 44px;
         
         > a {
-            padding: 10px 12px;
+            height: 44px;
+            width: 44px;
         }
     }
 }
@@ -188,7 +225,8 @@ img {
         margin: 0 -5px 0 5px;
         
         > a {
-            padding: 18px 5px 19px 5px;
+            height: 60px;
+            width: 30px;
         }
     }
 }

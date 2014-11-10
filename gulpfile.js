@@ -52,6 +52,7 @@ gulp.task("styles", ["i18n"], l10nify(function (l10n) {
         globalVars: l10nObj[l10n].style
     };
     
+    opts.globalVars.f = JSON.stringify("../file/");
     opts.globalVars.i = JSON.stringify("/i/");
     opts.globalVars.I = JSON.stringify("/i/" + l10n + "/");
     
@@ -142,6 +143,6 @@ gulp.task("watch", ["styles", "scripts", "pages"], function () {
                 }
             }
         }))
-        .use("/i", express.static("../honeyscreen-website-media"))
+        .use("/i", express.static("file"))
         .listen(9100);
 });

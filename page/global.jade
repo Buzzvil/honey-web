@@ -43,19 +43,17 @@ html(lang=meta.code)
         
         block content
         
-        div#nav-foot-outer
-            div.backdrop
-            nav.container#nav-foot(role="navigation")
-                ul.nav-left
-                    li © Buzzvil
-                    li: a(href="/terms") #{footer.terms}
-                    li: a(href="/privacy") #{footer.privacy}
-                
-                ul.nav-right
-                    li: a(rel="alternate", href="//en.honeyscreen.com", hreflang="en") English
-                    li: a(rel="alternate", href="//ko.honeyscreen.com", hreflang="ko") 한국어
-                    li: a(rel="alternate", href="//ja.honeyscreen.com", hreflang="ja") 日本語
-                    li: a(rel="alternate", href="//zh-tw.honeyscreen.com", hreflang="zh-TW") 繁體字
+        nav#nav-foot-outer(role="navigation"): div.container#nav-foot
+            ul.nav-left
+                li © Buzzvil
+                li: a(href="/terms") #{footer.terms}
+                li: a(href="/privacy") #{footer.privacy}
+            
+            ul.nav-right
+                li: a(rel="alternate", href="//en.honeyscreen.com", hreflang="en") English
+                li: a(rel="alternate", href="//ko.honeyscreen.com", hreflang="ko") 한국어
+                li: a(rel="alternate", href="//ja.honeyscreen.com", hreflang="ja") 日本語
+                li: a(rel="alternate", href="//zh-tw.honeyscreen.com", hreflang="zh-TW") 繁體字
         
         script(src="/global.js", async)
         script.

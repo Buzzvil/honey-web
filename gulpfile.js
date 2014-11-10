@@ -6,6 +6,7 @@ var fs = require("fs");
 var gulp = require("gulp");
 var gzip = require("gulp-gzip");
 var hl = require("highland");
+var imagemin = require("gulp-imagemin");
 var jade = require("gulp-jade");
 var less = require("gulp-less");
 var marked = require("marked");
@@ -119,6 +120,12 @@ gulp.task("upload", ["styles", "scripts", "pages"], l10nify(function (l10n) {
             });
         });
 }));
+
+gulp.task("files", function () {
+    return gulp.src("file/**/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("file"));
+});
 
 gulp.task("watch", ["styles", "scripts", "pages"], function () {
     gulp.watch("l10n/*.*", ["styles", "pages"]);

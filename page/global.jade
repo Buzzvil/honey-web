@@ -1,4 +1,5 @@
-- var navbarOpts = ["navbar", "navbar-default", "navbar-static-top"]
+- var navPage = ""
+- var navOpts = ["navbar", "navbar-default", "navbar-static-top"]
 
 mixin break(arr, postfix)
     each str in arr
@@ -19,7 +20,7 @@ html(lang=meta.code)
         <![endif]-->
     
     body
-        nav(class=navbarOpts, role="navigation"): div.container
+        nav(class=navOpts, role="navigation"): div.container
             div.navbar-header
                 button.navbar-toggle.collapsed(data-toggle="collapse", data-target=".navbar-collapse")
                     span.icon-bar
@@ -30,11 +31,11 @@ html(lang=meta.code)
             
             div.collapse.navbar-collapse.navbar-right
                 ul.nav.navbar-nav
-                    li: a(href="/#index-video") #{header.intro}
-                    li: a(href="/support") #{header.support}
-                    li: a(href="/advertise") #{header.advertise}
-                    li: a(href="/about") #{header.about}
-                    li: a(href="http://www.adhours.com/partner_user/login/") #{header.signin}
+                    li(class=navPage === "index" && "active"): a(href="/#index-video") #{header.intro}
+                    li(class=navPage === "support" && "active"): a(href="/support") #{header.support}
+                    li(class=navPage === "advertise" && "active"): a(href="/advertise") #{header.advertise}
+                    li(class=navPage === "about" && "active"): a(href="/about") #{header.about}
+                    li: a(href=contact.adadmin) #{header.signin}
                 
                 p.navbar-text
                     a.ic.ic-social-facebook(href=contact.facebook, target="_blank")

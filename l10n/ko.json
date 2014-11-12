@@ -20,7 +20,7 @@
         "privacy": "개인정보취급방침"
     },
     "contact": {
-        "email": "",
+        "adadmin": "http://www.adhours.com/partner_user/login/",
         "facebook": "",
         "twitter": "",
         "blog": "",
@@ -134,6 +134,7 @@
                     ]
                 }]
             },
+            
             "points": {
                 "name": "적립금",
                 "list": [{
@@ -167,6 +168,7 @@
                     ]
                 }]
             },
+            
             "referral": {
                 "name": "추천인",
                 "list": [{
@@ -199,6 +201,7 @@
                     ]
                 }]
             },
+            
             "service": {
                 "name": "서비스 이용",
                 "list": [{
@@ -257,6 +260,7 @@
                     ]
                 }]
             },
+            
             "account": {
                 "name": "계정",
                 "list": [{
@@ -284,6 +288,7 @@
                     ]
                 }]
             },
+            
             "abuse": {
                 "name": "불법유저신고",
                 "list": [{
@@ -308,6 +313,58 @@
                 "고객센터로 문의해주세요!"
             ],
             "btn": "문의하기"
+        }
+    },
+    
+    "advertise": {
+        "intro": {
+            "sub": "스마트폰 첫 화면에서 인기 컨텐츠를 골라보는",
+            "big": "스마트 모바일 미디어 허니스크린",
+            "intro": "매체소개서",
+            "guide": "제작가이드"
+        },
+        
+        "benefits": {
+            "big": "높은 주목도와 광고 효과",
+            "ctr_big": "띠배너 대비 월등한 CTR",
+            "ctr_sub": "평균 CTR 10%로 띠배너의 10배 이상",
+            "valid_big": "낮은 무효 클릭율",
+            "valid_sub": "직관적인 UI로 실수로 인한 클릭이 발생할 가능성이 낮습니다",
+            "brand_big": "탁월한 브랜드 각인 효과",
+            "brand_sub": "스크린 전면을 활용한 Full Size 광고 효과 노출로 정보와 메세지 전달이 용이"
+        },
+        
+        "cpm": {
+            "big": "트래픽 유입, 구매 전환t, 브랜딩이 목적인 광고 상품",
+            "apps": "앱 마켓",
+            "ecomm": "쇼핑몰",
+            "social": "페이스북"
+        },
+        
+        "cpa": {
+            "big": "광고 참여를 유도하기 위해 보상을 제공하는 광고",
+            "sub": "앱 설치, 페이스북 좋아요, 회원 가입, 동영상 시청 등"
+        },
+        
+        "partners": {
+            "big": "업계를 선도하는 대표 기업들과 함께 하고 있습니다"
+        },
+        
+        "contact": {
+            "sales": [{
+                "name": "이창영 영업 이사",
+                "mail": "ajay@buzzvil.com",
+                "tel": "070 4632 2137",
+                "fax": "02 6499 5513"
+            }, {
+                "name": "최지성 매니저",
+                "mail": "jiseongchoi@buzzvil.com",
+                "tel": "070 4632 2354",
+                "fax": "02 6499 5513"
+            }],
+            "address": "서울특별시 송파구 석촌호수로 272 (송파동 32, 대림빌딩 3층)",
+            "maplink": "https://www.google.com/maps/place/272+Seokchonhosu-ro,+Songpa-gu,+Seoul,+South+Korea/@37.5099336,127.1059156,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca59fc2df4013:0x27d10e76d956e776",
+            "mapcode": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12659.658171349469!2d127.1059156!3d37.509933649999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca59fc2df4013%3A0x27d10e76d956e776!2s272+Seokchonhosu-ro%2C+Songpa-gu%2C+Seoul%2C+South+Korea!5e0!3m2!1sen!2s!4v1415261314226"
         }
     },
     

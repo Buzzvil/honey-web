@@ -228,13 +228,14 @@ img {
 ///////////////////////////////////////////////////////////////////////////////
 // Nav: Foot
 ///////////////////////////////////////////////////////////////////////////////
-#nav-foot-outer {
-    background-color: @buzzvil-black-light;
+footer {
+    background-color: #999;
     color: #FFF;
     font-size: @font-size-small;
+    text-align: center;
 }
 
-#nav-foot > ul {
+footer > nav > ul {
     margin: 0;
     padding: 0;
     
@@ -242,11 +243,11 @@ img {
         display: inline-block;
         margin: 19px 15px 20px 15px;
         
-        &:first-child {
+        &.first-child {
             margin-left: 0;
         }
         
-        &:last-child {
+        &.last-child {
             margin-right: 0;
         }
         
@@ -258,22 +259,20 @@ img {
 }
 
 @media (max-width: @screen-xs-max) {
-    #nav-foot {
-        text-align: center;
-        
-        > ul + ul {
-            margin-top: -20px;
-        }
+    footer > nav > ul.last-child {
+        margin-top: -20px;
     }
 }
 
 @media (min-width: @screen-sm-min) {
-    #nav-foot > :first-child {
-        float: left;
-    }
-    
-    #nav-foot > :last-child {
-        float: right;
+    footer > nav > ul {
+        &.first-child {
+            float: left;
+        }
+        
+        &.last-child {
+            float: right;
+        }
     }
 }
 
@@ -441,7 +440,7 @@ img {
         padding: 20px;
         
         &:first-child,
-        &.first {
+        &.first-child {
             border: none;
         }
     }
@@ -647,12 +646,12 @@ img {
             margin: 60px 0;
         }
         
-        > div > :first-child {
+        .first-child {
             padding-right: 30px;
             text-align: right;
         }
         
-        > div > :last-child {
+        .last-child {
             padding-left: 30px;
             text-align: left;
         }

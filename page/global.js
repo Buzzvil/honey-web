@@ -1,8 +1,8 @@
 var resetList = function (q, a) {
-    $("#support-faqs > a").hide().removeClass("first");
+    $("#support-faqs > a").hide().removeClass("first-child");
     $("#support-faqs > div").removeClass("in").css("height", "");
     
-    q.show().first().addClass("first");
+    q.show().first().addClass("first-child");
     a.addClass("in");
 };
 

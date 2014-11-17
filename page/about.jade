@@ -7,7 +7,7 @@ block meta
     title #{header.about} - #{meta.title}
 
 block content
-    div#about-intro-outer: div.container#about-intro
+    div#about-intro-outer: div.container-fluid#about-intro
         img.img-responsive.center-block(src="#{i}about/buzzvil.png", width="356", height="92")
         
         h2.break-maybe: +break(["We're a team of people who aspire to", "change the world by dreaming the impossible"])
@@ -16,7 +16,7 @@ block content
             div.col-xs-6.first-child: a.btn(href="http://buzzvil.com") Buzzvil.com
             div.col-xs-6.last-child: a.btn(href="http://blog.buzzvil.com") Buzzvil Blog
     
-    div.container#about-main
+    div.container-fluid#about-main
         div.blip
         h3.break-maybe: +break(about.sub)
         

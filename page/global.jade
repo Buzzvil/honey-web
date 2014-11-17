@@ -20,7 +20,7 @@ html(lang=meta.code)
         <![endif]-->
     
     body
-        nav(class=navOpts): div.container
+        nav(class=navOpts): div.container-fluid
             div.navbar-header
                 button.navbar-toggle.collapsed(data-toggle="collapse", data-target=".navbar-collapse")
                     span.icon-bar
@@ -44,7 +44,7 @@ html(lang=meta.code)
         
         block content
         
-        footer: nav.container
+        footer: nav.container-fluid
             ul.first-child
                 li.first-child © Buzzvil
                 li: a(href="/terms") #{footer.terms}

@@ -31,16 +31,18 @@ html(lang=meta.code)
             
             div.collapse.navbar-collapse.navbar-right
                 ul.nav.navbar-nav
-                    li(class=navPage === "index" && "active"): a(href="/#index-video") #{header.intro}
                     li(class=navPage === "support" && "active"): a(href="/support") #{header.support}
                     li(class=navPage === "advertise" && "active"): a(href="/advertise") #{header.advertise}
                     li(class=navPage === "about" && "active"): a(href="/about") #{header.about}
                     li: a(href=contact.adadmin) #{header.signin}
                 
                 p.navbar-text
-                    a.ic.ic-social-facebook(href=contact.facebook, target="_blank")
-                    a.ic.ic-social-twitter(href=contact.twitter, target="_blank")
-                    a.ic.ic-social-blog(href=contact.blog, target="_blank")
+                    if contact.facebook
+                        a.ic.ic-social-facebook(href=contact.facebook, target="_blank")
+                    if contact.twitter
+                        a.ic.ic-social-twitter(href=contact.twitter, target="_blank")
+                    if contact.blog
+                        a.ic.ic-social-blog(href=contact.blog, target="_blank")
         
         block content
         

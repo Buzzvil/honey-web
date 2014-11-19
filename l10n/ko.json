@@ -9,7 +9,6 @@
     },
     
     "header": {
-        "intro": "서비스소개",
         "support": "고객문의",
         "advertise": "광고문의",
         "about": "회사소개",
@@ -21,11 +20,11 @@
     },
     "contact": {
         "adadmin": "http://www.adhours.com/partner_user/login/",
-        "facebook": "",
-        "twitter": "",
-        "blog": "",
-        "googlestore": "",
-        "applestore": ""
+        "facebook": "https://www.facebook.com/Honeyscreen",
+        "twitter": "https://twitter.com/honeyscreen",
+        "blog": "http://blog.naver.com/honeyscreen",
+        "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.adhours&referrer=homepage",
+        "applestore": "https://itunes.apple.com/kr/app/honeyscreen/id591658676?mt=8"
     },
     
     "index": {
@@ -106,7 +105,7 @@
                     "a": [
                         "<문화상품권>",
                         "본 상품은 컬쳐랜드 홈페이지에서만 사용 할 수 있는 모바일쿠폰입니다.",
-                        "컬쳐랜드홈페이지 가입 후 로그인->화면 우측 \"컬쳐캐쉬충전\"클릭 ->모바일로 전송받으신 쿠폰번호 입력->충전하기->온라인 사용처에서 사용",
+                        "컬쳐랜드홈페이지 가입 후 로그인->화면 우측 “컬쳐캐쉬충전”클릭 ->모바일로 전송받으신 쿠폰번호 입력->충전하기->온라인 사용처에서 사용",
                         "",
                         "＜해피머니상품권＞",
                         "구매하신 핀번호 / 발행일을 확인->핀번호/발행일을 입력하여 해피캐시로 충전(회원가입필수)->본인의 인증방법 확인 후 캐시 잠금 풀기 진행->",
@@ -136,7 +135,7 @@
                 }, {
                     "q": "환급은 어디서 신청하나요?",
                     "a": [
-                        "허니스크린->홈->스토어->상단 카테고리 중 \"환급\" 에서 신청 가능합니다."
+                        "허니스크린->홈->스토어->상단 카테고리 중 “환급” 에서 신청 가능합니다."
                     ]
                 }, {
                     "q": "환급은 얼마부터 가능한가요?",
@@ -235,7 +234,7 @@
                 }]
             },
             
-            "service": {
+            "usage": {
                 "name": "서비스 이용",
                 "list": [{
                     "q": "날씨 정보에 대해 설명해 주세요.",

@@ -2,22 +2,24 @@
     "meta": {
         "code": "en",
         "bucket": "com.honeyscreen.en",
-        "cloudkey": "E2ZQ9P41RBE10E",
         "title": "Honeyscreen"
+    },
+    "style": {
+        "l10n-font-family": "'Noto Sans', 'Open Sans', sans-serif"
     },
     
     "header": {
-        "intro": "Intro",
-        "support": "FAQs",
-        "company": "About",
-        "advertise": "Advertise"
+        "support": "Support",
+        "advertise": "Advertise",
+        "about": "About",
+        "signin": "Sign in"
     },
     "footer": {
         "terms": "Terms of Service",
         "privacy": "Privacy Policy"
     },
     "contact": {
-        "email": "",
+        "adadmin": "http://www.adhours.com/partner_user/login/",
         "facebook": "",
         "twitter": "",
         "blog": "",
@@ -34,15 +36,310 @@
             ]
         },
         
-        "outro": {
-            "big": "무료로 경험하는 모바일 세상",
+        "content": {
+            "big": [
+                "The latest news and popular content.",
+                "See what you want, when you want!"
+            ],
             "sub": [
-                "통신비, 음악 감상, 게임, 영화 예매 등",
-                "사람들이 스마트폰을 사용하면서",
-                "돈을 내는 이 모든 것들을",
-                "공짜로 이용할 수 있게 하는 것,",
-                "이것이 바로 저희가 꿈꾸는 꿈입니다"
+                "Get quick and easy access to current news, useful lifestyle tips,",
+                "and viral content, right from your lock screen!"
+            ]
+        },
+        
+        "points": {
+            "big": [
+                "Use your smartphone like you always do,",
+                "and watch your points add up in no time."
+            ],
+            "sub": [
+                "You accumulate points every hour,",
+                "just by unlocking your phone. It’s that easy!"
+            ]
+        },
+        
+        "store": {
+            "big": [
+                "Spend your points like cash!"
+            ],
+            "sub": [
+                "Using your points is easy!",
+                "Redeem them for cash or for products you love."
+            ]
+        },
+        
+        "outro": {
+            "big": "Experience more on mobile at a lower cost.",
+            "sub": [
+                "Your cell phone bill. Music streaming. Games. Movie tickets.",
+                "All these things that most smartphone users pay for,",
+                "we want you to experience for free.",
+                "This is our dream. We invite you to be a part of it."
             ]
         }
+    },
+    
+    "support": {
+        "intro": {
+            "big": "FAQs",
+            "sub": [
+                "If you have any questions about Honeyscreen,",
+                "please take a look at the questions and answers below."
+            ]
+        },
+        
+        "search": "Please enter your question...",
+        
+        "faqs": {
+            "store": {
+                "name": "Store",
+                "list": [{
+                    "q": "Where can I find the coupons I’ve purchased?",
+                    "a": [
+                        "Any products you’ve purchased from the Store can be found in your Coupon Box.",
+                        "In our Android app, you can find the Coupon Box from the menu at the top right of the screen.",
+                        "In our iPhone app, you can find the Coupon Box from the menu at the top left of the screen."
+                    ]
+                }, {
+                    "q": "Why do I get the message of “Purchase failure / limit has been exceeded”?",
+                    "a": [
+                        "If there is an error in purchasing a product, this is usually due to one of two reasons:",
+                        "The first reason is if your account and/or points have been suspended due to misuse of our service. If you believe this is the case, please send us an email with the email address and Nickname you registered with for your Honeyscreen account and your contact information, and we will follow up with further details.",
+                        "The second reason may be that you’ve changed your personal information or there is a temporary error. Please reinstall the app to continue using Honeyscreen as usual."
+                    ]
+                }, {
+                    "q": "Do I get my coupon via SMS after I’ve purchased a product?",
+                    "a": [
+                        "Any products you’ve purchased are sent to your Coupon Box.",
+                        "In our Android app, you can find the Coupon Box from the menu at the top right of the screen.",
+                        "In our iPhone app, you can find the Coupon Box from the menu at the top left of the screen."
+                    ]
+                }]
+            },
+            "points": {
+                "name": "Points",
+                "list": [{
+                    "q": "Why am I not receiving the automatic points for unlocking my smartphone?",
+                    "a": [
+                        "The automatic points that you receive for unlocking your smartphone are provided one time per hour. If your network connection is unstable, this may also prevent you from receiving your hourly points.",
+                        "Even with a strong wifi connection, there may be temporary errors in accessing the network, which may prevent point accumulation. We recommend turning off your wifi and accessing the network again."
+                    ]
+                }, {
+                    "q": "I engaged with an ad but I didn’t receive the extra points.",
+                    "a": [
+                        "If you have not received the points for participating in an ad, we first confirm the channel and if there has been an error, we manually add your points.",
+                        "Please send us an email with the corresponding ad campaign, your email address, Nickname, mobile phone number, and a screenshot confirming your participation.",
+                        "(For App Installs, Ad Participation, Level Achievement, Facebook Like, Shares, etc., we require a screenshot that shows that you’ve completed engaging with the ad to be able to manually add your points.)"
+                    ]
+                }, {
+                    "q": "I made a Referral, but I didn’t receive the Referral Points.",
+                    "a": [
+                        "If you have not received your Referral Points, please confirm the following:",
+                        "1. Has the person you referred ever listed any one else as a Referee?",
+                        "2. Has the Referee Nickname been entered correctly?",
+                        "3. Is this the first time you’re signing up for Honeyscreen?",
+                        "",
+                        "We only provide Referral Points one time for each mobile phone number and device.",
+                        "If you’ve ever signed up for Honeyscreen before and already listed a Referee, even if you delete your account and sign up again on the same device with a new Referee, you do not receive Referral Points a second time.",
+                        "Furthermore, if you create two accounts with the same device, the second account is not eligible for Referral Points.",
+                        "This is a measure to prevent misuse of Honeyscreen for multiple Referral Points, and we appreciate your understanding.",
+                        "",
+                        "If this is not due to any of the above reasons, please email us with your Nickname and the Nickname(s) of whoever has listed you as a Referee."
+                    ]
+                }]
+            },
+            "referral": {
+                "name": "Referrals",
+                "list": [{
+                    "q": "How do I enter a Referee?",
+                    "a": [
+                        "When you register for a new account, please enter the Nickname of your Referee accurately in the space provided."
+                    ]
+                }, {
+                    "q": "Is it possible to cancel my Referee?",
+                    "a": [
+                        "Once you complete your registration, you are unable to edit or cancel your Referee Nickname. If you have determined that your Referee may be misusing Honeyscreen and would like to cancel your Referral, please include a screenshot and send us a report by email."
+                    ]
+                }, {
+                    "q": "Where can I see my Referral Profiles, Referral Name Card, Messages, Gift Box, etc.?",
+                    "a": [
+                        "Honeyscreen does not currently have any features to view, message, or send gifts to your Referrals. This is because there are occasionally people who use this information to misuse our service. We take strong actions against those that misuse Honeyscreen in this way. If you see any violations of Honeyscreen, please report the incident with a screenshot so that we can provide a better Honeyscreen user experience for you."
+                    ]
+                }, {
+                    "q": "Is there a daily limit for how many Referral Points you can get?",
+                    "a": [
+                        "There is no limit."
+                    ]
+                }]
+            },
+            "usage": {
+                "name": "Usage",
+                "list": [{
+                    "q": "Please explain the weather information feature.",
+                    "a": [
+                        "Honeyscreen provides current weather information and forecast as confirmed by the National Weather Service."
+                    ]
+                }, {
+                    "q": "Is the weather information updated in real time?",
+                    "a": [
+                        "No, the weather information is updated once an hour."
+                    ]
+                }, {
+                    "q": "Is the weather information updated based on my current location?",
+                    "a": [
+                        "Honeyscreen provides weather information based on the location you selected when you created your account."
+                    ]
+                }, {
+                    "q": "What does it mean to “Sign up with Facebook”?",
+                    "a": [
+                        "For those that want to sign up for Honeyscreen without entering in all their information, you’re able to start using Honeyscreen immediately with your Facebook account."
+                    ]
+                }, {
+                    "q": "Does this mean I can no longer use my previous account?",
+                    "a": [
+                        "No. If you have previously registered with an email address, you can sign in with your existing email address and password."
+                    ]
+                }, {
+                    "q": "Can I use Honeyscreen with both my Facebook account and with my email address?",
+                    "a": [
+                        "Please only use one account. You are not able to use Honeyscreen with two accounts simultaneously, so by using two separate accounts, it will take you longer to accumulate points that you can redeem in the Store."
+                    ]
+                }, {
+                    "q": "I clicked “Sign up with Facebook” but it says this email address is already in use.",
+                    "a": [
+                        "It looks like you’ve already signed up for Honeyscreen! You will see this message if the email address that you originally used to register for Honeyscreen is the same as the email address you use for your Facebook account.",
+                        "If this is your correct email address, please reset your password through the in-app menu and sign in with your existing account."
+                    ]
+                }, {
+                    "q": "If I switch to a different device, do my existing points disappear?",
+                    "a": [
+                        "If you re-install Honeyscreen on your new device and log in with your account, you can continue using Honeyscreen with your existing data."
+                    ]
+                }, {
+                    "q": "Does Honeyscreen use up a lot of battery life?",
+                    "a": [
+                        "Using Honeyscreen may slightly increase your average battery consumption, but not by a significant account."
+                    ]
+                }, {
+                    "q": "Does Honeyscreen use up a lot of my data?",
+                    "a": [
+                        "In order to ensure efficient data consumption for our users, Honeyscreen loads the lock screen images when you have access to a wifi connection.",
+                        "Only when there is no lock screen image ready for the next hour and you are not within a wifi connection will Honeyscreen inevitably use data to load the images.",
+                        "Even in this case, we minimize the file size of the images to minimize our users’ data consumption.",
+                        "For the most efficient data usage, we recommend that you enable access to a wifi connection at least once a day."
+                    ]
+                }]
+            },
+            "account": {
+                "name": "Account",
+                "list": [{
+                    "q": "Why do I need to enter my information?",
+                    "a": [
+                        "In order to provide you with the content and images that are of interest to you, we request that you enter your personal information as accurately as possible."
+                    ]
+                }, {
+                    "q": "How do I delete my account?",
+                    "a": [
+                        "You are able to delete your account from the menu within the Honeyscreen app by going to Settings > Delete Account.",
+                        "Please note that once you delete your account, all of your personal information and data, including any accumulated points, cannot be recovered. In addition, after you’ve deleted your account, you will not be able to sign up for a new account for 3 months."
+                    ]
+                }, {
+                    "q": "Where can I view my Page or Profile?",
+                    "a": [
+                        "Honeyscreen does not have a “My Page” section.",
+                        "From the in-app menu, you can go to Settings to view your own profile and account information.",
+                        "In addition, for the privacy and security of personal data, Honeyscreen does not authorize access to profiles or user information other than your own."
+                    ]
+                }, {
+                    "q": "Can I change my email address or Nickname?",
+                    "a": [
+                        "Once you complete your registration, please note that you will not be able to edit or change your email address or Nickname."
+                    ]
+                }]
+            },
+            "abuse": {
+                "name": "Abuse",
+                "list": [{
+                    "q": "How do I report a violation or abuse of Honeyscreen?",
+                    "a": [
+                        "Please send an email to contact@honeyscreen.com to report the nature of the violation and include a screenshot that can identify the user’s Nickname."
+                    ]
+                }, {
+                    "q": "What actions are taken once a violation has been reported?",
+                    "a": [
+                        "Once we receive a report of abuse on Honeyscreen, we first review the report and take appropriate measures when the violation has been verified.",
+                        "If we confirm that a user has violated our terms of service, we may take actions such as suspending the user’s account, freezing their points, or restricting them from creating a new account.",
+                        "We enforce strict restrictions for those who abuse or violate our service, and we appreciate your cooperation in reporting these cases. Help us make Honeyscreen better for you!"
+                    ]
+                }]
+            }
+        },
+        
+        "contact": {
+            "sub": [
+                "Don’t see your question in our FAQs?",
+                "Please reach out to us!"
+            ],
+            "btn": "Contact Us"
+        }
+    },
+    
+    "advertise": {
+        "intro": {
+            "sub": "Popular Content on the First Screen of Mobile",
+            "big": "Smart Mobile Media",
+            "intro": "Service Intro",
+            "guide": "Design Guide"
+        },
+        
+        "benefits": {
+            "big": "Get Users’ Full Attention",
+            "ctr_big": "Superior CTR compared to banner ads",
+            "ctr_sub": "The average CTR is 10%, 10x higher than banner ads",
+            "valid_big": "Low rate of invalid clicks",
+            "valid_sub": "Due to our intuitive UI, the likelihood of misclicks is extremely low",
+            "brand_big": "Outstanding brand boosting",
+            "brand_sub": "With full-sized ads, it’s easy to deliver your message to users"
+        },
+        
+        "cpm": {
+            "big": "Increase traffic, conversion, and branding",
+            "apps": "App stores",
+            "ecom": "eCommerce",
+            "social": "Facebook"
+        },
+        
+        "cpa": {
+            "big": "Increase user engagement with incentivized ads",
+            "sub": "Installs, Likes, Signups, Views, etc."
+        },
+        
+        "partners": {
+            "big": "We work with industry-leading brands and businesses."
+        },
+        
+        "contact": {
+            "sales": [{
+                "name": "Psy Lee, Sales Director",
+                "mail": "ajay@buzzvil.com",
+                "tel": "070 4632 2137",
+                "fax": "02 6499 5513"
+            }, {
+                "name": "Chloe Choi, Manager",
+                "mail": "jiseongchoi@buzzvil.com",
+                "tel": "070 4632 2354",
+                "fax": "02 6499 5513"
+            }],
+            "address": "서울특별시 송파구 석촌호수로 272 (송파동 32, 대림빌딩 3층)",
+            "maplink": "https://www.google.com/maps/place/272+Seokchonhosu-ro,+Songpa-gu,+Seoul,+South+Korea/@37.5099336,127.1059156,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca59fc2df4013:0x27d10e76d956e776",
+            "mapcode": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12659.658171349469!2d127.1059156!3d37.509933649999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca59fc2df4013%3A0x27d10e76d956e776!2s272+Seokchonhosu-ro%2C+Songpa-gu%2C+Seoul%2C+South+Korea!5e0!3m2!1sen!2s!4v1415261314226"
+        }
+    },
+    
+    "about": {
+        "sub": [
+            "Honeyscreen aims to captivate users on their smartphones’",
+            "first screens. Join us on this journey!"
+        ]
     }
 }

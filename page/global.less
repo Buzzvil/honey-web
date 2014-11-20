@@ -152,7 +152,7 @@ img {
 ///////////////////////////////////////////////////////////////////////////////
 .btn-black {
     .button-size(6px; 32px; @font-size-large; @line-height-large; @border-radius-base);
-    .button-variant(#FFF; #6D6D6D; #6D6D6D);
+    .button-variant(#FFF; @honey-color; @honey-color);
     .transition(~"background-color 100ms");
 }
 
@@ -162,12 +162,13 @@ img {
     border-radius: @border-radius-base;
     color: #FFF;
     
-    .transition(~"border-color 100ms, color 100ms");
+    .transition(~"background-color 100ms");
     
     &:hover,
     &:focus {
-        border-color: @honey-color;
-        color: @honey-color;
+        background-color: #AAA;
+        background-color: rgba(255, 255, 255, 0.30);
+        color: #FFF;
     }
 }
 
@@ -248,7 +249,7 @@ img {
     
     &:hover,
     &:focus {
-        .opacity(0.75);
+        .opacity(0.70);
     }
 }
 
@@ -571,14 +572,14 @@ footer > nav > ul {
         background-image: url("@{i}support/bg-head.jpg");
         background-position: center top;
         background-repeat: no-repeat;
-        background-size: cover;
+        // TODO background-size: 100%;
         padding: 90px 0 30px 0;
     }
     
     #support-inner {
         > h1 {
             border-right: @honey-border;
-            border-right-color: rgba(255, 255, 255, 0.25);
+            border-right-color: rgba(255, 255, 255, 0.30);
             color: #FFF;
             display: inline-block;
             font-size: 48px;
@@ -745,7 +746,7 @@ footer > nav > ul {
         background-image: url("@{i}other/bg-head.jpg");
         background-position: center top;
         background-repeat: no-repeat;
-        background-size: cover;
+        // TODO background-size: cover;
         padding: 90px 0 30px 0;
     }
     

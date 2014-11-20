@@ -20,11 +20,11 @@
     },
     "contact": {
         "adadmin": "http://www.adhours.com/partner_user/login/",
-        "facebook": "",
-        "twitter": "",
-        "blog": "",
-        "googlestore": "",
-        "applestore": ""
+        "facebook": "https://www.facebook.com/Honeyscreen",
+        "twitter": "https://twitter.com/honeyscreen",
+        "blog": "http://blog.naver.com/honeyscreen",
+        "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.adhours&referrer=homepage",
+        "applestore": "https://itunes.apple.com/kr/app/honeyscreen/id591658676?mt=8"
     },
     
     "index": {

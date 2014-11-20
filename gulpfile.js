@@ -18,6 +18,8 @@ aws.config.update({
     region: "ap-northeast-1"
 });
 
+var IMAGES = "/i1/";
+
 var putObject = hl.wrapCallback(new aws.S3().putObject.bind(new aws.S3()));
 
 var l10nObj = {};
@@ -52,9 +54,10 @@ gulp.task("styles", ["i18n"], l10nify(function (l10n) {
         globalVars: l10nObj[l10n].style
     };
     
-    opts.globalVars.f = JSON.stringify("../file/");
-    opts.globalVars.i = JSON.stringify("/i/");
-    opts.globalVars.I = JSON.stringify("/i/" + l10n + "/");
+    opts.globalVars.l10n = JSON.stringify(l10n);
+    opts.globalVars.f = JSON.stringify("../file/_/");
+    opts.globalVars.i = JSON.stringify(IMAGES + "_/");
+    opts.globalVars.I = JSON.stringify(IMAGES + l10n + "/");
     
     return gulp.src("page/*.less")
         .pipe(less(opts))
@@ -86,8 +89,8 @@ gulp.task("pages", ["i18n"], l10nify(function (l10n) {
         locals: l10nObj[l10n]
     };
     
-    opts.locals.i = "/i/";
-    opts.locals.I = "/i/" + l10n + "/";
+    opts.locals.i = IMAGES + "_/";
+    opts.locals.I = IMAGES +  l10n + "/";
     opts.locals.gakey = process.env.GANALYTICS_KEY;
     
     return gulp.src("page/!(global).jade")
@@ -143,6 +146,6 @@ gulp.task("watch", ["styles", "scripts", "pages"], function () {
                 }
             }
         }))
-        .use("/i", express.static("file"))
+        .use(IMAGES, express.static("file"))
         .listen(9100);
 });

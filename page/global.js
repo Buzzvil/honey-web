@@ -7,6 +7,10 @@ var resetList = function (q, a) {
 };
 
 $("#support-search").keystop(function () {
+    if (!$(this).data("listen")) {
+        return $(this).data("listen", true);
+    }
+    
     var query = $.trim(this.value.toLowerCase());
     
     if (!query) {
@@ -21,10 +25,10 @@ $("#support-search").keystop(function () {
     var a = results.filter("div");
     
     resetList(q.add(a.prev()), a.add(q.next()));
-}, 250);
+}, 250).data("listen", true);
 
 $("#support-buttons").on("click", "a", function () {
-    $("#support-search").val("");
+    $("#support-search").data("listen", false).val("");
     
     resetList($("#support-faqs > a[data-target^='" + $(this).attr("href") + "']"), $());
     

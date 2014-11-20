@@ -110,6 +110,7 @@ img {
 }
 
 .blip {
+    background-color: @honey-color;
     border-radius: @border-radius-base;
     height: 3px;
     width: 30px;
@@ -202,16 +203,15 @@ img {
 // Icons
 ///////////////////////////////////////////////////////////////////////////////
 .ic {
+    -ms-behavior: url("@{i}backgroundsize.htc");
     background-position: center;
     background-repeat: no-repeat;
     display: block;
     float: left;
-    
-    -ms-behavior: url("@{i}backgroundsize.htc");
 }
 
 .ic-logo {
-    background-image: data-uri("@{f}logo.png");
+    background-image: data-uri("@{f}lg-honeyscreen.png");
     background-size: 221px 22px;
 }
 
@@ -567,9 +567,11 @@ footer > nav > ul {
 
 @media (min-width: @screen-sm-min) {
     #support-outer {
+        -ms-behavior: url("@{i}backgroundsize.htc");
         background-image: url("@{i}support/bg-head.jpg");
         background-position: center top;
         background-repeat: no-repeat;
+        background-size: cover;
         padding: 90px 0 30px 0;
     }
     
@@ -669,6 +671,7 @@ footer > nav > ul {
 
 @media (min-width: @screen-sm-min) {
     #about-intro-outer {
+        -ms-behavior: url("@{i}backgroundsize.htc");
         background-image: url("@{i}about/bg-head.jpg");
         background-position: center top;
         background-repeat: no-repeat;
@@ -738,9 +741,11 @@ footer > nav > ul {
 
 @media (min-width: @screen-sm-min) {
     #other-outer {
+        -ms-behavior: url("@{i}backgroundsize.htc");
         background-image: url("@{i}other/bg-head.jpg");
         background-position: center top;
         background-repeat: no-repeat;
+        background-size: cover;
         padding: 90px 0 30px 0;
     }
     

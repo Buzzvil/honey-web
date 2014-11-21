@@ -12,7 +12,7 @@ block content
         
         input.form-control#support-search(type="search", placeholder=support.search, autofocus)
         
-        div.container-fluid: div.row#support-buttons
+        div.clearfix#support-buttons
             each cat, key in support.faqs
                 div.col-xs-4.col-sm-2: a(href="#q-#{key}")
                     div: img(src="#{i}support/ic-#{key}.png", width="61", height="61")

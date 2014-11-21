@@ -47,11 +47,11 @@
 
 @input-color-placeholder: @honey-border-color;
 
+@grid-gutter-width: 60px;
+
 @navbar-height: 60px;
 @navbar-margin-bottom: 0;
-@navbar-padding-horizontal: 10px;
 
-@navbar-default-border: #FFF;
 @navbar-default-link-color: #FFF;
 @navbar-default-link-hover-color: @honey-link-alt;
 @navbar-default-link-active-color: @honey-link-alt;
@@ -165,7 +165,8 @@ img {
     .transition(~"background-color 100ms");
     
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
         background-color: #AAA;
         background-color: rgba(255, 255, 255, 0.30);
         color: #FFF;
@@ -175,7 +176,7 @@ img {
 @media (max-width: @screen-xs-max) {
     .btn-frame-outer {
         display: inline-block;
-        padding: 0 15px;
+        padding: 0 (@grid-gutter-width / 2);
         width: 50%;
     }
     
@@ -214,6 +215,8 @@ img {
 .ic-logo {
     background-image: data-uri("@{f}lg-honeyscreen.png");
     background-size: 221px 22px;
+    height: 60px;
+    width: 281px;
 }
 
 .ic-social-facebook {
@@ -239,11 +242,6 @@ img {
     border: none;
 }
 
-.navbar-brand {
-    height: 60px;
-    width: 241px;
-}
-
 .navbar-text > a {
     .transition(~"opacity 100ms");
     
@@ -259,6 +257,10 @@ img {
         
         &:not(.navbar-noshadow) {
             .box-shadow(0 0 3px @honey-border-color);
+        }
+        
+        & > div {
+            padding: 0 9px 0 20px;
         }
     }
     
@@ -292,6 +294,10 @@ img {
         background-color: transparent;
         position: absolute;
         width: 100%;
+    }
+    
+    .navbar-nav > li > a {
+        padding: 18px 10px;
     }
     
     .navbar-text {

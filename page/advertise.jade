@@ -1,0 +1,100 @@
+extends global
+
+block meta
+    - navPage = "advertise"
+    
+    title #{header.advertise} - #{meta.title}
+
+block content
+    div#advertise-intro-outer: section.container-fluid#advertise-intro
+        div.blip
+        h2 #{advertise.intro.sub}
+        h1 #{advertise.intro.big}
+        
+        div.row
+            div.btn-frame-outer: a.btn.btn-frame(href="", target="_blank") #{advertise.intro.intro}
+            div.btn-frame-outer: a.btn.btn-frame(href="", target="_blank") #{advertise.intro.guide}
+    
+    section.container-fluid#advertise-benefits
+        div.blip
+        h1 #{advertise.benefits.big}
+        
+        div#advertise-benefits-frame
+            img.img-responsive(src="#{i}advertise/ex-benefits-frame.png", width="328", height="653")
+        
+        div#advertise-benefits-list
+            div
+                div: img(src="#{i}advertise/ic-benefits-ctr.png", width="112", height="112")
+                div
+                    h2 #{advertise.benefits.ctr_big}
+                    h3 #{advertise.benefits.ctr_sub}
+            
+            div
+                div: img(src="#{i}advertise/ic-benefits-valid.png", width="112", height="112")
+                div
+                    h2 #{advertise.benefits.valid_big}
+                    h3 #{advertise.benefits.valid_sub}
+            
+            div
+                div: img(src="#{i}advertise/ic-benefits-brand.png", width="112", height="112")
+                div
+                    h2 #{advertise.benefits.brand_big}
+                    h3 #{advertise.benefits.brand_sub}
+    
+    div.bg-gray: section.container-fluid#advertise-cpm
+        div.blip
+        h1 Display Ads
+        h2 #{advertise.cpm.big}
+        
+        div.row
+            div.col-xs-4
+                img(src="#{i}advertise/ic-cpm-apps.png", width="211", height="211")
+                h3 #{advertise.cpm.apps}
+            div.col-xs-4
+                img(src="#{i}advertise/ic-cpm-ecom.png", width="211", height="211")
+                h3 #{advertise.cpm.ecom}
+            div.col-xs-4
+                img(src="#{i}advertise/ic-cpm-social.png", width="211", height="211")
+                h3 #{advertise.cpm.social}
+    
+    div#advertise-cpa-outer: section.container-fluid#advertise-cpa
+        div.blip
+        h1 Incentive Ads
+        h2 #{advertise.cpa.big}
+        h3 #{advertise.cpa.sub}
+    
+    div.bg-gray: section.container-fluid#advertise-partners
+        div.blip
+        h1 Partners
+        h2 #{advertise.partners.big}
+        
+        div.row: each _, n in Array(16)
+            div.col-xs-6.col-sm-3: img.img-responsive.center-block(
+                src="#{i}advertise/lg-partner-#{n + 1}.png",
+                width="180",
+                height="60"
+            )
+    
+    section.container-fluid#advertise-contact
+        div.blip
+        h1 Contact Us
+        
+        address
+            each person in advertise.contact.sales
+                h4 #{person.name}
+                
+                p
+                    img(src="#{i}ic-about-mail.png", width="19", height="20")
+                    a(href="mailto:#{person.mail}", target="_blank") #{person.mail}
+                    if person.tel
+                        img(src="#{i}ic-about-tel.png", width="19", height="20")
+                        a(href="tel:#{person.tel.replace(' ', '')}", target="_blank") #{person.tel}
+                    if person.fax
+                        img(src="#{i}ic-about-fax.png", width="19", height="20")
+                        a(href="fax:#{person.fax.replace(' ', '')}", target="_blank") #{person.fax}
+            
+            p
+                img(src="#{i}ic-about-place.png", width="19", height="20")
+                a(href=advertise.contact.maplink, target="_blank") #{advertise.contact.address}
+            
+            div.embed-responsive: iframe(src=advertise.contact.mapcode)

@@ -622,6 +622,151 @@ footer > nav > ul {
 
 
 ///////////////////////////////////////////////////////////////////////////////
+// Page: Advertise
+///////////////////////////////////////////////////////////////////////////////
+#advertise-intro {
+    text-align: center;
+}
+
+#advertise-benefits-list > div > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#advertise-cpm {
+    text-align: center;
+    
+    & img {
+        .img-responsive(inline-block);
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    #advertise-intro-outer {
+        -ms-behavior: url("@{i}backgroundsize.htc");
+        background-image: url("@{i}advertise/bg-head.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+        padding-top: 210px;
+    }
+    
+    #advertise-intro {
+        > h2 {
+            color: #FFF;
+            font-size: 35px;
+            margin: 30px 0 0 0;
+        }
+        
+        > h1 {
+            color: #FFF;
+            font-size: 65px;
+            margin: 15px 0 60px 0;
+        }
+    }
+    
+    #advertise-benefits,
+    #advertise-cpm,
+    #advertise-cpa,
+    #advertise-partners,
+    #advertise-contact {
+        & > .blip {
+            margin-top: 60px;
+        }
+        
+        & > h1 {
+            color: @honey-color;
+            font-size: 55px;
+            margin: 15px 0 45px 0;
+            text-align: center;
+        }
+    }
+    
+    #advertise-benefits {
+        & h2 {
+            font-size: 35px;
+            margin: 0;
+        }
+        
+        & h3 {
+            font-size: @font-size-base;
+            margin: 0;
+        }
+    }
+    
+    #advertise-benefits-frame {
+        display: inline-block;
+        width: 29%;
+    }
+    
+    #advertise-benefits-list {
+        display: inline-block;
+        vertical-align: top;
+        width: 71%;
+        
+        & img {
+            margin: 15px 15px 30px 45px;
+        }
+    }
+    
+    #advertise-cpm {
+        & > h2 {
+            font-size: 35px;
+            margin: 0 0 60px 0;
+        }
+        
+        & h3 {
+            color: @honey-color;
+            font-size: 35px;
+            margin: 30px 0 60px 0;
+        }
+    }
+    
+    #advertise-cpa-outer {
+        -ms-behavior: url("@{i}backgroundsize.htc");
+        background-image: url("@{I}advertise/bg-mid.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 755px;
+    }
+    
+    #advertise-cpa {
+        text-align: center;
+        
+        > h2 {
+            color: #FFF;
+            font-size: 35px;
+            margin: 0;
+        }
+        
+        > h3 {
+            color: #FFF;
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+    
+    #advertise-partners {
+        & > h2 {
+            text-align: center;
+            font-size: 35px;
+            margin: 0 0 60px 0;
+        }
+        
+        & img {
+            margin-bottom: 60px;
+        }
+    }
+    
+    #advertise-contact {
+        margin-bottom: 60px;
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
 // Page: About
 ///////////////////////////////////////////////////////////////////////////////
 #about-intro {

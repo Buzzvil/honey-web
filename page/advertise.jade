@@ -2,6 +2,7 @@ extends global
 
 block meta
     - navPage = "advertise"
+    - navOpts.push("navbar-noshadow")
     
     title #{header.advertise} - #{meta.title}
 
@@ -12,8 +13,16 @@ block content
         h1 #{advertise.intro.big}
         
         div.row
-            div.btn-frame-outer: a.btn.btn-frame(href="", target="_blank") #{advertise.intro.intro}
-            div.btn-frame-outer: a.btn.btn-frame(href="", target="_blank") #{advertise.intro.guide}
+            div.btn-frame-outer: a.btn.btn-frame(
+                href="#{I}advertise/dl-honeyscreen-intro-2014-11.pdf",
+                target="_blank",
+                download
+            ) #{advertise.intro.intro}
+            
+            div.btn-frame-outer: a.btn.btn-frame(
+                href="#{I}advertise/dl-honeyscreen-guide-2014-11.zip",
+                download
+            ) #{advertise.intro.guide}
     
     section.container-fluid#advertise-benefits
         div.blip
@@ -24,19 +33,19 @@ block content
         
         div#advertise-benefits-list
             div
-                div: img(src="#{i}advertise/ic-benefits-ctr.png", width="112", height="112")
+                img(src="#{i}advertise/ic-benefits-ctr.png", width="112", height="112")
                 div
                     h2 #{advertise.benefits.ctr_big}
                     h3 #{advertise.benefits.ctr_sub}
             
             div
-                div: img(src="#{i}advertise/ic-benefits-valid.png", width="112", height="112")
+                img(src="#{i}advertise/ic-benefits-valid.png", width="112", height="112")
                 div
                     h2 #{advertise.benefits.valid_big}
                     h3 #{advertise.benefits.valid_sub}
             
             div
-                div: img(src="#{i}advertise/ic-benefits-brand.png", width="112", height="112")
+                img(src="#{i}advertise/ic-benefits-brand.png", width="112", height="112")
                 div
                     h2 #{advertise.benefits.brand_big}
                     h3 #{advertise.benefits.brand_sub}
@@ -83,13 +92,14 @@ block content
             each person in advertise.contact.sales
                 h4 #{person.name}
                 
-                p
-                    img(src="#{i}ic-about-mail.png", width="19", height="20")
-                    a(href="mailto:#{person.mail}", target="_blank") #{person.mail}
-                    if person.tel
+                p.break-small
+                    span
+                        img(src="#{i}ic-about-mail.png", width="19", height="20")
+                        a(href="mailto:#{person.mail}", target="_blank") #{person.mail}
+                    span: if person.tel
                         img(src="#{i}ic-about-tel.png", width="19", height="20")
                         a(href="tel:#{person.tel.replace(' ', '')}", target="_blank") #{person.tel}
-                    if person.fax
+                    span: if person.fax
                         img(src="#{i}ic-about-fax.png", width="19", height="20")
                         a(href="fax:#{person.fax.replace(' ', '')}", target="_blank") #{person.fax}
             

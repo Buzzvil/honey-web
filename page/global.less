@@ -52,6 +52,7 @@
 @navbar-height: 60px;
 @navbar-margin-bottom: 0;
 
+@navbar-default-border: #FFF;
 @navbar-default-link-color: #FFF;
 @navbar-default-link-hover-color: @honey-link-alt;
 @navbar-default-link-active-color: @honey-link-alt;
@@ -80,12 +81,12 @@ address {
     & > p {
         margin-bottom: 15px;
         
-        & > img {
+        & img {
             margin-bottom: 1px;
             vertical-align: middle;
         }
         
-        & > a {
+        & a {
             margin: 0 15px 0 5px;
         }
     }
@@ -258,10 +259,6 @@ img {
         &:not(.navbar-noshadow) {
             .box-shadow(0 0 3px @honey-border-color);
         }
-        
-        & > div {
-            padding: 0 9px 0 20px;
-        }
     }
     
     .navbar-dark {
@@ -273,13 +270,22 @@ img {
         }
     }
     
+    .navbar-brand {
+        margin-left: -10px;
+    }
+    
+    .navbar-toggle {
+        margin-right: 9px;
+    }
+    
     .navbar-nav {
         float: left;
+        margin-left: -40px;
     }
     
     .navbar-text {
         float: right;
-        margin-top: 12px;
+        margin: 12px -22px 0 0;
         width: 44px;
         
         > a {
@@ -315,7 +321,7 @@ img {
 // Nav: Foot
 ///////////////////////////////////////////////////////////////////////////////
 footer {
-    background-color: #999;
+    background-color: @buzzvil-black;
     color: #FFF;
     font-size: @font-size-small;
     text-align: center;
@@ -628,9 +634,14 @@ footer > nav > ul {
     text-align: center;
 }
 
-#advertise-benefits-list > div > div {
-    display: table-cell;
-    vertical-align: middle;
+#advertise-benefits-list > div {
+    display: table;
+    
+    & > div {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+    }
 }
 
 #advertise-cpm {
@@ -638,6 +649,92 @@ footer > nav > ul {
     
     & img {
         .img-responsive(inline-block);
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    #advertise-intro {
+        border-top: 1px solid #FFF;
+        padding: 30px;
+        
+        #gradient > .vertical(@honey-color; #FFE56A);
+        
+        & > .blip {
+            display: none;
+        }
+        
+        & > h2 {
+            color: #FFF;
+            font-size: 24px;
+            margin: 0;
+        }
+        
+        & > h1 {
+            color: #FFF;
+            font-size: 36px;
+            margin: 15px 0 30px 0;
+        }
+    }
+    
+    #advertise-benefits,
+    #advertise-cpm,
+    #advertise-cpa,
+    #advertise-partners,
+    #advertise-contact {
+        padding: 20px;
+        
+        & h1 {
+            color: @honey-color;
+            font-size: 24px;
+            margin: 5px 0 10px 0;
+            text-align: center;
+        }
+        
+        & h2,
+        & h3 {
+            font-size: @font-size-base;
+            margin: 0;
+            text-align: center;
+        }
+        
+        & .row {
+            margin: 0 -10px;
+            
+            & > div {
+                padding: 0 10px;
+            }
+        }
+    }
+    
+    #advertise-benefits-frame > img {
+        .center-block();
+    }
+    
+    #advertise-benefits-list {
+        & > div {
+            margin-top: 20px;
+            
+            & > img {
+                margin-right: 10px;
+            }
+        }
+        
+        h2 {
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        h3 {
+            text-align: left;
+        }
+    }
+    
+    #advertise-cpm img {
+        margin: 10px 0;
+    }
+    
+    #advertise-partners img {
+        margin-top: 20px;
     }
 }
 
@@ -683,18 +780,6 @@ footer > nav > ul {
         }
     }
     
-    #advertise-benefits {
-        & h2 {
-            font-size: 35px;
-            margin: 0;
-        }
-        
-        & h3 {
-            font-size: @font-size-base;
-            margin: 0;
-        }
-    }
-    
     #advertise-benefits-frame {
         display: inline-block;
         width: 29%;
@@ -705,8 +790,22 @@ footer > nav > ul {
         vertical-align: top;
         width: 71%;
         
-        & img {
-            margin: 15px 15px 30px 45px;
+        & > div {
+            margin: 15px 0 30px 0;
+            
+            & > img {
+                margin: 0 15px 0 45px;
+            }
+        }
+        
+        & h2 {
+            font-size: 35px;
+            margin: 0;
+        }
+        
+        & h3 {
+            font-size: @font-size-base;
+            margin: 0;
         }
     }
     

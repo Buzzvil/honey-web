@@ -117,7 +117,7 @@ gulp.task("upload", ["styles", "scripts", "pages"], l10nify(function (l10n) {
                 Bucket: l10nObj[l10n].meta.bucket,
                 Key: file.relative,
                 Body: file.contents,
-                CacheControl: "public, max-age=900",
+                CacheControl: "public, max-age=72000",
                 ContentEncoding: "gzip",
                 ContentLanguage: l10nObj[l10n].meta.code,
                 ContentType: type[(file.relative.match(/\.[^.]+/) || [""])[0]]
@@ -126,6 +126,8 @@ gulp.task("upload", ["styles", "scripts", "pages"], l10nify(function (l10n) {
 }));
 
 gulp.task("files", function () {
+    del.sync("file/**/.DS_Store");
+    
     return gulp.src("file/**/*")
         .pipe(imagemin())
         .pipe(gulp.dest("file"));

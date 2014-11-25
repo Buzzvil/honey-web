@@ -372,18 +372,13 @@ footer > nav > ul {
 ///////////////////////////////////////////////////////////////////////////////
 // Page: Index
 ///////////////////////////////////////////////////////////////////////////////
-#index-intro-outer {
-    background-image: url("@{i}index/bg-head.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    color: #FFF;
-}
-
-#index-outro-outer {
-    background-image: url("@{i}index/bg-foot.jpg");
-    background-position: center;
-    background-size: cover;
-    color: #FFF;
+#index-intro,
+#index-outro {
+    & h1,
+    & h2,
+    & p {
+        color: #FFF;
+    }
 }
 
 #index-outro {
@@ -392,44 +387,49 @@ footer > nav > ul {
 
 @media (max-width: @screen-xs-max) {
     #index-intro {
-        margin: 132px 0 30px 0;
+        border-top: 1px solid #FFF;
         text-align: center;
         
-        > a + a {
-            display: block;
-            margin: 20px 15px 0 15px;
+        #gradient > .vertical(@honey-color; #FFE56A);
+        
+        h1 {
+            margin: 15px 0;
         }
         
-        > h1 {
-            letter-spacing: -4px;
-            margin: 0;
-        }
-        
-        > p {
+        p {
             font-size: @font-size-large;
-            letter-spacing: -2px;
-            margin: 15px 0 30px 0;
+            margin: 15px 0;
+        }
+        
+        img {
+            display: inline-block;
+            margin: 30px 0;
         }
     }
     
-    #index-video {
-        padding: 0;
+    #index-download {
+        margin: 0 -5px;
+        
+        > a {
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 0 10px;
+            max-width: 50%;
+        }
     }
     
     #index-outro {
         padding-bottom: 130px;
         
+        #gradient > .vertical(#FFE56A; @honey-color);
+        
         > h2 {
-            border-bottom: 2px solid @honey-color;
-            display: inline-block;
-            letter-spacing: -4px;
             margin: 30px 0 20px 0;
             padding-bottom: 20px;
         }
         
         > p {
             font-size: @font-size-large;
-            letter-spacing: -2px;
             line-height: 35px;
             margin: 0;
         }
@@ -437,45 +437,110 @@ footer > nav > ul {
 }
 
 @media (min-width: @screen-sm-min) {
+    #index-intro-outer {
+        -ms-behavior: url("@{i}backgroundsize.htc");
+        background-image: url("@{i}index/bg-head-v2.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+        padding-top: 60px;
+    }
+    
     #index-intro {
-        margin: 220px 0 160px 0;
-        
-        > a + a {
-            margin-left: 60px;
+        & h1 {
+            font-size: 57px;
+            margin: 145px 0 30px 0;
         }
         
-        > h1 {
-            font-size: 55px;
-            letter-spacing: -4px;
+        & p {
+            font-size: 30px;
             margin: 0;
         }
         
-        > p {
-            font-size: 30px;
-            letter-spacing: -2px;
-            margin: 40px 0 60px 0;
+        & img {
+            float: right;
+            margin: 80px 0;
         }
     }
     
-    #index-video-outer {
-        padding: 60px 0;
+    #index-download > a {
+        display: inline-block;
+        
+        &:first-child {
+            margin-right: 60px;
+        }
+    }
+    
+    #index-content-txt,
+    #index-points-txt1,
+    #index-points-txt2 {
+        & h1 {
+            border-bottom: 3px solid @honey-color;
+            display: inline-block;
+            font-size: 35px;
+            margin: 30px 0 15px 0;
+            padding-bottom: 15px;
+        }
+        
+        & h2 {
+            font-size: @font-size-base;
+            margin: 0 0 15px 0;
+        }
+    }
+    
+    #index-content-img > img {
+        float: right;
+        margin: 60px 0;
+    }
+    
+    #index-content-txt > img {
+        display: block;
+        margin-top: 180px;
+    }
+    
+    #index-points-txt1 {
+        text-align: right;
+        
+        & > img {
+            margin-top: 120px;
+        }
+    }
+    
+    #index-points-img {
+        margin: 60px 0;
+    }
+    
+    #index-points-txt2 {
+        & > img {
+            margin-top: 240px;
+        }
+        
+        & > div > img + img {
+            margin-left: 30px;
+        }
+    }
+    
+    #index-outro-outer {
+        -ms-behavior: url("@{i}backgroundsize.htc");
+        background-image: url("@{i}index/bg-foot.jpg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
     }
     
     #index-outro {
-        padding-bottom: 220px;
-        
-        > h2 {
-            border-bottom: 3px solid @honey-color;
-            display: inline-block;
-            font-size: 50px;
-            letter-spacing: -4px;
-            margin: 160px 0 40px 0;
-            padding-bottom: 40px;
+        & > .blip {
+            margin-top: 60px;
         }
         
-        > p {
+        & > h2 {
+            font-size: 50px;
+        }
+        
+        & > p {
             font-size: 35px;
-            letter-spacing: -2px;
             line-height: 60px;
             margin: 0;
         }

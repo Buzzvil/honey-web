@@ -7,27 +7,52 @@ block meta
     title #{meta.title} | #{index.intro.big}
 
 block content
-    div#index-intro-outer: div.container: div.row
-        div.col-sm-12#index-intro
+    div#index-intro-outer: section.container-fluid#index-intro: div.row
+        div.col-sm-7
             h1 #{index.intro.big}
-            p: each line in index.intro.sub
-                span #{line}
+            p.break-maybe: +break(index.intro.sub, " ")
             
-            a(href=contact.googlestore, target="_blank")
-                img(src="#{i}index/dl-google.png", width="214", height="64")
-            a(href=contact.applestore, target="_blank")
-                img(src="#{i}index/dl-apple.png", width="214", height="64")
+            div#index-download
+                if contact.googlestore
+                    a(href=contact.googlestore, target="_blank")
+                        img.img-responsive(src="#{i}index/dl-google.png", width="214", height="64")
+                if contact.applestore
+                    a(href=contact.applestore, target="_blank")
+                        img.img-responsive(src="#{i}index/dl-apple.png", width="214", height="64")
+        
+        div.col-sm-5
+            img.img-responsive(src="#{I}index/ex-intro.png", width="365", height="488")
     
-    div.bg-gray#index-video-outer: div.container: div.row
-        div.col-sm-12#index-video: div.embed-responsive.embed-responsive-16by9
-            iframe.embed-responsive-item(src="https://www.youtube.com/embed/9bZkp7q19f0", allowfullscreen)
+    section.container-fluid: div.row
+        div.col-sm-6#index-content-img
+            img.img-responsive(src="#{i}index/ex-content-frame.png", width="328", height="653")
+        
+        div.col-sm-6#index-content-txt
+            img(src="#{i}index/ic-content.png", width="70", height="80")
+            h1.break-maybe: +break(index.content.big)
+            h2.break-maybe: +break(index.content.sub)
     
-    div.container: div.row
+    div.bg-gray: section.container-fluid: div.row
+        div.col-sm-4#index-points-txt1
+            img(src="#{i}index/ic-points.png", width="70", height="80")
+            h1.break-maybe: +break(index.points.big)
+            h2.break-maybe: +break(index.points.sub)
+        
+        div.col-sm-4#index-points-img
+            img.img-responsive(src="#{I}index/ex-points-frame.png", width="328", height="653")
+        
+        div.col-sm-4#index-points-txt2
+            img(src="#{i}index/ic-store.png", width="70", height="80")
+            h1.break-maybe: +break(index.store.big)
+            h2.break-maybe: +break(index.store.sub)
+            div
+                img(src="#{i}index/ic-store-1.png", width="35", height="35")
+                img(src="#{i}index/ic-store-2.png", width="35", height="35")
+                img(src="#{i}index/ic-store-3.png", width="35", height="35")
+                img(src="#{i}index/ic-store-4.png", width="35", height="35")
+                img(src="#{i}index/ic-store-5.png", width="35", height="35")
     
-    div.container: div.row
-    
-    div#index-outro-outer: div.container: div.row
-        div.col-sm-12#index-outro
-            h2 #{index.outro.big}
-            p: each line in index.outro.sub
-                span #{line}
+    div#index-outro-outer: section.container-fluid#index-outro
+        div.blip
+        h2 #{index.outro.big}
+        p.break-force: +break(index.outro.sub)

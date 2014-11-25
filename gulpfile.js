@@ -5,6 +5,7 @@ var express = require("express");
 var fs = require("fs");
 var gulp = require("gulp");
 var gzip = require("gulp-gzip");
+var hashsum = require("gulp-hashsum");
 var hl = require("highland");
 var imagemin = require("gulp-imagemin");
 var jade = require("gulp-jade");
@@ -128,9 +129,10 @@ gulp.task("upload", ["styles", "scripts", "pages"], l10nify(function (l10n) {
 gulp.task("files", function () {
     del.sync("file/**/.DS_Store");
     
-    return gulp.src("file/**/*")
+    return gulp.src("file/*/**")
         .pipe(imagemin())
-        .pipe(gulp.dest("file"));
+        .pipe(gulp.dest("file"))
+        .pipe(hashsum({ dest: "file", filename: "index.txt" }));
 });
 
 gulp.task("watch", ["styles", "scripts", "pages"], function () {

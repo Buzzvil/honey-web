@@ -1,3 +1,5 @@
 dist/
-file/
 node_modules/
+
+file/*
+!file/index.txt

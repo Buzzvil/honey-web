@@ -2,29 +2,40 @@ extends global
 
 block meta
     - navPage = "support"
+    - navOpts.push("navbar-noshadow")
     
     title #{header.support} | #{meta.title}
 
 block content
-    div#support-outer: div.container-fluid#support-inner
-        h1 #{support.intro.big}
-        p.break-maybe: +break(support.intro.sub)
+    div#support-intro: section.container-fluid
+        div.blip
+        h1 #{header.support}
         
-        input.form-control#support-search(type="search", placeholder=support.search, autofocus)
+        input.form-control#support-search(
+            type="search",
+            placeholder=support.search,
+            autofocus
+        )
         
-        div.clearfix#support-buttons
-            each cat, key in support.faqs
-                div.col-xs-4.col-sm-2: a(href="#q-#{key}")
-                    div: img(src="#{i}support/ic-#{key}.png", width="61", height="61")
-                    | #{cat.name}
+        div.clearfix#support-buttons: each cat, key in support.faqs
+            div.col-xs-4.col-sm-2: a.btn-frame(href="#q-#{key}")
+                img(src="#{i}support/ic-#{key}.png", width="61", height="61")
+                div #{cat.name}
+    
+    section#support-faqs: each cat, key in support.faqs
+        each question, idx in cat.list
+            div: a.container-fluid(
+                data-toggle="collapse",
+                data-target="#q-#{key}-#{idx}"
+            ) #{question.q}
+            
+            div.bg-gray.collapse(id="q-#{key}-#{idx}")
+                p.container-fluid.break-force: +break(question.a)
+    
+    div#support-contact: section.container-fluid
+        p.break-small: +break(support.contact.sub, " ")
         
-        div#support-faqs: each cat, key in support.faqs
-            each question, idx in cat.list
-                a(data-toggle="collapse", data-target="#q-#{key}-#{idx}") #{question.q}
-                
-                div.bg-gray.collapse(id="q-#{key}-#{idx}")
-                    p.break-force: +break(question.a)
-        
-        div.bg-gray#support-contact
-            p.break-small: +break(support.contact.sub, " ")
-            a.btn.btn-black(href="mailto:#{contact.support}", target="_blank") #{support.contact.btn}
+        a.btn.btn-frame.btn-frame-main(
+            href="mailto:#{contact.support}",
+            target="_blank"
+        ) #{support.contact.btn}

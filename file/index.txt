@@ -50,7 +50,8 @@ aa98d6d0425ecc29280b82614b595c9c82decc1b  _/index/ic-store-5.png
 a918e19f4a216167307c034951fada68e3788608  _/index/ic-store.png
 52ef8ee1847204fd0e63b4440a9689b244a3c00e  _/lg-honeyscreen.png
 ea6d284907614416d515cfd12a57986953fb1512  _/other/bg-head.jpg
-a2fd0ca0042e1b9740d9069e2530223389cf8e3f  _/support/bg-head.jpg
+8fad996c80d5546b15f4ba9f0e8c3c1acbd16f15  _/support/bg-foot.jpg
+186e030ff5073606b5a2efde151dfde9bc4393a4  _/support/bg-head-v2.jpg
 d18bdc317c38a92ad05a5f491fd2655237fa9208  _/support/ic-abuse.png
 db3ec347f559fd65002005418ba5f9bb5c01357c  _/support/ic-account.png
 1bac187afcba363fba609ec57acd75416525ba30  _/support/ic-points.png

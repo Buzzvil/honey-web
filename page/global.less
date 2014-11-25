@@ -552,142 +552,136 @@ footer > nav > ul {
 // Page: Support
 ///////////////////////////////////////////////////////////////////////////////
 #support-search {
-    .border-bottom-radius(0);
     .box-shadow(none);
-    .input-size(60px; 0; 20px; @font-size-large; @line-height-large; 0);
+    .input-size(60px; 0; 20px; @font-size-large; @line-height-base; 0);
     .transition(~"border-color 100ms");
 }
 
-#support-buttons {
-    border-bottom: @honey-border;
-    padding: 20px 10px 0 10px;
-    text-align: center;
-    
-    > div {
-        padding: 0 10px;
-    }
-    
-    > div > a {
-        display: block;
-        margin-bottom: 20px;
-        
-        &:hover > div,
-        &:focus > div {
-            background-color: @honey-color-light;
-        }
-        
-        > div {
-            background-color: @honey-color;
-            border-radius: @border-radius-base;
-            margin-bottom: 5px;
-            padding: 10px 0;
-            width: 100%;
-            
-            .transition(~"background-color 100ms");
-        }
-    }
+#support-buttons a {
+    display: block;
+    padding: 5px 0;
 }
 
-#support-faqs {
-    > a {
-        border-top: 1px solid @honey-background;
+#support-faqs > div {
+    border-top: 1px solid @honey-background;
+    overflow: hidden;
+    
+    &:first-child,
+    &.first-child {
+        border: none;
+    }
+    
+    & > a {
         cursor: pointer;
         display: block;
-        padding: 20px;
-        
-        &:first-child,
-        &.first-child {
-            border: none;
-        }
     }
-    
-    > div {
-        overflow: hidden;
-        
-        > p {
-            margin: 20px;
-        }
-    }
-}
-
-#support-contact {
-    border-top: @honey-border;
-    padding: 20px 0;
-    text-align: center;
 }
 
 @media (max-width: @screen-xs-max) {
-    #support-inner {
-        padding: 0;
+    #support-intro {
+        border-top: 1px solid #FFF;
+        text-align: center;
         
-        > h1,
-        > p {
-            margin: 20px;
-            text-align: center;
+        #gradient > .vertical(@honey-color; #FFE56A);
+        
+        & > section {
+            padding: 0;
+        }
+        
+        & .blip {
+            display: none;
+        }
+        
+        & h1 {
+            color: #FFF;
+            margin: 20px 0;
         }
     }
     
     #support-search {
         border: none;
-        border-top: @honey-border;
+        
+        .placeholder(@honey-border-color);
     }
     
     #support-buttons {
-        border-bottom: @honey-border;
-        border-top: @honey-border;
-        font-size: @font-size-small;
+        font-size: 12px;
+        padding: 10px;
+        
+        & > div {
+            padding: 10px;
+        }
+    }
+    
+    #support-faqs p,
+    #support-faqs a {
+        padding: 20px;
     }
     
     #support-contact {
-        border-top: @honey-border;
+        color: #FFF;
+        padding: 20px 0;
+        text-align: center;
+        
+        #gradient > .vertical(#FFE56A; @honey-color);
     }
 }
 
 @media (min-width: @screen-sm-min) {
-    #support-outer {
+    #support-intro {
         -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{i}support/bg-head.jpg");
+        background-image: url("@{i}support/bg-head-v2.jpg");
         background-position: center top;
         background-repeat: no-repeat;
-        // TODO background-size: 100%;
-        padding: 90px 0 30px 0;
-    }
-    
-    #support-inner {
-        & > h1 {
-            border-right: @honey-border;
-            border-right-color: rgba(255, 255, 255, 0.30);
-            color: #FFF;
-            float: left;
-            font-size: 48px;
-            line-height: 48px;
-            margin: 0 30px 30px 20px;
-            padding-right: 30px;
-        }
+        background-size: cover;
+        height: 700px;
+        padding-top: 180px;
+        text-align: center;
         
-        & > p {
+        & h1 {
             color: #FFF;
-            float: left;
+            font-size: 65px;
+            margin: 15px 0 45px 0;
         }
     }
     
     #support-search {
-        border-color: @honey-border;
-        
-        .border-top-radius(@border-radius-base);
+        .btn-frame() !important;
+        .placeholder(#FFF);
     }
     
-    #support-buttons,
+    #support-buttons {
+        margin: 30px -15px 0 -15px;
+        
+        & > div {
+            padding: 0 15px;
+        }
+    }
+    
     #support-faqs {
-        background-color: #FFF;
-        border-left: @honey-border;
-        border-right: @honey-border;
+        & a {
+            padding: 30px;
+        }
+        
+        & p {
+            margin: 30px auto;
+        }
     }
     
     #support-contact {
-        border: @honey-border;
+        -ms-behavior: url("@{i}backgroundsize.htc");
+        background-image: url("@{i}support/bg-foot.jpg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 263px;
+        text-align: center;
         
-        .border-bottom-radius(@border-radius-base);
+        & p {
+            color: #FFF;
+            font-size: 25px;
+            margin: 45px 0;
+        }
     }
 }
 

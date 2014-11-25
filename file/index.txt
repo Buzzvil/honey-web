@@ -1,6 +1,6 @@
 4cafad49964be36b06fe9238917d709d01313c5d  _/about/bg-head.jpg
 6516d7264ba514fb55d55370130f6f39bf8b2012  _/about/lg-buzzvil.png
-44f14c478ae6379fde5289c963fba92e8c851396  _/advertise/bg-head.jpg
+a0f77610e915935b00c49471ce48bc698a99888e  _/advertise/bg-head-v2.jpg
 5ccf5d8c18b3bb6a01e23caaa896dd2ad256ddf4  _/advertise/ex-benefits-frame.png
 82dcc243bd94a801cebf1dff3ec7c0bbe477531f  _/advertise/ic-benefits-brand.png
 8f2dd59ad3e241f026155cb9c7eb3505e4db7527  _/advertise/ic-benefits-ctr.png

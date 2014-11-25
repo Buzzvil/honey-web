@@ -5,7 +5,7 @@
         "title": "허니스크린"
     },
     "style": {
-        "l10n-font-family": "'Noto Sans CJK KR', 'Nanum Gothic', sans-serif"
+        "l10n-font-family": "'Nanum Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Gulim', sans-serif"
     },
     
     "header": {
@@ -24,7 +24,8 @@
         "twitter": "https://twitter.com/honeyscreen",
         "blog": "http://blog.naver.com/honeyscreen",
         "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.adhours&referrer=homepage",
-        "applestore": "https://itunes.apple.com/kr/app/honeyscreen/id591658676?mt=8"
+        "applestore": "https://itunes.apple.com/kr/app/honeyscreen/id591658676?mt=8",
+        "support": "contact@honeyscreen.com"
     },
     
     "index": {

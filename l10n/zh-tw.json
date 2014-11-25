@@ -24,7 +24,8 @@
         "twitter": "",
         "blog": "http://honeyscreen.pixnet.net/blog",
         "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.honeyscreen.tw&referrer=homepage",
-        "applestore": ""
+        "applestore": "",
+        "support": "contact.tw@honeyscreen.com"
     },
     
     "index": {
@@ -269,7 +270,9 @@
             "sub": "在HoneyScreen上，分享傳遞人氣情報!",
             "big": "最聰明的鎖屏桌布",
             "intro": "媒體介紹",
-            "guide": "製作指南"
+            "intro": "Coming Soon",
+            "guide": "製作指南",
+            "guide": "Coming Soon"
         },
         
         "benefits": {

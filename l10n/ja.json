@@ -24,7 +24,8 @@
         "twitter": "https://twitter.com/honeyscreenjp",
         "blog": "http://ameblo.jp/honeyscreen",
         "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.lockjoy&referrer=homepage",
-        "applestore": "https://itunes.apple.com/jp/app/lockjoy/id656698242?mt=8"
+        "applestore": "https://itunes.apple.com/jp/app/lockjoy/id656698242?mt=8",
+        "support": "contact@honeyscreen.jp"
     },
     
     "index": {
@@ -316,7 +317,9 @@
             "sub": "スマホの待ち受けで人気コンテンツが見れる。",
             "big": "スマートモバイルメディアハニースクリーン！",
             "intro": "媒体紹介",
-            "guide": "デザインガイド"
+            "intro": "Coming Soon",
+            "guide": "デザインガイド",
+            "guide": "Coming Soon"
         },
         
         "benefits": {

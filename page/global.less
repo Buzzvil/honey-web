@@ -131,6 +131,15 @@ img {
     max-width: @container-lg;
 }
 
+.background-pic(@file; @pos; @size) {
+    -ms-behavior: url("@{i}backgroundsize.htc");
+    background-image: url(@file);
+    background-position: center @pos;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: @size;
+}
+
 @media (max-width: @screen-xs-max) {
     .break-maybe > span:after {
         content: " ";
@@ -438,13 +447,9 @@ footer > nav > ul {
 
 @media (min-width: @screen-sm-min) {
     #index-intro-outer {
-        -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{i}index/bg-head-v2.jpg");
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 700px;
         padding-top: 60px;
+        
+        .background-pic("@{i}index/bg-head-v2.jpg"; top; 700px);
     }
     
     #index-intro {
@@ -522,12 +527,7 @@ footer > nav > ul {
     }
     
     #index-outro-outer {
-        -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{i}index/bg-foot.jpg");
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 700px;
+        .background-pic("@{i}index/bg-foot.jpg"; bottom; 700px);
     }
     
     #index-outro {
@@ -629,14 +629,10 @@ footer > nav > ul {
 
 @media (min-width: @screen-sm-min) {
     #support-intro {
-        -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{i}support/bg-head-v2.jpg");
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 700px;
         padding-top: 180px;
         text-align: center;
+        
+        .background-pic("@{i}support/bg-head-v2.jpg"; top; 700px);
         
         & h1 {
             color: #FFF;
@@ -669,13 +665,9 @@ footer > nav > ul {
     }
     
     #support-contact {
-        -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{i}support/bg-foot.jpg");
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 263px;
         text-align: center;
+        
+        .background-pic("@{i}support/bg-foot.jpg"; bottom; 263px);
         
         & p {
             color: #FFF;
@@ -799,13 +791,9 @@ footer > nav > ul {
 
 @media (min-width: @screen-sm-min) {
     #advertise-intro-outer {
-        -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{i}advertise/bg-head.jpg");
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 700px;
         padding-top: 210px;
+        
+        .background-pic("@{i}advertise/bg-head.jpg"; top; 700px);
     }
     
     #advertise-intro {
@@ -882,12 +870,7 @@ footer > nav > ul {
     }
     
     #advertise-cpa-outer {
-        -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{I}advertise/bg-mid-v2.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 755px;
+        .background-pic("@{I}advertise/bg-mid-v2.jpg"; center; 755px);
     }
     
     #advertise-cpa {
@@ -981,13 +964,9 @@ footer > nav > ul {
 
 @media (min-width: @screen-sm-min) {
     #about-intro-outer {
-        -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{i}about/bg-head.jpg");
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 700px;
         padding-top: 180px;
+        
+        .background-pic("@{i}about/bg-head.jpg"; top; 700px);
     }
     
     #about-intro > h2 {

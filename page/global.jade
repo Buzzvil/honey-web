@@ -7,7 +7,7 @@ mixin break(arr, postfix)
 
 mixin carousel(l, w, h, f)
     div.carousel.slide: div.carousel-inner: each _, n in Array(l)
-        div.item(class=!n && "active"): img(src="#{I}#{f}-#{n + 1}.png", width=w, height=h)
+        div.item(class=!n && "active"): img(src="#{I}#{f}-#{n}.jpg", width=w, height=h)
 
 doctype
 html(lang=meta.code)

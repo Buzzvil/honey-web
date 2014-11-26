@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Setup
+// Bootstrap: load
 ///////////////////////////////////////////////////////////////////////////////
 @import "node_modules/bootstrap/less/variables";
 @import "node_modules/bootstrap/less/mixins";
@@ -20,32 +20,22 @@
 @import "node_modules/bootstrap/less/utilities";
 @import "node_modules/bootstrap/less/responsive-utilities";
 
-@buzzvil-black: #404041;
-@buzzvil-black-light: lighten(@buzzvil-black, 10%);
-@buzzvil-color: #B50007;
 
-@honey-background: #F5F5F5;
-@honey-border-color: #D8D1D1;
-@honey-border: 1px solid @honey-border-color;
-@honey-color: #FECC25;
-@honey-color-light: lighten(@honey-color, 10%);
-@honey-link: #FF960D;
-@honey-link-alt: #FFEA00;
-
+///////////////////////////////////////////////////////////////////////////////
+// Bootstrap: config
+///////////////////////////////////////////////////////////////////////////////
 @link-hover-color: @honey-link;
 @link-hover-decoration: none;
 
 @font-family-base: @l10n-font-family;
-@font-size-base: 16px;
+@font-size-base: @base-font-2;
 @line-height-base: 1.5;
 
 @headings-font-weight: 400;
 @headings-line-height: @line-height-base;
 @headings-color: #5A5961;
 
-@input-border-focus: @honey-color;
-
-@input-color-placeholder: @honey-border-color;
+@input-border-focus: #FFF;
 
 @grid-gutter-width: 60px;
 
@@ -67,7 +57,32 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Global
+// Global: config
+///////////////////////////////////////////////////////////////////////////////
+@base-font-1: 20px;
+@base-font-2: 16px;
+@base-font-3: 12px;
+
+@make-font-1: 70px;
+@make-font-2: 60px;
+@make-font-3: 40px;
+@make-font-4: 30px;
+
+@buzzvil-black: #404041;
+@buzzvil-black-light: lighten(@buzzvil-black, 10%);
+@buzzvil-color: #B50007;
+
+@honey-background: #F5F5F5;
+@honey-border-color: #D8D1D1;
+@honey-border: 1px solid @honey-border-color;
+@honey-color: #FECC25;
+@honey-color-light: lighten(@honey-color, 10%);
+@honey-link: #FF960D;
+@honey-link-alt: #FFEA00;
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Global: elements
 ///////////////////////////////////////////////////////////////////////////////
 a {
     color: inherit;
@@ -106,6 +121,19 @@ img {
     vertical-align: top;
 }
 
+
+///////////////////////////////////////////////////////////////////////////////
+// Global: classes
+///////////////////////////////////////////////////////////////////////////////
+.background-pic(@file; @pos; @size) {
+    -ms-behavior: url("@{i}backgroundsize.htc");
+    background-image: url(@file);
+    background-position: center @pos;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: @size;
+}
+
 .bg-gray {
     background-color: @honey-background;
 }
@@ -127,45 +155,6 @@ img {
     }
 }
 
-.container-fluid {
-    max-width: @container-lg;
-}
-
-.background-pic(@file; @pos; @size) {
-    -ms-behavior: url("@{i}backgroundsize.htc");
-    background-image: url(@file);
-    background-position: center @pos;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: @size;
-}
-
-@media (max-width: @screen-xs-max) {
-    .break-maybe > span:after {
-        content: " ";
-    }
-    
-    .break-small > span {
-        display: block;
-    }
-}
-
-@media (min-width: @screen-sm-min) {
-    .break-maybe > span {
-        display: block;
-    }
-}
-
-
-///////////////////////////////////////////////////////////////////////////////
-// Buttons
-///////////////////////////////////////////////////////////////////////////////
-.btn-black {
-    .button-size(6px; 32px; @font-size-large; @line-height-large; @border-radius-base);
-    .button-variant(#FFF; @honey-color; @honey-color);
-    .transition(~"background-color 100ms");
-}
-
 .btn-frame {
     background-color: transparent;
     border: 3px solid #FFF;
@@ -183,37 +172,10 @@ img {
     }
 }
 
-@media (max-width: @screen-xs-max) {
-    .btn-frame-outer {
-        display: inline-block;
-        padding: 0 (@grid-gutter-width / 2);
-        width: 50%;
-    }
-    
-    .btn-frame-big {
-        padding: 10px 0;
-        width: 100%;
-    }
+.container-fluid {
+    max-width: @container-lg;
 }
 
-@media (min-width: @screen-sm-min) {
-    .btn-frame-outer {
-        display: inline-block;
-        padding: 0 30px;
-    }
-    
-    .btn-frame-big {
-        font-size: 23px;
-        line-height: 23px;
-        padding: 15px;
-        width: 200px;
-    }
-}
-
-
-///////////////////////////////////////////////////////////////////////////////
-// Icons
-///////////////////////////////////////////////////////////////////////////////
 .ic {
     -ms-behavior: url("@{i}backgroundsize.htc");
     background-position: center;
@@ -244,9 +206,61 @@ img {
     background-size: 20px 23px;
 }
 
+.make-font(@min; @max; @i: 0) when (@i =< 6) {
+    @media (min-width: (@screen-sm-min + (72 * @i))) {
+        font-size: @min + ceil(((@max - @min) / 6) * @i);
+    }
+    
+    .make-font(@min; @max; (@i + 1));
+}
+
+.make-font-1 { .make-font(floor(@make-font-1 * 0.70); @make-font-1); }
+.make-font-2 { .make-font(floor(@make-font-2 * 0.70); @make-font-2); }
+.make-font-3 { .make-font(floor(@make-font-3 * 0.70); @make-font-3); }
+.make-font-4 { .make-font(floor(@make-font-4 * 0.70); @make-font-4); }
+
+@media (max-width: @screen-xs-max) {
+    .break-maybe > span:after {
+        content: " ";
+    }
+    
+    .break-small > span {
+        display: block;
+    }
+    
+    .btn-frame-big {
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    .btn-frame-outer {
+        display: inline-block;
+        padding: 0 (@grid-gutter-width / 2);
+        width: 50%;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .break-maybe > span {
+        display: block;
+    }
+    
+    .btn-frame-big {
+        font-size: 23px;
+        line-height: 23px;
+        padding: 15px;
+        width: 200px;
+    }
+    
+    .btn-frame-outer {
+        display: inline-block;
+        padding: 0 30px;
+    }
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////
-// Nav: Head
+// Global: header
 ///////////////////////////////////////////////////////////////////////////////
 .navbar {
     border: none;
@@ -327,12 +341,12 @@ img {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Nav: Foot
+// Global: footer
 ///////////////////////////////////////////////////////////////////////////////
 footer {
     background-color: @buzzvil-black;
     color: #FFF;
-    font-size: @font-size-small;
+    font-size: @base-font-3;
     text-align: center;
 }
 
@@ -406,7 +420,7 @@ footer > nav > ul {
         }
         
         p {
-            font-size: @font-size-large;
+            font-size: @base-font-1;
             margin: 15px 0;
         }
         
@@ -438,8 +452,7 @@ footer > nav > ul {
         }
         
         > p {
-            font-size: @font-size-large;
-            line-height: 35px;
+            font-size: @base-font-1;
             margin: 0;
         }
     }
@@ -454,12 +467,10 @@ footer > nav > ul {
     
     #index-intro {
         & h1 {
-            font-size: 57px;
             margin: 145px 0 30px 0;
         }
         
         & p {
-            font-size: 30px;
             margin: 0;
         }
         
@@ -483,13 +494,12 @@ footer > nav > ul {
         & h1 {
             border-bottom: 3px solid @honey-color;
             display: inline-block;
-            font-size: 35px;
             margin: 30px 0 15px 0;
             padding-bottom: 15px;
         }
         
         & h2 {
-            font-size: @font-size-base;
+            font-size: @base-font-2;
             margin: 0 0 15px 0;
         }
     }
@@ -535,13 +545,7 @@ footer > nav > ul {
             margin-top: 60px;
         }
         
-        & > h2 {
-            font-size: 50px;
-        }
-        
         & > p {
-            font-size: 35px;
-            line-height: 60px;
             margin: 0;
         }
     }
@@ -553,7 +557,7 @@ footer > nav > ul {
 ///////////////////////////////////////////////////////////////////////////////
 #support-search {
     .box-shadow(none);
-    .input-size(60px; 0; 20px; @font-size-large; @line-height-base; 0);
+    .input-size(60px; 0; 20px; @base-font-1; @line-height-base; 0);
     .transition(~"border-color 100ms");
 }
 
@@ -605,7 +609,7 @@ footer > nav > ul {
     }
     
     #support-buttons {
-        font-size: 12px;
+        font-size: @base-font-3;
         padding: 10px;
         
         & > div {
@@ -636,7 +640,6 @@ footer > nav > ul {
         
         & h1 {
             color: #FFF;
-            font-size: 65px;
             margin: 15px 0 45px 0;
         }
     }
@@ -671,7 +674,6 @@ footer > nav > ul {
         
         & p {
             color: #FFF;
-            font-size: 25px;
             margin: 45px 0;
         }
     }
@@ -743,7 +745,7 @@ footer > nav > ul {
         
         & h2,
         & h3 {
-            font-size: @font-size-base;
+            font-size: @base-font-2;
             margin: 0;
             text-align: center;
         }
@@ -771,7 +773,6 @@ footer > nav > ul {
         }
         
         h2 {
-            font-weight: 700;
             text-align: left;
         }
         
@@ -791,21 +792,19 @@ footer > nav > ul {
 
 @media (min-width: @screen-sm-min) {
     #advertise-intro-outer {
-        padding-top: 210px;
-        
         .background-pic("@{i}advertise/bg-head-v2.jpg"; top; 700px);
     }
     
     #advertise-intro {
+        padding-top: 180px;
+        
         > h2 {
             color: #FFF;
-            font-size: 35px;
             margin: 30px 0 0 0;
         }
         
         > h1 {
             color: #FFF;
-            font-size: 65px;
             margin: 15px 0 60px 0;
         }
     }
@@ -821,7 +820,6 @@ footer > nav > ul {
         
         & > h1 {
             color: @honey-color;
-            font-size: 55px;
             margin: 15px 0 45px 0;
             text-align: center;
         }
@@ -846,25 +844,22 @@ footer > nav > ul {
         }
         
         & h2 {
-            font-size: 35px;
             margin: 0;
         }
         
         & h3 {
-            font-size: @font-size-base;
+            font-size: @base-font-2;
             margin: 0;
         }
     }
     
     #advertise-cpm {
         & > h2 {
-            font-size: 35px;
             margin: 0 0 60px 0;
         }
         
         & h3 {
             color: @honey-color;
-            font-size: 35px;
             margin: 30px 0 60px 0;
         }
     }
@@ -878,13 +873,11 @@ footer > nav > ul {
         
         > h2 {
             color: #FFF;
-            font-size: 35px;
             margin: 0;
         }
         
         > h3 {
             color: #FFF;
-            font-size: 25px;
             margin: 0;
         }
     }
@@ -892,7 +885,6 @@ footer > nav > ul {
     #advertise-partners {
         & > h2 {
             text-align: center;
-            font-size: 35px;
             margin: 0 0 60px 0;
         }
         
@@ -937,7 +929,7 @@ footer > nav > ul {
         padding: 30px;
         
         & > h2 {
-            font-size: @font-size-large;
+            font-size: @base-font-1;
             margin: 30px 0;
         }
     }
@@ -950,7 +942,7 @@ footer > nav > ul {
         }
         
         > h3 {
-            font-size: @font-size-large;
+            font-size: @base-font-1;
             margin: 0;
         }
         
@@ -970,7 +962,6 @@ footer > nav > ul {
     }
     
     #about-intro > h2 {
-        font-size: 36px;
         margin: 60px 0;
     }
     
@@ -979,7 +970,6 @@ footer > nav > ul {
         
         & > h3,
         & > address > h4 {
-            font-size: 30px;
             margin: 30px 0 0 0;
         }
         

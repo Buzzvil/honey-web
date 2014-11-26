@@ -9,8 +9,8 @@ block meta
 block content
     div#advertise-intro-outer: section.container-fluid#advertise-intro
         div.blip
-        h2 #{advertise.intro.sub}
-        h1 #{advertise.intro.big}
+        h2.make-font-3 #{advertise.intro.sub}
+        h1.make-font-1 #{advertise.intro.big}
         
         div.row
             div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
@@ -26,7 +26,7 @@ block content
     
     section.container-fluid#advertise-benefits
         div.blip
-        h1 #{advertise.benefits.big}
+        h1.make-font-2 #{advertise.benefits.big}
         
         div#advertise-benefits-frame
             img.img-responsive(src="#{i}advertise/ex-benefits-frame.png", width="328", height="653")
@@ -35,47 +35,47 @@ block content
             div
                 img(src="#{i}advertise/ic-benefits-ctr.png", width="112", height="112")
                 div
-                    h2 #{advertise.benefits.ctr_big}
+                    h2.make-font-3 #{advertise.benefits.ctr_big}
                     h3 #{advertise.benefits.ctr_sub}
             
             div
                 img(src="#{i}advertise/ic-benefits-valid.png", width="112", height="112")
                 div
-                    h2 #{advertise.benefits.valid_big}
+                    h2.make-font-3 #{advertise.benefits.valid_big}
                     h3 #{advertise.benefits.valid_sub}
             
             div
                 img(src="#{i}advertise/ic-benefits-brand.png", width="112", height="112")
                 div
-                    h2 #{advertise.benefits.brand_big}
+                    h2.make-font-3 #{advertise.benefits.brand_big}
                     h3 #{advertise.benefits.brand_sub}
     
     div.bg-gray: section.container-fluid#advertise-cpm
         div.blip
-        h1 Display Ads
-        h2 #{advertise.cpm.big}
+        h1.make-font-2 Display Ads
+        h2.make-font-3 #{advertise.cpm.big}
         
         div.row
             div.col-xs-4
                 img(src="#{i}advertise/ic-cpm-apps.png", width="211", height="211")
-                h3 #{advertise.cpm.apps}
+                h3.make-font-3 #{advertise.cpm.apps}
             div.col-xs-4
                 img(src="#{i}advertise/ic-cpm-ecom.png", width="211", height="211")
-                h3 #{advertise.cpm.ecom}
+                h3.make-font-3 #{advertise.cpm.ecom}
             div.col-xs-4
                 img(src="#{i}advertise/ic-cpm-social.png", width="211", height="211")
-                h3 #{advertise.cpm.social}
+                h3.make-font-3 #{advertise.cpm.social}
     
     div#advertise-cpa-outer: section.container-fluid#advertise-cpa
         div.blip
-        h1 Incentive Ads
-        h2 #{advertise.cpa.big}
-        h3 #{advertise.cpa.sub}
+        h1.make-font-2 Incentive Ads
+        h2.make-font-3 #{advertise.cpa.big}
+        h3.make-font-4 #{advertise.cpa.sub}
     
     div.bg-gray: section.container-fluid#advertise-partners
         div.blip
-        h1 Partners
-        h2 #{advertise.partners.big}
+        h1.make-font-2 Partners
+        h2.make-font-3 #{advertise.partners.big}
         
         div.row: each _, n in Array(16)
             div.col-xs-6.col-sm-3: img.img-responsive.center-block(
@@ -86,7 +86,7 @@ block content
     
     section.container-fluid#advertise-contact
         div.blip
-        h1 Contact Us
+        h1.make-font-2 Contact Us
         
         address
             each person in advertise.contact.sales

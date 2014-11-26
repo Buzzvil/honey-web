@@ -9,8 +9,8 @@ block meta
 block content
     div#index-intro-outer: section.container-fluid#index-intro: div.row
         div.col-sm-7
-            h1 #{index.intro.big}
-            p.break-maybe: +break(index.intro.sub, " ")
+            h1.make-font-2 #{index.intro.big}
+            p.make-font-4.break-maybe: +break(index.intro.sub, " ")
             
             div#index-download
                 if contact.googlestore
@@ -29,13 +29,13 @@ block content
         
         div.col-sm-6#index-content-txt
             img(src="#{i}index/ic-content.png", width="70", height="80")
-            h1.break-maybe: +break(index.content.big)
+            h1.make-font-4.break-maybe: +break(index.content.big)
             h2.break-maybe: +break(index.content.sub)
     
     div.bg-gray: section.container-fluid: div.row
         div.col-sm-4#index-points-txt1
             img(src="#{i}index/ic-points.png", width="70", height="80")
-            h1.break-maybe: +break(index.points.big)
+            h1.make-font-4.break-maybe: +break(index.points.big)
             h2.break-maybe: +break(index.points.sub)
         
         div.col-sm-4#index-points-img
@@ -43,7 +43,7 @@ block content
         
         div.col-sm-4#index-points-txt2
             img(src="#{i}index/ic-store.png", width="70", height="80")
-            h1.break-maybe: +break(index.store.big)
+            h1.make-font-4.break-maybe: +break(index.store.big)
             h2.break-maybe: +break(index.store.sub)
             div
                 img(src="#{i}index/ic-store-1.png", width="35", height="35")
@@ -54,5 +54,5 @@ block content
     
     div#index-outro-outer: section.container-fluid#index-outro
         div.blip
-        h2 #{index.outro.big}
-        p.break-force: +break(index.outro.sub)
+        h2.make-font-2 #{index.outro.big}
+        p.make-font-3.break-force: +break(index.outro.sub)

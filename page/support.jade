@@ -9,7 +9,7 @@ block meta
 block content
     div#support-intro: section.container-fluid
         div.blip
-        h1 #{header.support}
+        h1.make-font-1 #{header.support}
         
         input.form-control#support-search(
             type="search",
@@ -33,7 +33,7 @@ block content
                 p.container-fluid.break-force: +break(question.a)
     
     div#support-contact: section.container-fluid
-        p.break-small: +break(support.contact.sub, " ")
+        p.make-font-4.break-small: +break(support.contact.sub, " ")
         
         a.btn.btn-frame.btn-frame-big(
             href="mailto:#{contact.support}",

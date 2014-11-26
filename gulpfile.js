@@ -71,6 +71,7 @@ gulp.task("scripts", ["i18n"], l10nify(function (l10n) {
         "node_modules/jquery-keystop/jquery.keystop.min.js",
         "node_modules/bootstrap/js/transition.js",
         "node_modules/bootstrap/js/collapse.js",
+        "node_modules/bootstrap/js/carousel.js",
         "page/global.js"
     ]).pipe(concat("global.js"));
     

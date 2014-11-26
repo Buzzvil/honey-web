@@ -32,6 +32,7 @@ e8a293ba70fda88a82f550afe7c8dc370092d7f4  _/favicon.ico
 f04c9d39163469d86f93fd2eb463b0668a17ef7a  _/ic-about-mail.png
 1b689cd2ab76cfd83dd3851e8f0e922d2fcab27e  _/ic-about-place.png
 1bea33a64b77d1938c3c521c1b12d1e01c0034d2  _/ic-about-tel.png
+e468be3850ffa2ce58eb55dc5919ff3e8f0bc63f  _/ic-arrow.png
 59ecd89facfd51fcf9cc3564ba3f7c18d7f0e824  _/ic-social-blog.png
 6b16ae67df11913e19d109a6f014539bc77f930c  _/ic-social-facebook.png
 8dd16d4d373179f0078b97ad4667b3dd52927ceb  _/ic-social-twitter.png
@@ -49,7 +50,7 @@ ad8fedfbd399f85b9d17a7671e17b77081e653a8  _/index/ic-store-4.png
 aa98d6d0425ecc29280b82614b595c9c82decc1b  _/index/ic-store-5.png
 a918e19f4a216167307c034951fada68e3788608  _/index/ic-store.png
 52ef8ee1847204fd0e63b4440a9689b244a3c00e  _/lg-honeyscreen.png
-ea6d284907614416d515cfd12a57986953fb1512  _/other/bg-head.jpg
+a2e6bae41787c4fb7314ecd084a08b02b9085485  _/other/bg-head-v2.jpg
 8fad996c80d5546b15f4ba9f0e8c3c1acbd16f15  _/support/bg-foot.jpg
 186e030ff5073606b5a2efde151dfde9bc4393a4  _/support/bg-head-v2.jpg
 d18bdc317c38a92ad05a5f491fd2655237fa9208  _/support/ic-abuse.png
@@ -98,7 +99,7 @@ fed0efcf798758ad6f5b4637bbb51e6c47207f6b  ko/advertise/dl-honeyscreen-guide-2014
 d608866060cfda413198f10f43143a6d9ab269f4  ko/advertise/ex-benefits-1.png
 75fee9ecbddc5b90513bab9d27a0d788517091c6  ko/advertise/ex-benefits-2.png
 407f4b972309f3b9a44d80d65a2646d72e8f8c4f  ko/advertise/ex-benefits-3.png
-6e4cf5fa82599c695da68c1acc5ed76d5dcf21d1  ko/advertise/ex-benefits-4.png
+9618339d4a105cf7730c66a9319603a796e4c422  ko/advertise/ex-benefits-4.png
 046b3248f34aaa0d1132a7a0fbacc2d743dca727  ko/advertise/ex-benefits-5.png
 d2f703766d909b177a43617cce4fb6b13b74c01f  ko/advertise/ex-benefits-6.png
 451c3fda3eebb15ab5d9681ecea01821583a9a51  ko/index/ex-content-1.png

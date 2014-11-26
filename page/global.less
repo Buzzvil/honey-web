@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Bootstrap: load
+// Bootstrap: Load
 ///////////////////////////////////////////////////////////////////////////////
 @import "node_modules/bootstrap/less/variables";
 @import "node_modules/bootstrap/less/mixins";
@@ -22,7 +22,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Bootstrap: config
+// Bootstrap: Config
 ///////////////////////////////////////////////////////////////////////////////
 @link-hover-color: @honey-link;
 @link-hover-decoration: none;
@@ -57,7 +57,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Global: config
+// Global: Config
 ///////////////////////////////////////////////////////////////////////////////
 @base-font-1: 20px;
 @base-font-2: 16px;
@@ -82,7 +82,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Global: elements
+// Global: Elements
 ///////////////////////////////////////////////////////////////////////////////
 a {
     color: inherit;
@@ -123,7 +123,7 @@ img {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Global: classes
+// Global: Classes
 ///////////////////////////////////////////////////////////////////////////////
 .background-pic(@file; @pos; @size) {
     -ms-behavior: url("@{i}backgroundsize.htc");
@@ -142,9 +142,8 @@ img {
     background-color: @honey-color;
     border-radius: @border-radius-base;
     height: 3px;
+    margin: 0 auto;
     width: 30px;
-    
-    .center-block();
 }
 
 .break-force > span {
@@ -169,6 +168,167 @@ img {
         background-color: #AAA;
         background-color: rgba(255, 255, 255, 0.30);
         color: #FFF;
+    }
+}
+
+.carousel-outer {
+    position: relative;
+    
+    & > div {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+    
+    & > img:extend(.img-responsive) {
+        position: relative;
+    }
+}
+
+.carousel-inner {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    
+    & > .item {
+        display: none;
+        position: relative;
+        
+        & > img:extend(.img-responsive) {
+            line-height: 1;
+        }
+    }
+    
+    & > .active,
+    & > .next,
+    & > .prev {
+        display: block;
+    }
+}
+
+.lr .carousel-inner {
+    & > .item {
+        .transition(.6s ease-in-out left);
+        
+        @media all and (transform-3d), (-webkit-transform-3d) {
+            backface-visibility: hidden;
+            perspective: 1000;
+            transition: transform .6s ease-in-out;
+            
+            &.next,
+            &.active.right {
+                left: 0;
+                transform: translate3d(100%, 0, 0);
+            }
+            
+            &.prev,
+            &.active.left {
+                left: 0;
+                transform: translate3d(-100%, 0, 0);
+            }
+            
+            &.next.left,
+            &.prev.right,
+            &.active {
+                left: 0;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    
+    & > .active {
+        left: 0;
+    }
+    
+    & > .next,
+    & > .prev {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    & > .next {
+        left: 100%;
+    }
+
+    & > .prev {
+        left: -100%;
+    }
+    
+    & > .next.left,
+    & > .prev.right {
+        left: 0;
+    }
+    
+    & > .active.left {
+        left: -100%;
+    }
+    
+    & > .active.right {
+        left: 100%;
+    }
+}
+
+.tb .carousel-inner {
+    & > .item {
+        .transition(.6s ease-in-out top);
+        
+        @media all and (transform-3d), (-webkit-transform-3d) {
+            backface-visibility: hidden;
+            perspective: 1000;
+            transition: transform .6s ease-in-out;
+            
+            &.next,
+            &.active.right {
+                top: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+            
+            &.prev,
+            &.active.left {
+                top: 0;
+                transform: translate3d(0, -100%, 0);
+            }
+            
+            &.next.left,
+            &.prev.right,
+            &.active {
+                top: 0;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    
+    & > .active {
+        top: 0;
+    }
+    
+    & > .next,
+    & > .prev {
+        position: absolute;
+        height: 100%;
+        left: 0;
+    }
+    
+    & > .next {
+        top: 100%;
+    }
+
+    & > .prev {
+        top: -100%;
+    }
+    
+    & > .next.left,
+    & > .prev.right {
+        top: 0;
+    }
+    
+    & > .active.left {
+        top: -100%;
+    }
+    
+    & > .active.right {
+        top: 100%;
     }
 }
 
@@ -268,7 +428,7 @@ img {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Global: header
+// Global: Header
 ///////////////////////////////////////////////////////////////////////////////
 .navbar-text > a {
     .transition(~"opacity 100ms");
@@ -343,7 +503,7 @@ img {
 
 
 ///////////////////////////////////////////////////////////////////////////////
-// Global: footer
+// Global: Footer
 ///////////////////////////////////////////////////////////////////////////////
 footer {
     background-color: @buzzvil-black;
@@ -403,6 +563,26 @@ footer > nav > ul {
     & h2,
     & p {
         color: #FFF;
+    }
+}
+
+#index-content-img {
+    & .carousel {
+        top: 8.8%;
+    }
+    
+    & .carousel-inner {
+        width: 91%;
+    }
+}
+
+#index-points-img {
+    & .carousel {
+        top: 11.5%;
+    }
+    
+    & .carousel-inner {
+        width: 83.5%;
     }
 }
 
@@ -501,7 +681,7 @@ footer > nav > ul {
         }
     }
     
-    #index-content-img > img {
+    #index-content-img > div {
         float: right;
         margin: 60px 0;
     }
@@ -679,7 +859,17 @@ footer > nav > ul {
     text-align: center;
 }
 
-#advertise-benefits-list > div {
+#advertise-benefits-img {
+    & .carousel {
+        top: 8.8%;
+    }
+    
+    & .carousel-inner {
+        width: 91%;
+    }
+}
+
+#advertise-benefits-txt > div {
     display: table;
     
     & > div {
@@ -744,11 +934,7 @@ footer > nav > ul {
         }
     }
     
-    #advertise-benefits-frame > img {
-        .center-block();
-    }
-    
-    #advertise-benefits-list {
+    #advertise-benefits-txt {
         & > div {
             margin-top: 20px;
             
@@ -814,12 +1000,12 @@ footer > nav > ul {
         }
     }
     
-    #advertise-benefits-frame {
+    #advertise-benefits-img {
         display: inline-block;
         width: 29%;
     }
     
-    #advertise-benefits-list {
+    #advertise-benefits-txt {
         display: inline-block;
         vertical-align: top;
         width: 71%;

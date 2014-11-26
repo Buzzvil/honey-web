@@ -23,8 +23,9 @@ block content
             img.img-responsive(src="#{I}index/ex-intro.png", width="365", height="488")
     
     section.container-fluid: div.row
-        div.col-sm-6#index-content-img
-            img.img-responsive(src="#{i}index/ex-content-frame.png", width="328", height="653")
+        div.col-sm-6#index-content-img: div.carousel-outer.tb
+            +carousel(6, 301, 527, "index/ex-content")
+            img(src="#{i}index/ex-content-frame.png", width="328", height="653")
         
         div.col-sm-6#index-content-txt
             img(src="#{i}index/ic-content.png", width="70", height="80")
@@ -37,19 +38,16 @@ block content
             h1.make-font-4.break-maybe: +break(index.points.big)
             h2.break-maybe: +break(index.points.sub)
         
-        div.col-sm-4#index-points-img
-            img.img-responsive(src="#{I}index/ex-points-frame.png", width="328", height="653")
+        div.col-sm-4#index-points-img: div.carousel-outer.lr
+            +carousel(2, 274, 484, "index/ex-points")
+            img(src="#{I}index/ex-points-frame.png", width="328", height="653")
         
         div.col-sm-4#index-points-txt2
             img(src="#{i}index/ic-store.png", width="70", height="80")
             h1.make-font-4.break-maybe: +break(index.store.big)
             h2.break-maybe: +break(index.store.sub)
-            div
-                img(src="#{i}index/ic-store-1.png", width="35", height="35")
-                img(src="#{i}index/ic-store-2.png", width="35", height="35")
-                img(src="#{i}index/ic-store-3.png", width="35", height="35")
-                img(src="#{i}index/ic-store-4.png", width="35", height="35")
-                img(src="#{i}index/ic-store-5.png", width="35", height="35")
+            div: each _, n in Array(5)
+                img(src="#{i}index/ic-store-#{n + 1}.png", width="35", height="35")
     
     div.gradient-2#index-outro-outer: section.container-fluid#index-outro
         div.blip

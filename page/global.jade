@@ -5,6 +5,10 @@ mixin break(arr, postfix)
     each str in arr
         span #{str}#{postfix}
 
+mixin carousel(l, w, h, f)
+    div.carousel.slide: div.carousel-inner: each _, n in Array(l)
+        div.item(class=!n && "active"): img(src="#{I}#{f}-#{n + 1}.png", width=w, height=h)
+
 doctype
 html(lang=meta.code)
     head

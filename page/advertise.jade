@@ -29,10 +29,11 @@ block content
         div.blip
         h1.make-font-2 #{advertise.benefits.big}
         
-        div#advertise-benefits-frame
-            img.img-responsive(src="#{i}advertise/ex-benefits-frame.png", width="328", height="653")
+        div#advertise-benefits-img: div.carousel-outer.tb
+            +carousel(6, 301, 527, "advertise/ex-benefits")
+            img(src="#{i}advertise/ex-benefits-frame.png", width="328", height="653")
         
-        div#advertise-benefits-list
+        div#advertise-benefits-txt
             div
                 img(src="#{i}advertise/ic-benefits-ctr.png", width="112", height="112")
                 div

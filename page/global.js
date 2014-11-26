@@ -1,4 +1,21 @@
-var resetList = function (q, a) {
+///////////////////////////////////////////////////////////////////////////////
+// Global
+///////////////////////////////////////////////////////////////////////////////
+$(".carousel").carousel({
+    interval: 3000,
+    pause: false,
+    keyboard: false
+});
+
+$(".carousel").parent().click(function () {
+    $(this).find(".carousel").carousel("next");
+});
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Page: Support
+///////////////////////////////////////////////////////////////////////////////
+var supportReset = function (q, a) {
     $("#support-faqs > :even").hide().removeClass("first-child");
     $("#support-faqs > :odd").removeClass("in").css("height", "");
     
@@ -14,7 +31,7 @@ $("#support-search").keystop(function () {
     var query = $.trim(this.value.toLowerCase());
     
     if (!query) {
-        return resetList($("#support-faqs > :even"), $());
+        return supportReset($("#support-faqs > :even"), $());
     }
     
     var results = $("#support-faqs").children().filter(function () {
@@ -24,13 +41,13 @@ $("#support-search").keystop(function () {
     var q = results.filter(":even");
     var a = results.filter(":odd");
     
-    resetList(q.add(a.prev()), a.add(q.next()));
+    supportReset(q.add(a.prev()), a.add(q.next()));
 }, 250).data("listen", true);
 
 $("#support-buttons").on("click", "a", function () {
     $("#support-search").data("listen", false).val("").trigger("input");
     
-    resetList($("#support-faqs [data-target^='" + $(this).attr("href") + "']").parent(), $());
+    supportReset($("#support-faqs [data-target^='" + $(this).attr("href") + "']").parent(), $());
     
     return false;
 });

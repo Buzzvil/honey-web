@@ -20,6 +20,8 @@ block content
             div.col-xs-4.col-sm-2: a.btn-frame(href="#q-#{key}")
                 img(src="#{i}support/ic-#{key}.png", width="61", height="61")
                 div #{cat.name}
+        
+        img.hidden-xs(src="#{i}ic-arrow.png", width="48", height="25")
     
     section#support-faqs: each cat, key in support.faqs
         each question, idx in cat.list

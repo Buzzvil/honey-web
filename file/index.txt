@@ -83,6 +83,7 @@ cd787d14d6c05f96e5e4f39ecd1b15ae05f4926b  ja/advertise/ex-benefits-0.jpg
 6a7618c9b02021edc0c989dde8dc2878ee88fa24  ja/advertise/ex-benefits-2.jpg
 09f1d7d81946e26d437f4c03b1863b991cd4dff9  ja/advertise/ex-benefits-3.jpg
 308fe6d896a74abe6b4da95b2f62af4806b7d240  ja/advertise/ex-benefits-4.jpg
+295b21752c7617a78f8507a26236ef74d9eaaa1f  ja/advertise/ex-benefits-5.jpg
 0849428a2da4495ec61499817c942224e32b5398  ja/index/ex-content-0.jpg
 18ed6987303832017acfb73170ccee50fa287d34  ja/index/ex-content-1.jpg
 6e3ad76c7a897dfc24479720f14c84be0ff6e803  ja/index/ex-content-2.jpg

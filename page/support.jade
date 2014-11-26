@@ -2,13 +2,12 @@ extends global
 
 block meta
     - navPage = "support"
-    - navOpts.push("navbar-noshadow")
     
     title #{header.support} | #{meta.title}
 
 block content
-    div#support-intro: section.container-fluid
-        div.blip
+    div.gradient-1#support-intro: section.container-fluid
+        div.blip.hidden-xs
         h1.make-font-1 #{header.support}
         
         input.form-control#support-search(
@@ -32,7 +31,7 @@ block content
             div.bg-gray.collapse(id="q-#{key}-#{idx}")
                 p.container-fluid.break-force: +break(question.a)
     
-    div#support-contact: section.container-fluid
+    div.gradient-2#support-contact: section.container-fluid
         p.make-font-4.break-small: +break(support.contact.sub, " ")
         
         a.btn.btn-frame.btn-frame-big(

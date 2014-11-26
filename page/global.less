@@ -238,6 +238,14 @@ img {
         padding: 0 (@grid-gutter-width / 2);
         width: 50%;
     }
+    
+    .gradient-1 {
+        #gradient > .vertical(@honey-color; #FFE56A);
+    }
+    
+    .gradient-2 {
+        #gradient > .vertical(#FFE56A; @honey-color);
+    }
 }
 
 @media (min-width: @screen-sm-min) {
@@ -262,10 +270,6 @@ img {
 ///////////////////////////////////////////////////////////////////////////////
 // Global: header
 ///////////////////////////////////////////////////////////////////////////////
-.navbar {
-    border: none;
-}
-
 .navbar-text > a {
     .transition(~"opacity 100ms");
     
@@ -278,10 +282,7 @@ img {
 @media (max-width: @screen-xs-max) {
     .navbar {
         background-color: @honey-color;
-        
-        &:not(.navbar-noshadow) {
-            .box-shadow(0 0 3px @honey-border-color);
-        }
+        border-bottom: 1px solid #FFF;
     }
     
     .navbar-dark {
@@ -321,6 +322,7 @@ img {
 @media (min-width: @screen-sm-min) {
     .navbar {
         background-color: transparent;
+        border: none;
         position: absolute;
         width: 100%;
     }
@@ -410,10 +412,7 @@ footer > nav > ul {
 
 @media (max-width: @screen-xs-max) {
     #index-intro {
-        border-top: 1px solid #FFF;
         text-align: center;
-        
-        #gradient > .vertical(@honey-color; #FFE56A);
         
         h1 {
             margin: 15px 0;
@@ -443,8 +442,6 @@ footer > nav > ul {
     
     #index-outro {
         padding-bottom: 130px;
-        
-        #gradient > .vertical(#FFE56A; @honey-color);
         
         > h2 {
             margin: 30px 0 20px 0;
@@ -583,17 +580,10 @@ footer > nav > ul {
 
 @media (max-width: @screen-xs-max) {
     #support-intro {
-        border-top: 1px solid #FFF;
         text-align: center;
-        
-        #gradient > .vertical(@honey-color; #FFE56A);
         
         & > section {
             padding: 0;
-        }
-        
-        & .blip {
-            display: none;
         }
         
         & h1 {
@@ -626,8 +616,6 @@ footer > nav > ul {
         color: #FFF;
         padding: 20px 0;
         text-align: center;
-        
-        #gradient > .vertical(#FFE56A; @honey-color);
     }
 }
 
@@ -707,14 +695,7 @@ footer > nav > ul {
 
 @media (max-width: @screen-xs-max) {
     #advertise-intro {
-        border-top: 1px solid #FFF;
         padding: 30px;
-        
-        #gradient > .vertical(@honey-color; #FFE56A);
-        
-        & > .blip {
-            display: none;
-        }
         
         & > h2 {
             color: #FFF;
@@ -925,7 +906,6 @@ footer > nav > ul {
 @media (max-width: @screen-xs-max) {
     #about-intro {
         background-color: @buzzvil-black;
-        border-top: 1px solid #FFF;
         padding: 30px;
         
         & > h2 {
@@ -1012,10 +992,6 @@ footer > nav > ul {
 }
 
 @media (max-width: @screen-xs-max) {
-    #other-intro {
-        #gradient > .vertical(@honey-color; #FFE56A);
-    }
-    
     #other-text {
         padding: 20px;
     }

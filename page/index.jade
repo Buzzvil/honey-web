@@ -2,12 +2,11 @@ extends global
 
 block meta
     - navPage = "index"
-    - navOpts.push("navbar-noshadow")
     
     title #{meta.title} | #{index.intro.big}
 
 block content
-    div#index-intro-outer: section.container-fluid#index-intro: div.row
+    div.gradient-1#index-intro-outer: section.container-fluid#index-intro: div.row
         div.col-sm-7
             h1.make-font-2 #{index.intro.big}
             p.make-font-4.break-maybe: +break(index.intro.sub, " ")
@@ -52,7 +51,7 @@ block content
                 img(src="#{i}index/ic-store-4.png", width="35", height="35")
                 img(src="#{i}index/ic-store-5.png", width="35", height="35")
     
-    div#index-outro-outer: section.container-fluid#index-outro
+    div.gradient-2#index-outro-outer: section.container-fluid#index-outro
         div.blip
         h2.make-font-2 #{index.outro.big}
         p.make-font-3.break-force: +break(index.outro.sub)

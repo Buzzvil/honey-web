@@ -2,13 +2,12 @@ extends global
 
 block meta
     - navPage = "advertise"
-    - navOpts.push("navbar-noshadow")
     
     title #{header.advertise} | #{meta.title}
 
 block content
-    div#advertise-intro-outer: section.container-fluid#advertise-intro
-        div.blip
+    div.gradient-1#advertise-intro-outer: section.container-fluid#advertise-intro
+        div.blip.hidden-xs
         h2.make-font-3 #{advertise.intro.sub}
         h1.make-font-1 #{advertise.intro.big}
         

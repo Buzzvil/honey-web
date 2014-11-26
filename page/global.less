@@ -983,22 +983,26 @@ footer > nav > ul {
 ///////////////////////////////////////////////////////////////////////////////
 // Page: Other
 ///////////////////////////////////////////////////////////////////////////////
+#other-intro h1 {
+    color: #FFF;
+    margin: 15px 0;
+    text-align: center;
+}
+
 #other-text {
-    padding: 20px;
-    
-    > :first-child {
+    & > :first-child {
         margin-top: 0;
     }
     
-    > :last-child {
+    & > :last-child {
         margin-bottom: 0;
     }
     
-    .row {
+    & .row {
         border-left: @honey-border;
         border-top: @honey-border;
         
-        > div {
+        & > div {
             border-bottom: @honey-border;
             border-right: @honey-border;
             padding: 10px;
@@ -1008,38 +1012,23 @@ footer > nav > ul {
 }
 
 @media (max-width: @screen-xs-max) {
-    #other-inner {
-        padding: 0;
-        
-        > h1 {
-            margin: 30px 0 0 0;
-            text-align: center;
-        }
+    #other-intro {
+        #gradient > .vertical(@honey-color; #FFE56A);
+    }
+    
+    #other-text {
+        padding: 20px;
     }
 }
 
 @media (min-width: @screen-sm-min) {
-    #other-outer {
-        -ms-behavior: url("@{i}backgroundsize.htc");
-        background-image: url("@{i}other/bg-head.jpg");
-        background-position: center top;
-        background-repeat: no-repeat;
-        // TODO background-size: cover;
-        padding: 90px 0 30px 0;
-    }
-    
-    #other-inner > h1 {
-        color: #FFF;
-        display: inline-block;
-        font-size: 48px;
-        line-height: 48px;
-        margin: 0 30px 30px 20px;
-        padding-right: 30px;
+    #other-intro {
+        padding-top: 180px;
+        
+        .background-pic("@{i}other/bg-head-v2.jpg"; top; 400px);
     }
     
     #other-text {
-        background-color: #FFF;
-        border: @honey-border;
-        border-radius: @border-radius-base;
+        margin: 30px auto;
     }
 }

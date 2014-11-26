@@ -4,7 +4,8 @@ block meta
     title #{footer.terms} | #{meta.title}
 
 block content
-    div#other-outer: div.container-fluid#other-inner
-        h1 #{footer.terms}
-        
-        div#other-text !{terms}
+    div#other-intro: div.container-fluid
+        div.blip.hidden-xs
+        h1.make-font-1 #{footer.terms}
+    
+    div.container-fluid#other-text !{terms}

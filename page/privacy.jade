@@ -4,7 +4,8 @@ block meta
     title #{footer.privacy} | #{meta.title}
 
 block content
-    div#other-outer: div.container-fluid#other-inner
-        h1 #{footer.privacy}
-        
-        div#other-text !{privacy}
+    div#other-intro: div.container-fluid
+        div.blip.hidden-xs
+        h1.make-font-1 #{footer.privacy}
+    
+    div.container-fluid#other-text !{privacy}

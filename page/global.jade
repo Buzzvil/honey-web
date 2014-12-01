@@ -1,5 +1,7 @@
-- var navPage = ""
-- var navOpts = ["navbar", "navbar-default", "navbar-static-top"]
+- var pagePath
+- var pageName
+- var pageType
+block config
 
 mixin break(arr, postfix)
     each str in arr
@@ -15,16 +17,20 @@ html(lang=meta.code)
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1")
-        block meta
+        title #{pageName.join(" | ")}
+        link(rel="stylesheet", href="/global.css")
         link(rel="icon", type="image/png", href="#{i}favicon-1x.png", sizes="16x16")
         link(rel="icon", type="image/png", href="#{i}favicon-2x.png", sizes="32x32")
-        link(rel="stylesheet", href="/global.css")
+        link(rel="alternate", hreflang="en", href="//en.honeyscreen.com/#{pagePath}")
+        link(rel="alternate", hreflang="ko", href="//ko.honeyscreen.com/#{pagePath}")
+        link(rel="alternate", hreflang="ja", href="//ja.honeyscreen.com/#{pagePath}")
+        link(rel="alternate", hreflang="zh-TW", href="//zh-tw.honeyscreen.com/#{pagePath}")
         <!--[if lt IE 9]>
         script(src="/legacy.js")
         <![endif]-->
     
     body
-        nav(class=navOpts): div.container-fluid
+        nav.navbar.navbar-default.navbar-static-top(class=pageType === "dark" && "navbar-dark"): div.container-fluid
             div.navbar-header
                 button.navbar-toggle.collapsed(data-toggle="collapse", data-target=".navbar-collapse")
                     span.icon-bar
@@ -35,9 +41,9 @@ html(lang=meta.code)
             
             div.collapse.navbar-collapse.navbar-right
                 ul.nav.navbar-nav
-                    li(class=navPage === "support" && "active"): a(href="/support") #{header.support}
-                    li(class=navPage === "advertise" && "active"): a(href="/advertise") #{header.advertise}
-                    li(class=navPage === "about" && "active"): a(href="/about") #{header.about}
+                    li(class=pagePath === "support" && "active"): a(href="/support") #{header.support}
+                    li(class=pagePath === "advertise" && "active"): a(href="/advertise") #{header.advertise}
+                    li(class=pagePath === "about" && "active"): a(href="/about") #{header.about}
                     li: a(href=contact.adadmin) #{header.signin}
                 
                 p.navbar-text
@@ -57,10 +63,10 @@ html(lang=meta.code)
                 li.last-child: a(href="/privacy") #{footer.privacy}
             
             ul.last-child
-                li.first-child: a(rel="alternate", href="//en.honeyscreen.com", hreflang="en") English
-                li: a(rel="alternate", href="//ko.honeyscreen.com", hreflang="ko") 한국어
-                li: a(rel="alternate", href="//ja.honeyscreen.com", hreflang="ja") 日本語
-                li.last-child: a(rel="alternate", href="//zh-tw.honeyscreen.com", hreflang="zh-TW") 繁體中文
+                li.first-child: a(rel="alternate", href="//en.honeyscreen.com/#{pagePath}", hreflang="en") English
+                li: a(rel="alternate", href="//ko.honeyscreen.com/#{pagePath}", hreflang="ko") 한국어
+                li: a(rel="alternate", href="//ja.honeyscreen.com/#{pagePath}", hreflang="ja") 日本語
+                li.last-child: a(rel="alternate", href="//zh-tw.honeyscreen.com/#{pagePath}", hreflang="zh-TW") 繁體中文
         
         script(src="/global.js", async)
         script.

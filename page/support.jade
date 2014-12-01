@@ -1,9 +1,8 @@
 extends global
 
-block meta
-    - navPage = "support"
-    
-    title #{header.support} | #{meta.title}
+block config
+    - pagePath = "support"
+    - pageName = [header.support, meta.title]
 
 block content
     div.gradient-1#support-intro: section.container-fluid

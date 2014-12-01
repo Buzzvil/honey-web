@@ -1,7 +1,8 @@
 extends global
 
-block meta
-    title #{footer.privacy} | #{meta.title}
+block config
+    - pagePath = "privacy"
+    - pageName = [footer.privacy, meta.title]
 
 block content
     div.gradient-1#other-intro: section.container-fluid

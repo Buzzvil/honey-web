@@ -1,9 +1,8 @@
 extends global
 
-block meta
-    - navPage = "advertise"
-    
-    title #{header.advertise} | #{meta.title}
+block config
+    - pagePath = "advertise"
+    - pageName = [header.advertise, meta.title]
 
 block content
     div.gradient-1#advertise-intro-outer: section.container-fluid#advertise-intro

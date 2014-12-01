@@ -1,9 +1,8 @@
 extends global
 
-block meta
-    - navPage = "index"
-    
-    title #{meta.title} | #{index.intro.big}
+block config
+    - pagePath = ""
+    - pageName = [meta.title, index.intro.big]
 
 block content
     div.gradient-1#index-intro-outer: section.container-fluid#index-intro: div.row

@@ -1,7 +1,8 @@
 extends global
 
-block meta
-    title #{footer.terms} | #{meta.title}
+block config
+    - pagePath = "terms"
+    - pageName = [footer.terms, meta.title]
 
 block content
     div.gradient-1#other-intro: section.container-fluid

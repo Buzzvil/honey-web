@@ -29,13 +29,13 @@ block content
         
         div.col-sm-6#index-content-txt
             img(src="#{i}index/ic-content.png", width="70", height="80")
-            h1.make-font-4.break-maybe: +break(index.content.big)
+            h1.make-font-3.break-maybe: +break(index.content.big)
             h2.break-maybe: +break(index.content.sub)
     
     div.bg-gray: section.container-fluid: div.row
         div.col-sm-4#index-points-txt1
             img(src="#{i}index/ic-points.png", width="70", height="80")
-            h1.make-font-4.break-maybe: +break(index.points.big)
+            h1.make-font-3.break-maybe: +break(index.points.big)
             h2.break-maybe: +break(index.points.sub)
         
         div.col-sm-4#index-points-img: div.carousel-outer.lr
@@ -44,12 +44,12 @@ block content
         
         div.col-sm-4#index-points-txt2
             img(src="#{i}index/ic-store.png", width="70", height="80")
-            h1.make-font-4.break-maybe: +break(index.store.big)
+            h1.make-font-3.break-maybe: +break(index.store.big)
             h2.break-maybe: +break(index.store.sub)
             div: each _, n in Array(5)
                 img(src="#{i}index/ic-store-#{n + 1}.png", width="35", height="35")
     
     div.gradient-2#index-outro-outer: section.container-fluid#index-outro
-        div.blip
-        h2.make-font-2 #{index.outro.big}
-        p.make-font-3.break-force: +break(index.outro.sub)
+        div.blip.hidden-xs
+        h1.make-font-2 #{index.outro.big}
+        h2.make-font-3.break-force: +break(index.outro.sub)

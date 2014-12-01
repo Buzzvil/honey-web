@@ -65,7 +65,7 @@
 
 @make-font-1: 70px;
 @make-font-2: 60px;
-@make-font-3: 40px;
+@make-font-3: 37px;
 @make-font-4: 30px;
 
 @buzzvil-black: #404041;
@@ -172,6 +172,7 @@ img {
 }
 
 .carousel-outer {
+    cursor: pointer;
     position: relative;
     
     & > div {
@@ -586,18 +587,26 @@ footer > nav > ul {
     }
 }
 
-#index-outro {
-    text-align: center;
-}
-
 @media (max-width: @screen-xs-max) {
-    #index-intro {
+    #index-intro,
+    #index-content-txt,
+    #index-points-txt1,
+    #index-points-txt2,
+    #index-outro {
         text-align: center;
         
         h1 {
+            font-size: 30px;
             margin: 15px 0;
         }
         
+        h2 {
+            font-size: @base-font-1;
+            margin: 0 0 30px 0;
+        }
+    }
+    
+    #index-intro {
         p {
             font-size: @base-font-1;
             margin: 15px 0;
@@ -620,17 +629,21 @@ footer > nav > ul {
         }
     }
     
-    #index-outro {
-        padding-bottom: 130px;
-        
-        > h2 {
-            margin: 30px 0 20px 0;
-            padding-bottom: 20px;
+    #index-content-img {
+        margin: 30px 0;
+    }
+    
+    #index-points-txt1 > img {
+        margin-top: 30px;
+    }
+    
+    #index-points-txt2 {
+        & > img {
+            margin-top: 30px;
         }
         
-        > p {
-            font-size: @base-font-1;
-            margin: 0;
+        & > div > img {
+            margin: 0 15px 30px 15px;
         }
     }
 }
@@ -722,8 +735,9 @@ footer > nav > ul {
             margin-top: 60px;
         }
         
-        & > p {
+        & > h2 {
             margin: 0;
+            text-align: center;
         }
     }
 }
@@ -918,7 +932,12 @@ footer > nav > ul {
             text-align: center;
         }
         
-        & h2,
+        & h2 {
+            font-size: @base-font-1;
+            margin: 0;
+            text-align: center;
+        }
+        
         & h3 {
             font-size: @base-font-2;
             margin: 0;

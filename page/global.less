@@ -337,6 +337,10 @@ img {
     max-width: @container-lg;
 }
 
+.frame-map {
+    cursor: pointer;
+}
+
 .ic {
     -ms-behavior: url("@{i}backgroundsize.htc");
     background-position: center;
@@ -379,6 +383,10 @@ img {
 .make-font-2 { .make-font(floor(@make-font-2 * 0.70); @make-font-2); }
 .make-font-3 { .make-font(floor(@make-font-3 * 0.70); @make-font-3); }
 .make-font-4 { .make-font(floor(@make-font-4 * 0.70); @make-font-4); }
+
+.scroller {
+    display: block;
+}
 
 @media (max-width: @screen-xs-max) {
     .break-maybe > span:after {
@@ -825,7 +833,7 @@ footer > nav > ul {
             margin: 15px 0 45px 0;
         }
         
-        & img.hidden-xs {
+        & .scroller {
             margin-top: 60px;
         }
     }
@@ -998,7 +1006,7 @@ footer > nav > ul {
             margin: 15px 0 60px 0;
         }
         
-        & > img {
+        & .scroller {
             margin-top: 90px;
         }
     }
@@ -1216,8 +1224,7 @@ footer > nav > ul {
         
         .background-pic("@{i}other/bg-head-v2.jpg"; top; 400px);
         
-        & img {
-            display: block;
+        & .scroller {
             margin: 30px auto;
         }
     }

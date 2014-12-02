@@ -22,7 +22,8 @@ block content
                 download
             ) #{advertise.intro.guide}
         
-        img.hidden-xs(src="#{i}ic-arrow.png", width="48", height="25")
+        a.scroller.hidden-xs(href="#advertise-benefits")
+            img(src="#{i}ic-arrow.png", width="48", height="25")
     
     section.container-fluid#advertise-benefits
         div.blip
@@ -108,4 +109,4 @@ block content
                 img(src="#{i}ic-about-place.png", width="19", height="20")
                 a(href=advertise.contact.maplink, target="_blank") #{advertise.contact.address}
             
-            div.embed-responsive: iframe(src=advertise.contact.mapcode)
+            div.embed-responsive.frame-map: iframe(src=advertise.contact.mapcode)

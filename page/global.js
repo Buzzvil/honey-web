@@ -1,5 +1,19 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Global
+// Scrollers
+///////////////////////////////////////////////////////////////////////////////
+$(".scroller").click(function () {
+    document.activeElement.blur();
+    
+    $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top
+    }, 250);
+    
+    return false;
+});
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Carousels
 ///////////////////////////////////////////////////////////////////////////////
 $(".carousel").carousel({
     interval: 3000,
@@ -13,17 +27,33 @@ $(".carousel").parent().click(function () {
 
 
 ///////////////////////////////////////////////////////////////////////////////
+// Maps
+///////////////////////////////////////////////////////////////////////////////
+$(".frame-map").one("click", function () {
+    $(this).children().css("pointer-events", "auto");
+}).children().css("pointer-events", "none");
+
+
+///////////////////////////////////////////////////////////////////////////////
 // Page: Support
 ///////////////////////////////////////////////////////////////////////////////
+var $supportFAQs = $("#support-faqs").children();
+var $supportQs = $supportFAQs.filter(":even");
+var $supportAs = $supportFAQs.filter(":odd");
+
 var supportReset = function (q, a) {
-    $("#support-faqs > :even").hide().removeClass("first-child");
-    $("#support-faqs > :odd").removeClass("in").css("height", "");
+    $supportQs.hide().removeClass("first-child");
+    $supportAs.removeClass("in").css("height", "");
     
     q.show().first().addClass("first-child");
     a.addClass("in");
 };
 
-$("#support-search").keystop(function () {
+$("#support-search").keypress(function (evt) {
+    if (evt.which === 13) {
+        $(".scroller").click();
+    }
+}).keystop(function () {
     if (!$(this).data("listen")) {
         return $(this).data("listen", true);
     }
@@ -31,15 +61,15 @@ $("#support-search").keystop(function () {
     var query = $.trim(this.value.toLowerCase());
     
     if (!query) {
-        return supportReset($("#support-faqs > :even"), $());
+        return supportReset($supportQs, $());
     }
     
-    var results = $("#support-faqs").children().filter(function () {
+    var results = $supportFAQs.filter(function () {
         return $(this).text().toLowerCase().indexOf(query) !== -1;
     });
     
-    var q = results.filter(":even");
-    var a = results.filter(":odd");
+    var q = results.filter($supportQs);
+    var a = results.filter($supportAs);
     
     supportReset(q.add(a.prev()), a.add(q.next()));
 }, 250).data("listen", true);
@@ -47,7 +77,8 @@ $("#support-search").keystop(function () {
 $("#support-buttons").on("click", "a", function () {
     $("#support-search").data("listen", false).val("").trigger("input");
     
-    supportReset($("#support-faqs [data-target^='" + $(this).attr("href") + "']").parent(), $());
+    supportReset($supportFAQs.find("[data-target^='" + $(this).attr("href") + "']").parent(), $());
+    $(".scroller").click();
     
     return false;
 });

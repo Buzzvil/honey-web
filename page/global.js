@@ -16,13 +16,17 @@ $(".scroller").click(function () {
 // Carousels
 ///////////////////////////////////////////////////////////////////////////////
 $(".carousel").carousel({
-    interval: 3000,
+    interval: 4000,
     pause: false,
     keyboard: false
 });
 
 $(".carousel").parent().click(function () {
     $(this).find(".carousel").carousel("next");
+}).mouseenter(function () {
+    $(this).find(".carousel").carousel("pause");
+}).mouseleave(function () {
+    $(this).find(".carousel").carousel("cycle");
 });
 
 
@@ -32,6 +36,38 @@ $(".carousel").parent().click(function () {
 $(".frame-map").one("click", function () {
     $(this).children().css("pointer-events", "auto");
 }).children().css("pointer-events", "none");
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Page: Index
+///////////////////////////////////////////////////////////////////////////////
+$("#index-video a").click(function () {
+    if (window.matchMedia && matchMedia("(max-width: 767px)").matches) {
+        return;
+    }
+    
+    var $a = $(this);
+    var $div = $a.siblings("div");
+    var src = $a.prop("href").replace("watch?v=", "embed/") + "?";
+    
+    $("<iframe/>").prop("src", src + $.param({
+        autohide: 1,
+        autoplay: 1,
+        rel: 0,
+        showinfo: 0
+    })).load(function () {
+        $a.remove();
+        
+        $div.css("display", "block");
+        $div.css("opacity");
+        $div.css("opacity", 1);
+    }).appendTo($div);
+    
+    $a.css("opacity", 0);
+    $("#index-video > div").css("background-color", "rgba(0, 0, 0, 0.7)");
+    
+    return false;
+});
 
 
 ///////////////////////////////////////////////////////////////////////////////

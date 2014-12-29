@@ -5,7 +5,24 @@
         "title": "HoneyScreen"
     },
     "style": {
-        "l10n-font-family": "'Noto Sans CJK TW', sans-serif"
+        "font-list": "'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Microsoft JhengHei', '微軟正黑體', '宋体', SimSun, STXihei, '华文细黑', 'Noto Sans CJK TW', sans-serif",
+        
+        "font-base-1": "22px",
+        "font-base-2": "19px",
+        "font-base-3": "16px",
+        "font-base-4": "13px",
+        
+        "font-mobile-1": "32px",
+        "font-mobile-2": "25px",
+        "font-mobile-3": "19px",
+        "font-mobile-4": "15px",
+        
+        "font-make-1": "65px",
+        "font-make-2": "50px",
+        "font-make-3": "34px",
+        "font-make-4": "28px",
+        
+        "font-spacing": "normal"
     },
     
     "header": {
@@ -25,12 +42,16 @@
         "blog": "http://honeyscreen.pixnet.net/blog",
         "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.honeyscreen.tw&referrer=homepage",
         "applestore": "",
-        "support": "contact.tw@honeyscreen.com"
+        "support": "contact.tw@honeyscreen.com",
+        "video": "PYTERRAEfss"
     },
     
     "index": {
         "intro": {
-            "big": "滑動鎖屏畫面 發現甜蜜生活",
+            "big": [
+                "滑動鎖屏畫面",
+                "發現甜蜜生活"
+            ],
             "sub": [
                 "豐富有趣的生活資訊和每小時免費提供點數回饋",
                 "精緻唯美的鎖屏界面 便利快捷的操作應用"
@@ -71,7 +92,9 @@
         },
         
         "outro": {
-            "big": "甜蜜樂享鎖屛優惠",
+            "big": [
+                "甜蜜樂享鎖屛優惠"
+            ],
             "sub": [
                 "只要參與活動任務，便可輕鬆集點，",
                 "兌換便利商店，遊戲，電影，美食餐廳等電子禮券，",
@@ -81,14 +104,6 @@
     },
     
     "support": {
-        "intro": {
-            "big": "常見問題",
-            "sub": [
-                "我們已為您整理出常見問題供您參考，若您對HoneyScreen還有任何疑問，",
-                "可以透過客服信箱和我們聯繫，我們將儘快為您服務！"
-            ]
-        },
-        
         "search": "問答集...",
         
         "faqs": {
@@ -258,8 +273,8 @@
         
         "contact": {
             "sub": [
-                "若您有任何意見或建議，竭誠歡迎您的來信，",
-                "我們將儘速回覆您!"
+                "若您有任何意見或建議，",
+                "竭誠歡迎您的來信，我們將儘速回覆您!"
             ],
             "btn": "提出問題"
         }
@@ -267,8 +282,13 @@
     
     "advertise": {
         "intro": {
-            "sub": "在HoneyScreen上，分享傳遞人氣情報!",
-            "big": "最聰明的鎖屏桌布",
+            "sub": [
+                "在HoneyScreen上，",
+                "分享傳遞人氣情報!"
+            ],
+            "big": [
+                "最聰明的鎖屏桌布"
+            ],
             "intro": "媒體介紹",
             "intro": "Coming Soon",
             "guide": "製作指南",
@@ -293,12 +313,19 @@
         },
         
         "cpa": {
-            "big": "我們提供回饋以獎勵用戶積極參與廣告活動",
-            "sub": "安裝app，臉書按讚分享，會員註冊，觀賞短片等"
+            "big": [
+                "我們提供回饋以獎勵用戶積極參與廣告活動"
+            ],
+            "installs": "安裝",
+            "likes": "讚",
+            "signups": "登錄",
+            "views": "觀賞影片"
         },
         
         "partners": {
-            "big": "我們的合作夥伴"
+            "big": [
+                "我們的合作夥伴"
+            ]
         },
         
         "contact": {

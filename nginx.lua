@@ -29,4 +29,9 @@ for i, l10n in pairs(options) do
     if l10nKey then break end
 end
 
-ngx.redirect("http://" .. (l10nKey or "ko") .. ".honeyscreen.com" .. ngx.var.request_uri)
+ngx.redirect(
+    "http://" ..
+    (l10nKey or "ko") ..
+    ".honeyscreen.com" ..
+    string.gsub(ngx.var.request_uri, [[/+$]], "")
+)

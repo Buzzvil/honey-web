@@ -5,7 +5,24 @@
         "title": "Honeyscreen"
     },
     "style": {
-        "l10n-font-family": "'Noto Sans', 'Open Sans', sans-serif"
+        "font-list": "'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif",
+        
+        "font-base-1": "22px",
+        "font-base-2": "19px",
+        "font-base-3": "16px",
+        "font-base-4": "13px",
+        
+        "font-mobile-1": "32px",
+        "font-mobile-2": "25px",
+        "font-mobile-3": "19px",
+        "font-mobile-4": "15px",
+        
+        "font-make-1": "70px",
+        "font-make-2": "45px",
+        "font-make-3": "32px",
+        "font-make-4": "26px",
+        
+        "font-spacing": "normal"
     },
     
     "header": {
@@ -25,15 +42,19 @@
         "blog": "http://blog.naver.com/honeyscreen",
         "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.adhours&referrer=homepage",
         "applestore": "https://itunes.apple.com/kr/app/honeyscreen/id591658676?mt=8",
-        "support": "contact@honeyscreen.com"
+        "support": "contact@honeyscreen.com",
+        "video": "P_aONkC2fJg"
     },
     
     "index": {
         "intro": {
-            "big": "Sweet rewards on your first screen",
+            "big": [
+                "Sweet rewards",
+                "on your first screen"
+            ],
             "sub": [
-                "Get popular content and points every hour.",
-                "Enjoy every minute of your personalized first screen."
+                "Get popular content and points every hour!",
+                "Enjoy every moment of your first screen."
             ]
         },
         
@@ -43,19 +64,19 @@
                 "See what you want, when you want!"
             ],
             "sub": [
-                "Get quick and easy access to current news, useful lifestyle tips,",
+                "Get quick and easy access to current news, lifestyle tips,",
                 "and viral content, right from your lock screen!"
             ]
         },
         
         "points": {
             "big": [
-                "Use your smartphone like you always do,",
-                "and watch your points add up in no time."
+                "Use your phone as usual.",
+                "Watch your points pile up!"
             ],
             "sub": [
-                "You accumulate points every hour,",
-                "just by unlocking your phone. It’s that easy!"
+                "Accumulate points every hour just by",
+                "unlocking your phone. It’s that easy!"
             ]
         },
         
@@ -65,30 +86,23 @@
             ],
             "sub": [
                 "Using your points is easy!",
-                "Redeem them for cash or for products you love."
+                "Redeem them for cash or items you love."
             ]
         },
         
         "outro": {
-            "big": "Experience more on mobile at a lower cost.",
+            "big": [
+                "Experience more,",
+                "pay less"
+            ],
             "sub": [
-                "Your cell phone bill. Music streaming. Games. Movie tickets.",
-                "All these things that most smartphone users pay for,",
-                "we want you to experience for free.",
-                "This is our dream. We invite you to be a part of it."
+                "Your phone bill. Music streaming. Games. Movie tickets.",
+                "With Honeyscreen, experience more on mobile for free."
             ]
         }
     },
     
     "support": {
-        "intro": {
-            "big": "FAQs",
-            "sub": [
-                "If you have any questions about Honeyscreen,",
-                "please take a look at the questions and answers below."
-            ]
-        },
-        
         "search": "Please enter your question...",
         
         "faqs": {
@@ -287,8 +301,13 @@
     
     "advertise": {
         "intro": {
-            "sub": "Popular Content on the First Screen of Mobile",
-            "big": "Smart Mobile Media",
+            "sub": [
+                "Popular Content on the",
+                "First Screen of Mobile"
+            ],
+            "big": [
+                "Smart Mobile Media"
+            ],
             "intro": "Service Intro",
             "guide": "Design Guide",
             "guide": "Coming Soon"
@@ -296,12 +315,12 @@
         
         "benefits": {
             "big": "Get Users’ Full Attention",
-            "ctr_big": "Superior CTR compared to banner ads",
-            "ctr_sub": "The average CTR is 10%, 10x higher than banner ads",
-            "valid_big": "Low rate of invalid clicks",
-            "valid_sub": "Due to our intuitive UI, the likelihood of misclicks is extremely low",
-            "brand_big": "Outstanding brand boosting",
-            "brand_sub": "With full-sized ads, it’s easy to deliver your message to users"
+            "ctr_big": "Higher CTR than banner ads",
+            "ctr_sub": "Average CTR is 10%, up to 10x higher than banner ads",
+            "valid_big": "Fewer invalid clicks",
+            "valid_sub": "Reduce the likelihood of misclicks with our intuitive UI",
+            "brand_big": "Boost your brand",
+            "brand_sub": "Engage users with beautiful full-sized ads"
         },
         
         "cpm": {
@@ -312,12 +331,19 @@
         },
         
         "cpa": {
-            "big": "Increase user engagement with incentivized ads",
-            "sub": "Installs, Likes, Signups, Views, etc."
+            "big": [
+                "Increase user engagement with incentivized ads"
+            ],
+            "installs": "Installs",
+            "likes": "Likes",
+            "signups": "Signups",
+            "views": "Views"
         },
         
         "partners": {
-            "big": "We work with industry-leading brands and businesses."
+            "big": [
+                "We work with industry-leading brands and businesses"
+            ]
         },
         
         "contact": {
@@ -332,7 +358,7 @@
                 "tel": "070 4632 2354",
                 "fax": "02 6499 5513"
             }],
-            "address": "서울특별시 송파구 석촌호수로 272 (송파동 32, 대림빌딩 3층)",
+            "address": "3F Daerim Building, 272 Seokchonhosu-ro (32 Songpa-dong), Songpa-gu, Seoul",
             "maplink": "https://www.google.com/maps/place/272+Seokchonhosu-ro,+Songpa-gu,+Seoul,+South+Korea/@37.5099336,127.1059156,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca59fc2df4013:0x27d10e76d956e776",
             "mapcode": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12659.658171349469!2d127.1059156!3d37.509933649999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca59fc2df4013%3A0x27d10e76d956e776!2s272+Seokchonhosu-ro%2C+Songpa-gu%2C+Seoul%2C+South+Korea!5e0!3m2!1sen!2s!4v1415261314226"
         }
@@ -340,8 +366,8 @@
     
     "about": {
         "sub": [
-            "Honeyscreen aims to captivate users on their smartphones’",
-            "first screens. Join us on this journey!"
+            "Honeyscreen aims to captivate users on their",
+            "smartphones’ first screens. Join us on this journey!"
         ]
     }
 }

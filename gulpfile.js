@@ -44,6 +44,7 @@ gulp.task("i18n", function () {
         var privacy = fs.readFileSync("l10n/" + key + ".privacy.md", "utf8");
         
         l10nObj[key] = JSON.parse(json);
+        l10nObj[key].meta.key = key;
         l10nObj[key].terms = marked(terms);
         l10nObj[key].privacy = marked(privacy);
     });
@@ -55,7 +56,6 @@ gulp.task("styles", ["i18n"], l10nify(function (l10n) {
         globalVars: l10nObj[l10n].style
     };
     
-    opts.globalVars.l10n = JSON.stringify(l10n);
     opts.globalVars.f = JSON.stringify("../file/_/");
     opts.globalVars.i = JSON.stringify(IMAGES + "_/");
     opts.globalVars.I = JSON.stringify(IMAGES + l10n + "/");

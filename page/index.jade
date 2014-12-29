@@ -5,50 +5,62 @@ block config
     - pageName = [meta.title, index.intro.big]
 
 block content
-    div.gradient-1#index-intro-outer: section.container-fluid#index-intro: div.row
-        div.col-sm-7
-            h1.make-font-2 #{index.intro.big}
-            p.make-font-4.break-maybe: +break(index.intro.sub, " ")
+    div.gradient-1#index-intro: section.container-fluid
+        div.first-child
+            h1.font-make-2: +break("small", index.intro.big)
+            h2.font-make-4: +break("force", index.intro.sub)
             
-            div#index-download
-                if contact.googlestore
-                    a(href=contact.googlestore, target="_blank")
-                        img.img-responsive(src="#{i}index/dl-google.png", width="214", height="64")
-                if contact.applestore
-                    a(href=contact.applestore, target="_blank")
-                        img.img-responsive(src="#{i}index/dl-apple.png", width="214", height="64")
+            if contact.googlestore
+                div: a.btn-frame-outer(href=contact.googlestore, target="_blank")
+                    img(src="#{i}index/dl-google-v2.png", width="159", height="64")
+            
+            if contact.applestore
+                div: a.btn-frame-outer(href=contact.applestore, target="_blank")
+                    img(src="#{i}index/dl-apple-v2.png", width="159", height="64")
         
-        div.col-sm-5
+        div.last-child
             img.img-responsive(src="#{I}index/ex-intro.png", width="365", height="488")
     
-    section.container-fluid: div.row
-        div.col-sm-6#index-content-img: div.carousel-outer.tb
-            +carousel(6, 301, 527, "index/ex-content")
-            img(src="#{i}index/ex-content-frame.png", width="328", height="653")
+    div.gradient-3#index-video: div: section.container-fluid: div
+        span.ic.ic-logo.visible-xs-block
+        div.embed-responsive.embed-responsive-16by9
+        a(href="https://www.youtube.com/watch?v=#{contact.video}", target="_blank")
+            img(src="#{i}ic-play.png", width="113", height="113")
+    
+    section.container-fluid#index-content
+        div.first-child: +carousel({
+            path: "index/ex-content-v2",
+            fw: 285, fh: 580,
+            iw: 257, ih: 456,
+            t: "tb", l: 6
+        })
         
-        div.col-sm-6#index-content-txt
+        div.last-child
             img(src="#{i}index/ic-content.png", width="70", height="80")
-            h1.make-font-3.break-maybe: +break(index.content.big)
-            h2.break-maybe: +break(index.content.sub)
+            h1.font-make-3: +break("force", index.content.big)
+            h2: +break("force", index.content.sub)
     
-    div.bg-gray: section.container-fluid: div.row
-        div.col-sm-4#index-points-txt1
+    div.bg-gray.bg-btop: section.container-fluid#index-points
+        div.first-child
             img(src="#{i}index/ic-points.png", width="70", height="80")
-            h1.make-font-3.break-maybe: +break(index.points.big)
-            h2.break-maybe: +break(index.points.sub)
+            h1.font-make-3: +break("force", index.points.big)
+            h2: +break("force", index.points.sub)
         
-        div.col-sm-4#index-points-img: div.carousel-outer.lr
-            +carousel(2, 274, 484, "index/ex-points")
-            img(src="#{I}index/ex-points-frame.png", width="328", height="653")
+        div: +carousel({
+            path: "index/ex-points-v2",
+            fw: 285, fh: 580,
+            iw: 257, ih: 456,
+            t: "lr", l: 2
+        })
         
-        div.col-sm-4#index-points-txt2
+        div.last-child
             img(src="#{i}index/ic-store.png", width="70", height="80")
-            h1.make-font-3.break-maybe: +break(index.store.big)
-            h2.break-maybe: +break(index.store.sub)
-            div: each _, n in Array(5)
-                img(src="#{i}index/ic-store-#{n + 1}.png", width="35", height="35")
+            h1.font-make-3: +break("force", index.store.big)
+            h2: +break("force", index.store.sub)
+            each _, n in Array(5)
+                div: img(src="#{i}index/ic-store-#{n + 1}.png", width="35", height="35")
     
-    div.gradient-2#index-outro-outer: section.container-fluid#index-outro
+    div.gradient-2#index-outro: section.container-fluid
         div.blip.hidden-xs
-        h1.make-font-2 #{index.outro.big}
-        h2.make-font-3.break-force: +break(index.outro.sub)
+        h1.font-make-2: +break("small", index.outro.big)
+        h2.font-make-4: +break("maybe", index.outro.sub)

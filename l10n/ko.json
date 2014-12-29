@@ -5,7 +5,24 @@
         "title": "허니스크린"
     },
     "style": {
-        "l10n-font-family": "'Nanum Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', 'Gulim', sans-serif"
+        "font-list": "'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', '나눔고딕', '나눔 고딕', 'Nanum Gothic', '맑은 고딕', 'Apple SD Gothic Neo', 'Gulim', sans-serif",
+        
+        "font-base-1": "22px",
+        "font-base-2": "19px",
+        "font-base-3": "16px",
+        "font-base-4": "13px",
+        
+        "font-mobile-1": "32px",
+        "font-mobile-2": "25px",
+        "font-mobile-3": "19px",
+        "font-mobile-4": "15px",
+        
+        "font-make-1": "70px",
+        "font-make-2": "60px",
+        "font-make-3": "37px",
+        "font-make-4": "30px",
+        
+        "font-spacing": "normal"
     },
     
     "header": {
@@ -25,12 +42,15 @@
         "blog": "http://blog.naver.com/honeyscreen",
         "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.adhours&referrer=homepage",
         "applestore": "https://itunes.apple.com/kr/app/honeyscreen/id591658676?mt=8",
-        "support": "contact@honeyscreen.com"
+        "support": "contact@honeyscreen.com",
+        "video": "rBBYg2Jp3zs"
     },
     
     "index": {
         "intro": {
-            "big": "첫 화면 속 달콤한 혜택",
+            "big": [
+                "첫 화면 속 달콤한 혜택"
+            ],
             "sub": [
                 "인기있는 정보와 매 시간 쌓이는 적립금",
                 "매 순간이 즐거운 나만의 첫 화면"
@@ -71,26 +91,19 @@
         },
         
         "outro": {
-            "big": "무료로 경험하는 모바일 세상",
+            "big": [
+                "무료로 경험하는",
+                "모바일 세상"
+            ],
             "sub": [
-                "통신비, 음악 감상, 게임, 영화 예매 등",
-                "사람들이 스마트폰을 사용하면서",
-                "돈을 내는 이 모든 것들을",
-                "공짜로 이용할 수 있게 하는 것,",
+                "통신비, 음악 감상, 게임, 영화 예매 등 사람들이 스마트폰을 사용하면서",
+                "돈을 내는 이 모든 것들을 공짜로 이용할 수 있게 하는 것,",
                 "이것이 바로 저희가 꿈꾸는 꿈입니다"
             ]
         }
     },
     
     "support": {
-        "intro": {
-            "big": "도움말",
-            "sub": [
-                "허니스크린을 이용하면서 궁금한 점이 있거나 도움이 필요하신 경우",
-                "아래 질문과 답변을 먼저 확인해주세요"
-            ]
-        },
-        
         "search": "질문할 내용을 적어주세요...",
         
         "faqs": {
@@ -351,8 +364,14 @@
     
     "advertise": {
         "intro": {
-            "sub": "스마트폰 첫 화면에서 인기 컨텐츠를 골라보는",
-            "big": "스마트 모바일 미디어 허니스크린",
+            "sub": [
+                "스마트폰 첫 화면에서",
+                "인기 컨텐츠를 골라보는"
+            ],
+            "big": [
+                "스마트 모바일",
+                "미디어 허니스크린"
+            ],
             "intro": "매체소개서",
             "guide": "제작가이드"
         },
@@ -364,7 +383,7 @@
             "valid_big": "낮은 무효 클릭율",
             "valid_sub": "직관적인 UI로 실수로 인한 클릭이 발생할 가능성이 낮습니다",
             "brand_big": "탁월한 브랜드 각인 효과",
-            "brand_sub": "스크린 전면을 활용한 Full Size 광고 효과 노출로 정보와 메세지 전달이 용이"
+            "brand_sub": "스크린 전면을 활용한 Full Size 광고 효과 노출로 정보와 메세지 전달 용이"
         },
         
         "cpm": {
@@ -375,12 +394,19 @@
         },
         
         "cpa": {
-            "big": "광고 참여를 유도하기 위해 보상을 제공하는 광고",
-            "sub": "앱 설치, 페이스북 좋아요, 회원 가입, 동영상 시청 등"
+            "big": [
+                "광고 참여를 유도하기 위해 보상을 제공하는 광고"
+            ],
+            "installs": "앱 설치",
+            "likes": "좋아요",
+            "signups": "회원가입",
+            "views": "영상시청"
         },
         
         "partners": {
-            "big": "업계를 선도하는 대표 기업들과 함께 하고 있습니다"
+            "big": [
+                "업계를 선도하는 대표 기업들과 함께 하고 있습니다"
+            ]
         },
         
         "contact": {

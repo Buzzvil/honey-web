@@ -5,82 +5,97 @@ block config
     - pageName = [header.advertise, meta.title]
 
 block content
-    div.gradient-1#advertise-intro-outer: section.container-fluid#advertise-intro
+    div.gradient-1#advertise-intro: section.container-fluid
         div.blip.hidden-xs
-        h2.make-font-3 #{advertise.intro.sub}
-        h1.make-font-1 #{advertise.intro.big}
+        h2.font-make-3: +break("small", advertise.intro.sub)
+        h1.font-make-1: +break("small", advertise.intro.big)
         
-        div.row
-            div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
-                href="#{I}advertise/dl-honeyscreen-intro-2014-11-26.pdf",
-                target="_blank",
-                download
-            ) #{advertise.intro.intro}
-            
-            div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
-                href="#{I}advertise/dl-honeyscreen-guide-2014-11.zip",
-                download
-            ) #{advertise.intro.guide}
+        div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
+            href="#{I}advertise/dl-honeyscreen-intro-2014-11-26.pdf",
+            target="_blank",
+            download
+        ) #{advertise.intro.intro}
         
-        a.scroller.hidden-xs(href="#advertise-benefits")
-            img(src="#{i}ic-arrow.png", width="48", height="25")
+        div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
+            href="#{I}advertise/dl-honeyscreen-guide-2014-11.zip",
+            download
+        ) #{advertise.intro.guide}
+        
+        +scroller("advertise-benefits")
     
     section.container-fluid#advertise-benefits
         div.blip
-        h1.make-font-2 #{advertise.benefits.big}
+        h1.font-make-2 #{advertise.benefits.big}
         
-        div#advertise-benefits-img: div.carousel-outer.tb
-            +carousel(6, 301, 527, "advertise/ex-benefits")
-            img(src="#{i}advertise/ex-benefits-frame.png", width="328", height="653")
-        
-        div#advertise-benefits-txt
-            div
-                img(src="#{i}advertise/ic-benefits-ctr.png", width="112", height="112")
-                div
-                    h2.make-font-3 #{advertise.benefits.ctr_big}
-                    h3 #{advertise.benefits.ctr_sub}
+        div
+            div#advertise-benefits-img: +carousel({
+                path: "advertise/ex-benefits-v2",
+                fw: 253, fh: 516,
+                iw: 227, ih: 403,
+                t: "tb", l: 6
+            })
             
-            div
-                img(src="#{i}advertise/ic-benefits-valid.png", width="112", height="112")
+            div#advertise-benefits-txt
                 div
-                    h2.make-font-3 #{advertise.benefits.valid_big}
-                    h3 #{advertise.benefits.valid_sub}
-            
-            div
-                img(src="#{i}advertise/ic-benefits-brand.png", width="112", height="112")
+                    img(src="#{i}advertise/ic-benefits-ctr-v2.png", width="112", height="112")
+                    div
+                        h2.font-make-3 #{advertise.benefits.ctr_big}
+                        h3 #{advertise.benefits.ctr_sub}
+                
                 div
-                    h2.make-font-3 #{advertise.benefits.brand_big}
-                    h3 #{advertise.benefits.brand_sub}
+                    img(src="#{i}advertise/ic-benefits-valid.png", width="112", height="112")
+                    div
+                        h2.font-make-3 #{advertise.benefits.valid_big}
+                        h3 #{advertise.benefits.valid_sub}
+                
+                div
+                    img(src="#{i}advertise/ic-benefits-brand.png", width="112", height="112")
+                    div
+                        h2.font-make-3 #{advertise.benefits.brand_big}
+                        h3 #{advertise.benefits.brand_sub}
     
-    div.bg-gray: section.container-fluid#advertise-cpm
+    div.bg-gray.bg-btop: section.container-fluid#advertise-cpm
         div.blip
-        h1.make-font-2 Display Ads
-        h2.make-font-3 #{advertise.cpm.big}
+        h1.font-make-2 Display Ads
+        h2.font-make-3 #{advertise.cpm.big}
         
         div.row
             div.col-xs-4
-                img(src="#{i}advertise/ic-cpm-apps.png", width="211", height="211")
-                h3.make-font-3 #{advertise.cpm.apps}
+                img(src="#{i}advertise/ic-cpm-apps.png", width="180", height="180")
+                h3.font-make-3 #{advertise.cpm.apps}
             div.col-xs-4
-                img(src="#{i}advertise/ic-cpm-ecom.png", width="211", height="211")
-                h3.make-font-3 #{advertise.cpm.ecom}
+                img(src="#{i}advertise/ic-cpm-ecom.png", width="180", height="180")
+                h3.font-make-3 #{advertise.cpm.ecom}
             div.col-xs-4
-                img(src="#{i}advertise/ic-cpm-social.png", width="211", height="211")
-                h3.make-font-3 #{advertise.cpm.social}
+                img(src="#{i}advertise/ic-cpm-social.png", width="180", height="180")
+                h3.font-make-3 #{advertise.cpm.social}
     
-    div#advertise-cpa-outer: section.container-fluid#advertise-cpa
+    div#advertise-cpa: section.container-fluid
         div.blip
-        h1.make-font-2 Incentive Ads
-        h2.make-font-3 #{advertise.cpa.big}
-        h3.make-font-4 #{advertise.cpa.sub}
+        h1.font-make-2 Incentive Ads
+        h2.font-make-3: +break("small", advertise.cpa.big)
+        
+        div.row.center-block
+            div.col-xs-3
+                img(src="#{i}advertise/ic-cpa-installs.png", width="111", height="111")
+                h3.font-make-4 #{advertise.cpa.installs}
+            div.col-xs-3
+                img(src="#{i}advertise/ic-cpa-likes.png", width="111", height="111")
+                h3.font-make-4 #{advertise.cpa.likes}
+            div.col-xs-3
+                img(src="#{i}advertise/ic-cpa-signups.png", width="111", height="111")
+                h3.font-make-4 #{advertise.cpa.signups}
+            div.col-xs-3
+                img(src="#{i}advertise/ic-cpa-views.png", width="111", height="111")
+                h3.font-make-4 #{advertise.cpa.views}
     
-    div.bg-gray: section.container-fluid#advertise-partners
+    div.bg-gray.bg-bbot: section.container-fluid#advertise-partners
         div.blip
-        h1.make-font-2 Partners
-        h2.make-font-3 #{advertise.partners.big}
+        h1.font-make-2 Partners
+        h2.font-make-3: +break("small", advertise.partners.big)
         
         div.row: each _, n in Array(16)
-            div.col-xs-6.col-sm-3: img.img-responsive.center-block(
+            div.col-xs-4.col-sm-3: img.img-responsive.center-block(
                 src="#{i}advertise/lg-partner-#{n + 1}.png",
                 width="180",
                 height="60"
@@ -88,20 +103,20 @@ block content
     
     section.container-fluid#advertise-contact
         div.blip
-        h1.make-font-2 Contact Us
+        h1.font-make-2 Contact Us
         
         address
             each person in advertise.contact.sales
                 h4 #{person.name}
                 
-                p.break-small
-                    span
+                p
+                    span.break-small
                         img(src="#{i}ic-about-mail.png", width="19", height="20")
                         a(href="mailto:#{person.mail}", target="_blank") #{person.mail}
-                    span: if person.tel
+                    span.break-small: if person.tel
                         img(src="#{i}ic-about-tel.png", width="19", height="20")
                         a(href="tel:#{person.tel.replace(' ', '')}", target="_blank") #{person.tel}
-                    span: if person.fax
+                    span.break-small: if person.fax
                         img(src="#{i}ic-about-fax.png", width="19", height="20")
                         a(href="fax:#{person.fax.replace(' ', '')}", target="_blank") #{person.fax}
             

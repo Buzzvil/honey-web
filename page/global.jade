@@ -3,13 +3,23 @@
 - var pageType
 block config
 
-mixin break(arr, postfix)
-    each str in arr
-        span #{str}#{postfix}
+mixin break(type, arr)
+    each str, i in arr
+        span(class="break-#{type}")
+            | #{str || "\u00A0"}
+            if type !== "force" && i + 1 < arr.length
+                span 
 
-mixin carousel(l, w, h, f)
-    div.carousel.slide: div.carousel-inner: each _, n in Array(l)
-        div.item(class=!n && "active"): img(src="#{I}#{f}-#{n}.jpg", width=w, height=h)
+mixin carousel(o)
+    div.carousel-outer(class=o.t, style="max-width:#{o.fw}px")
+        div.carousel.slide: div.carousel-inner: each _, n in Array(o.l)
+            div.item(class=!n && "active")
+                img(src="#{I}#{o.path}-#{n}.jpg", width=o.iw, height=o.ih)
+        img(src="#{i}#{o.path}-frame.png", width=o.fw, height=o.fh)
+
+mixin scroller(id)
+    a.scroller.hidden-xs(href="##{id}")
+        img(src="#{i}ic-arrow.png", width="48", height="25")
 
 doctype
 html(lang=meta.code)
@@ -21,10 +31,11 @@ html(lang=meta.code)
         link(rel="stylesheet", href="/global.css")
         link(rel="icon", type="image/png", href="#{i}favicon-1x.png", sizes="16x16")
         link(rel="icon", type="image/png", href="#{i}favicon-2x.png", sizes="32x32")
-        link(rel="alternate", hreflang="en", href="//en.honeyscreen.com/#{pagePath}")
-        link(rel="alternate", hreflang="ko", href="//ko.honeyscreen.com/#{pagePath}")
-        link(rel="alternate", hreflang="ja", href="//ja.honeyscreen.com/#{pagePath}")
-        link(rel="alternate", hreflang="zh-TW", href="//zh-tw.honeyscreen.com/#{pagePath}")
+        link(rel="canonical", href="http://#{meta.key}.honeyscreen.com/#{pagePath}")
+        link(rel="alternate", href="http://en.honeyscreen.com/#{pagePath}", hreflang="en")
+        link(rel="alternate", href="http://ja.honeyscreen.com/#{pagePath}", hreflang="ja")
+        link(rel="alternate", href="http://ko.honeyscreen.com/#{pagePath}", hreflang="ko")
+        link(rel="alternate", href="http://zh-tw.honeyscreen.com/#{pagePath}", hreflang="zh-TW")
         <!--[if lt IE 9]>
         script(src="/legacy.js")
         <![endif]-->
@@ -63,10 +74,10 @@ html(lang=meta.code)
                 li.last-child: a(href="/privacy") #{footer.privacy}
             
             ul.last-child
-                li.first-child: a(rel="alternate", href="//en.honeyscreen.com/#{pagePath}", hreflang="en") English
-                li: a(rel="alternate", href="//ko.honeyscreen.com/#{pagePath}", hreflang="ko") 한국어
-                li: a(rel="alternate", href="//ja.honeyscreen.com/#{pagePath}", hreflang="ja") 日本語
-                li.last-child: a(rel="alternate", href="//zh-tw.honeyscreen.com/#{pagePath}", hreflang="zh-TW") 繁體中文
+                li.first-child: a(href="//en.honeyscreen.com/#{pagePath}") English
+                li: a(href="//ko.honeyscreen.com/#{pagePath}") 한국어
+                li: a(href="//ja.honeyscreen.com/#{pagePath}") 日本語
+                li.last-child: a(href="//zh-tw.honeyscreen.com/#{pagePath}") 繁體中文
         
         script(src="/global.js", async)
         script.

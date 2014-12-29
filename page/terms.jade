@@ -7,8 +7,7 @@ block config
 block content
     div.gradient-1#other-intro: section.container-fluid
         div.blip.hidden-xs
-        h1.make-font-1 #{footer.terms}
-        a.scroller.hidden-xs(href="#other-text")
-            img(src="#{i}ic-arrow.png", width="48", height="25")
+        h1.font-make-1 #{footer.terms}
+        +scroller("other-text")
     
     section.container-fluid#other-text !{terms}

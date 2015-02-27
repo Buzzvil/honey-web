@@ -66,7 +66,7 @@ f5787aa44117c23c500f6d2d2c45b6611ae0b9ba  _/support/ic-referral.png
 40bb51985b785c0286745aeb69f3f9d381ce2ee4  _/support/ic-store.png
 93067fc9e1d76dbf16394dd720ba5c631f42c88d  _/support/ic-usage.png
 982559576d027c05fc49489ff8d6f5048113f9d5  en/advertise/bg-mid-v3.jpg
-2a0bfefab1baca160b4d643a6564fc1dc786173c  en/advertise/dl-honeyscreen-intro-2014-11-26.pdf
+2a0bfefab1baca160b4d643a6564fc1dc786173c  en/advertise/dl-honeyscreen-intro-2015-02-27.pdf
 b5e0ad56292ca8295567a36c36a4e45c95bd1b62  en/advertise/ex-benefits-v2-0.jpg
 df3aeabf2349561264c89c5fd712982405e30d91  en/advertise/ex-benefits-v2-1.jpg
 4dfa042f459baffa819b676233634ba8257f5453  en/advertise/ex-benefits-v2-2.jpg
@@ -102,7 +102,7 @@ e998f5937627974992188558fcc1e701f3ddd052  ja/index/ex-intro.png
 64dd5764cce8042018085b528d3d3fe9dbb4c173  ja/index/ex-points-v2-1.jpg
 982559576d027c05fc49489ff8d6f5048113f9d5  ko/advertise/bg-mid-v3.jpg
 fed0efcf798758ad6f5b4637bbb51e6c47207f6b  ko/advertise/dl-honeyscreen-guide-2014-11.zip
-16248a7ba2cde4739512caa47f58b771b8cc95e4  ko/advertise/dl-honeyscreen-intro-2014-11-26.pdf
+13a884e21804090988b9b5444b6ad05853389e6d  ko/advertise/dl-honeyscreen-intro-2015-02-27.pdf
 b5e0ad56292ca8295567a36c36a4e45c95bd1b62  ko/advertise/ex-benefits-v2-0.jpg
 df3aeabf2349561264c89c5fd712982405e30d91  ko/advertise/ex-benefits-v2-1.jpg
 4dfa042f459baffa819b676233634ba8257f5453  ko/advertise/ex-benefits-v2-2.jpg

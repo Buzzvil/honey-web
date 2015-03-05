@@ -95,11 +95,17 @@ gulp.task("pages", ["i18n"], l10nify(function (l10n) {
     opts.locals.I = IMAGES +  l10n + "/";
     opts.locals.gakey = process.env.GANALYTICS_KEY;
     
-    return gulp.src("page/!(global).jade")
+    return gulp.src(["page/!(global).jade", "l10n/" + l10n + ".*.jade"])
         .pipe(jade(opts))
         .pipe(hl())
         .doto(function (file) {
-            file.path = file.path.slice(0, -5);
+            var name = file.relative.split(".");
+            
+            if (name.length === 2) {
+                file.path = file.base + name[0];
+            } else if (name.length === 3) {
+                file.path = file.base + "event/" + name[1];
+            }
         })
         .pipe(gulp.dest("dist/" + l10n));
 }));
@@ -111,7 +117,7 @@ gulp.task("upload", ["styles", "scripts", "pages"], l10nify(function (l10n) {
         ".js": "application/javascript"
     };
     
-    return gulp.src("dist/" + l10n + "/*")
+    return gulp.src("dist/" + l10n + "/**/*")
         .pipe(gzip({ append: false }))
         .pipe(hl())
         .flatMap(function (file) {
@@ -119,7 +125,7 @@ gulp.task("upload", ["styles", "scripts", "pages"], l10nify(function (l10n) {
                 Bucket: l10nObj[l10n].meta.bucket,
                 Key: file.relative,
                 Body: file.contents,
-                CacheControl: "public, max-age=72000",
+                CacheControl: "public, max-age=7200",
                 ContentEncoding: "gzip",
                 ContentLanguage: l10nObj[l10n].meta.code,
                 ContentType: type[(file.relative.match(/\.[^.]+/) || [""])[0]]

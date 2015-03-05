@@ -109,6 +109,8 @@ df3aeabf2349561264c89c5fd712982405e30d91  ko/advertise/ex-benefits-v2-1.jpg
 d21400e6139bf9df304cd2f66ef0621c1c50302d  ko/advertise/ex-benefits-v2-3.jpg
 f528730e4eb507e940fea6a8f578d2922c78cbcb  ko/advertise/ex-benefits-v2-4.jpg
 198d329c7e56448dd4810a6633cdc089f40e736c  ko/advertise/ex-benefits-v2-5.jpg
+454cc131817b63c5b27dea76b103fc876ddf7d75  ko/event/bg-fb-got20.jpg
+9c2ee74de746505ded0bafa68101b35ebdb424e3  ko/event/dl-fb-got20.png
 00c749bc7869651a1fd886c5d75e1ee969d5f493  ko/index/bg-video.jpg
 0b51aee2b1d4c88135d2aad384edc1206b1622e0  ko/index/ex-content-v2-0.jpg
 2afa3eaaf54ad022415f88fda02cea473a3f45e0  ko/index/ex-content-v2-1.jpg

@@ -15,7 +15,7 @@ mixin carousel(o)
         div.carousel.slide: div.carousel-inner: each _, n in Array(o.l)
             div.item(class=!n && "active")
                 img(src="#{I}#{o.path}-#{n}.jpg", width=o.iw, height=o.ih)
-        img(src="#{i}#{o.path}-frame.png", width=o.fw, height=o.fh)
+        img(src="#{I}#{o.path}-frame.png", width=o.fw, height=o.fh)
 
 mixin scroller(id)
     a.scroller.hidden-xs(href="##{id}")

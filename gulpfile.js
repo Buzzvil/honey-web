@@ -19,7 +19,7 @@ aws.config.update({
     region: "ap-northeast-1"
 });
 
-var IMAGES = "/i1/";
+var IMAGES = "/i-v2/";
 
 var putObject = hl.wrapCallback(new aws.S3().putObject.bind(new aws.S3()));
 

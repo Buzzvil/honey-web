@@ -411,7 +411,10 @@
         
         "contact": {
             "sales": [{
-                "name": "이창영 영업 이사",
+                "name": "Customer Service - 고객 문의",
+                "mail": "contact@honeyscreen.com"
+            }, {
+                "name": "이창영 영업 이사 - 광고 의뢰 문의",
                 "mail": "ajay@buzzvil.com",
                 "tel": "070 4632 2137",
                 "fax": "02 6499 5513"

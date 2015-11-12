@@ -109,6 +109,7 @@ bef18950500795aa64f800fba448735f96217cbb  ja/index/ex-content-v1-frame.png
 54705cf95d2c77a0cb4a9795a99961c21ee1a16f  ja/index/ex-points-v1-0.jpg
 789b582fe15660855b110fb7e11bc81cb393082f  ja/index/ex-points-v1-1.jpg
 3de734799a5c5b6144f8cbf2d93d3ddbc3b6912b  ja/index/ex-points-v1-frame.png
+2100738686a7aa4df5120793cb5265acfe282e30  ja/index/privacy.jpg
 982559576d027c05fc49489ff8d6f5048113f9d5  ko/advertise/bg-mid-v1.jpg
 b5e0ad56292ca8295567a36c36a4e45c95bd1b62  ko/advertise/ex-benefits-v1-0.jpg
 df3aeabf2349561264c89c5fd712982405e30d91  ko/advertise/ex-benefits-v1-1.jpg
@@ -130,6 +131,7 @@ c175ef369b5b1b73d121ec075b700de403ad9631  ko/index/ex-content-v1-frame.png
 405ea3e915f2837be2d4d104079fd0ff7e1fb95d  ko/index/ex-points-v1-0.jpg
 692fdd19ee2bb3eba935d8ff813cbd4814ab1ce4  ko/index/ex-points-v1-1.jpg
 18774346d813b90c4a8899f52ed7e6658f76f60c  ko/index/ex-points-v1-frame.png
+a9ab2f55e1a7fede3f64205782892543fc834762  ko/index/privacy.jpg
 276639b73965afedcaaccad8ecf85000ee90c893  zh-tw/advertise/bg-mid-v1.jpg
 b9fe9eaf743dbbe96439aa36c6d9a647987adbcc  zh-tw/advertise/ex-benefits-v1-0.jpg
 f3f46e06b56e11d57d94e50df3e9b83815accc01  zh-tw/advertise/ex-benefits-v1-1.jpg

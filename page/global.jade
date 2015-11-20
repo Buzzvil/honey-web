@@ -79,15 +79,6 @@ html(lang=meta.code)
                 li: a(href="//ja.honeyscreen.com/#{pagePath}") 日本語
                 li.last-child: a(href="//zh-tw.honeyscreen.com/#{pagePath}") 繁體中文
         
-        // TEMP //
-        if meta.key === "ko" || meta.key === "ja"
-            div.modal: div.modal-dialog: div.modal-content
-                  div.modal-body: img.img-responsive(src="#{I}index/privacy.jpg")
-                  div.modal-footer
-                    button.btn.btn-default(type="button", data-dismiss="modal") #{temp.never}
-                    button.btn.btn-primary(type="button", data-dismiss="modal") #{temp.close}
-        // TEMP //
-        
         script(src="/global.js", async)
         script.
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

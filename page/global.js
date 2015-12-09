@@ -118,3 +118,13 @@ $("#support-buttons").on("click", "a", function () {
     
     return false;
 });
+
+
+///////////////////////////////////////////////////////////////////////////////
+// TODO TEMP
+///////////////////////////////////////////////////////////////////////////////
+if (!localStorage.terms201706) {
+    $(".modal").modal().find("button").first().click(function () {
+        localStorage.terms201706 = true;
+    });
+}

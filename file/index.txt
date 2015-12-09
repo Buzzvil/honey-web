@@ -67,7 +67,7 @@ f5787aa44117c23c500f6d2d2c45b6611ae0b9ba  _/support/ic-referral.png
 2a0bfefab1baca160b4d643a6564fc1dc786173c  _download/en-honeyscreen-intro.pdf
 d90f6984cedd37220e765625a493d85a119039f5  _download/ja-honeyscreen-guide.zip
 b28277fdb3814ec2c017829d1d5b20790efe2f80  _download/ja-honeyscreen-intro.pdf
-6736c94cda32b8b5ef8e27ecc287bf1ba8a0da35  _download/ko-honeyscreen-guide.zip
+b31e58e5d2b98e3c51081613a207c8780af93bc5  _download/ko-honeyscreen-guide.zip
 3748f4df425392f3aac9985e09fc1932f2f22c0c  _download/ko-honeyscreen-intro.pdf
 268badb95db9d89cb33da8979adadb5d6f932a8f  _download/zh-tw-honeyscreen-guide.zip
 b591453671acac07e0715a27a31de1c1b239e35d  _download/zh-tw-honeyscreen-intro.pdf

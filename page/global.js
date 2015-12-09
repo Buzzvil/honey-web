@@ -118,3 +118,13 @@ $("#support-buttons").on("click", "a", function () {
     
     return false;
 });
+
+
+///////////////////////////////////////////////////////////////////////////////
+// TEMP //
+///////////////////////////////////////////////////////////////////////////////
+if (!localStorage.terms201512) {
+    $(".modal").modal().find("button").first().click(function () {
+        localStorage.terms201512 = true;
+    });
+}

@@ -130,6 +130,7 @@ c175ef369b5b1b73d121ec075b700de403ad9631  ko/index/ex-content-v1-frame.png
 405ea3e915f2837be2d4d104079fd0ff7e1fb95d  ko/index/ex-points-v1-0.jpg
 692fdd19ee2bb3eba935d8ff813cbd4814ab1ce4  ko/index/ex-points-v1-1.jpg
 18774346d813b90c4a8899f52ed7e6658f76f60c  ko/index/ex-points-v1-frame.png
+cb2faf58880d29707c81b605448add1802f5134d  ko/index/terms.jpg
 276639b73965afedcaaccad8ecf85000ee90c893  zh-tw/advertise/bg-mid-v1.jpg
 b9fe9eaf743dbbe96439aa36c6d9a647987adbcc  zh-tw/advertise/ex-benefits-v1-0.jpg
 f3f46e06b56e11d57d94e50df3e9b83815accc01  zh-tw/advertise/ex-benefits-v1-1.jpg

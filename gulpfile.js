@@ -72,9 +72,6 @@ gulp.task("scripts", ["i18n"], l10nify(function (l10n) {
         "node_modules/bootstrap/js/transition.js",
         "node_modules/bootstrap/js/collapse.js",
         "node_modules/bootstrap/js/carousel.js",
-        // TEMP //
-        "node_modules/bootstrap/js/modal.js",
-        // TEMP //
         "page/global.js"
     ]).pipe(concat("global.js"));
     

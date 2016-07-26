@@ -65,10 +65,11 @@ f5787aa44117c23c500f6d2d2c45b6611ae0b9ba  _/support/ic-referral.png
 93067fc9e1d76dbf16394dd720ba5c631f42c88d  _/support/ic-usage.png
 2a0bfefab1baca160b4d643a6564fc1dc786173c  _download/en-buzzad-intro.pdf
 6736c94cda32b8b5ef8e27ecc287bf1ba8a0da35  _download/en-honeyscreen-guide.zip
-b28277fdb3814ec2c017829d1d5b20790efe2f80  _download/ja-buzzad-intro.pdf
+84ac62fa2551a1a633c9f430d165b865ba79732e  _download/ja-buzzad-intro.pdf
 94eb82286ee11b85d27381ca7bc99220dafc772b  _download/ja-honeyscreen-guide.zip
-391cc61dcf90b8f9098a87ca5020d63beec1f52a  _download/ko-buzzad-intro.pdf
-8ede99370180f91d830d2dedcdf40fc7436b8ea6  _download/ko-honeyscreen-guide.zip
+416b9bdd2116978b70be8234332248a65154800e  _download/ko-buzzad-intro.pdf
+bd868f894fe70adfccf7ae02279bc6df5ff0f19c  _download/ko-buzzscreen-intro.pdf
+8e5c16498c2fefac2487c7606f505f5255312ab3  _download/ko-honeyscreen-guide.zip
 b591453671acac07e0715a27a31de1c1b239e35d  _download/zh-tw-buzzad-intro.pdf
 d3dc7f9242a485cb2e890afed3512ed878b9e3ef  _download/zh-tw-honeyscreen-guide.zip
 982559576d027c05fc49489ff8d6f5048113f9d5  en/advertise/bg-mid-v1.jpg

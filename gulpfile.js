@@ -151,8 +151,8 @@ gulp.task("watch", ["styles", "scripts", "pages"], function () {
     express()
         .use(express.static("dist/" + process.env.L10N, {
             index: "index",
-            setHeaders: function (res, file) {
-                if (!/\./.test(file)) {
+            setHeaders: function (res, path) {
+                if (!/\./.test(path)) {
                     res.type("html");
                 }
             }

@@ -459,7 +459,7 @@
         "benefits": {
             "big": "より高い広告効果",
             "ctr_big": "バナーよりダントツ高いCTR",
-            "ctr_sub": "平均CTR10％でバナーより10倍以上高い。",
+            "ctr_sub": "平均CTR2％でバナーより5倍以上高い。",
             "valid_big": "低いミスクリック率",
             "valid_sub": "ロック解除で広告に参加するのでミスクリック率が低い。",
             "brand_big": "ブランドイメージアップ効果",
@@ -498,9 +498,9 @@
                 "tel": "",
                 "fax": ""
             }],
-            "address": "東京都渋谷区神泉町8-16 渋谷ファーストプレイス8F Buzzvil",
-            "maplink": "https://www.google.com/maps/place/Japan,+%E3%80%92150-0044+T%C5%8Dky%C5%8D-to,+Shibuya-ku,+Shinsench%C5%8D,+8%E2%88%9216+%E6%B8%8B%E8%B0%B7%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%83%97%E3%83%AC%E3%82%A4%E3%82%B9/@35.6552572,139.6937595,17z/data=!3m1!4b1!4m2!3m1!1s0x60188b55a7e6d7b5:0xaff179d1e13cec4",
-            "mapcode": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3241.8828761604555!2d139.69375949999997!3d35.655257199999994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b55a7e6d7b5%3A0xaff179d1e13cec4!2zSmFwYW4sIOOAkjE1MC0wMDQ0IFTFjWt5xY0tdG8sIFNoaWJ1eWEta3UsIFNoaW5zZW5jaMWNLCA44oiSMTYg5riL6LC344OV44Kh44O844K544OI44OX44Os44Kk44K5!5e0!3m2!1sen!2s!4v1415261824726"
+            "address": "東京都渋谷区渋谷1-17-1 TOC第二ビル３F PoRTAL内",
+            "maplink": "https://www.google.com/maps/place/1+Chome-17-1+Shibuya,+Shibuya-ku,+T%C5%8Dky%C5%8D-to+150-0002,+Japan/@35.6614372,139.7009509,17z/data=!3m1!4b1!4m5!3m4!1s0x60188ca790f8cf2d:0x3032815a2a95351d!8m2!3d35.6614329!4d139.7031396",
+            "mapcode": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6320034045634!2d139.70095091490992!3d35.66143723866534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca790f8cf2d%3A0x3032815a2a95351d!2s1+Chome-17-1+Shibuya%2C+Shibuya-ku%2C+T%C5%8Dky%C5%8D-to+150-0002%2C+Japan!5e0!3m2!1sen!2s!4v1470651213987"
         }
     },
     

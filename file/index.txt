@@ -2,7 +2,6 @@
 6516d7264ba514fb55d55370130f6f39bf8b2012  _/about/lg-buzzvil.png
 a0f77610e915935b00c49471ce48bc698a99888e  _/advertise/bg-head-v2.jpg
 82dcc243bd94a801cebf1dff3ec7c0bbe477531f  _/advertise/ic-benefits-brand.png
-58f082a20015f116ac567227280aaae35d54ef56  _/advertise/ic-benefits-ctr-v2.png
 35e1e0b7ee81de124e1f0b93110fa411797989bc  _/advertise/ic-benefits-valid.png
 40008ec54efa4a44e7239272b768339d2e33a02f  _/advertise/ic-cpa-installs.png
 7b9e747cdb13c567cd68d55db07b5771fd1e2114  _/advertise/ic-cpa-likes.png
@@ -69,7 +68,7 @@ f5787aa44117c23c500f6d2d2c45b6611ae0b9ba  _/support/ic-referral.png
 94eb82286ee11b85d27381ca7bc99220dafc772b  _download/ja-honeyscreen-guide.zip
 416b9bdd2116978b70be8234332248a65154800e  _download/ko-buzzad-intro.pdf
 bd868f894fe70adfccf7ae02279bc6df5ff0f19c  _download/ko-buzzscreen-intro.pdf
-8e5c16498c2fefac2487c7606f505f5255312ab3  _download/ko-honeyscreen-guide.zip
+fa4414425e2c967c3fa4457bd3d4ffcf654aa69f  _download/ko-honeyscreen-guide.zip
 b591453671acac07e0715a27a31de1c1b239e35d  _download/zh-tw-buzzad-intro.pdf
 d3dc7f9242a485cb2e890afed3512ed878b9e3ef  _download/zh-tw-honeyscreen-guide.zip
 982559576d027c05fc49489ff8d6f5048113f9d5  en/advertise/bg-mid-v1.jpg
@@ -80,6 +79,7 @@ d21400e6139bf9df304cd2f66ef0621c1c50302d  en/advertise/ex-benefits-v1-3.jpg
 f528730e4eb507e940fea6a8f578d2922c78cbcb  en/advertise/ex-benefits-v1-4.jpg
 198d329c7e56448dd4810a6633cdc089f40e736c  en/advertise/ex-benefits-v1-5.jpg
 801226c5569301654ef9f7d86de7542dd8622699  en/advertise/ex-benefits-v1-frame.png
+58f082a20015f116ac567227280aaae35d54ef56  en/advertise/ic-benefits-ctr.png
 0b51aee2b1d4c88135d2aad384edc1206b1622e0  en/index/ex-content-v1-0.jpg
 2afa3eaaf54ad022415f88fda02cea473a3f45e0  en/index/ex-content-v1-1.jpg
 bc304add5ea228a7f8fad9a49b73040071054e5d  en/index/ex-content-v1-2.jpg
@@ -99,6 +99,7 @@ eac913e47bf2a6793365e157e5eb9c6cf2bd4549  ja/advertise/ex-benefits-v1-3.jpg
 20cdd08f9539f355d21eabbc6c3d6a4ab68f65e1  ja/advertise/ex-benefits-v1-4.jpg
 e940ec097d54dd8d548ea5b0981ac8000e618619  ja/advertise/ex-benefits-v1-5.jpg
 736482783cfb1206b7a249638af0b866a2220a56  ja/advertise/ex-benefits-v1-frame.png
+ebfe52c30860dec4428643c87a9ddb7b620d235e  ja/advertise/ic-benefits-ctr.png
 2a3c6fc121f9b304431b70f61cce9cb1f50fa9a5  ja/index/ex-content-v1-0.jpg
 d901b4826073e3e2161147e2dcae9a707519bfb5  ja/index/ex-content-v1-1.jpg
 2295cb8b4eeae1e883cf79b1f7cb7945e4cf2769  ja/index/ex-content-v1-2.jpg
@@ -118,6 +119,7 @@ d21400e6139bf9df304cd2f66ef0621c1c50302d  ko/advertise/ex-benefits-v1-3.jpg
 f528730e4eb507e940fea6a8f578d2922c78cbcb  ko/advertise/ex-benefits-v1-4.jpg
 198d329c7e56448dd4810a6633cdc089f40e736c  ko/advertise/ex-benefits-v1-5.jpg
 801226c5569301654ef9f7d86de7542dd8622699  ko/advertise/ex-benefits-v1-frame.png
+58f082a20015f116ac567227280aaae35d54ef56  ko/advertise/ic-benefits-ctr.png
 454cc131817b63c5b27dea76b103fc876ddf7d75  ko/event/bg-fb-got20.jpg
 9c2ee74de746505ded0bafa68101b35ebdb424e3  ko/event/dl-fb-got20.png
 0b51aee2b1d4c88135d2aad384edc1206b1622e0  ko/index/ex-content-v1-0.jpg
@@ -139,6 +141,7 @@ b0a1069a91f56ab8c2fac0defcb2ce7055f659ae  zh-tw/advertise/ex-benefits-v1-3.jpg
 13818757947367f65708168448a32a7efc54a8a0  zh-tw/advertise/ex-benefits-v1-4.jpg
 95e0e44f78624107cb53556c3e1e23a3d791dc28  zh-tw/advertise/ex-benefits-v1-5.jpg
 60a451cf2fea0b2e3bdaf147cdec4123cfb3b14e  zh-tw/advertise/ex-benefits-v1-frame.png
+58f082a20015f116ac567227280aaae35d54ef56  zh-tw/advertise/ic-benefits-ctr.png
 913b9fbb733bda0b5104edf2c566bca52e5d5f27  zh-tw/index/ex-content-v1-0.jpg
 a21db56e3dfbdf450a9d6a587f2b54e7acb08e72  zh-tw/index/ex-content-v1-1.jpg
 281895e19922cd05d53114014930c1441d7e4559  zh-tw/index/ex-content-v1-2.jpg

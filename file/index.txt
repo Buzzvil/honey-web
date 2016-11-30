@@ -27,6 +27,12 @@ a1dd8fc2e78f2464e2259b4123480c7d97558329  _/advertise/lg-partner-5.png
 d9a2f49bfb351ef6d9fb2c44bcb7c823f56264d3  _/advertise/lg-partner-8.png
 35e26091199ad6aa990a7e034e1dab1377dc721d  _/advertise/lg-partner-9.png
 f234343a9c3d5d52d5b9cb71df2b63249ac1ac29  _/backgroundsize.htc
+8168486ca2b09e774b52a81f450dc450ee8d0745  _/event/referral/ic-calendar.svg
+fcd36aa09710fa607a31b12802423f9f43b2a679  _/event/referral/ic-intro.svg
+5b10e4560c72bdc8a57e1887ff4d57bd53026036  _/event/referral/ic-time.svg
+0339bab68a1bc1025841e0762e4c78801f284f5e  _/event/referral/ic-warning.svg
+734c502a9fc530f42355fea25642e8bb2f3526be  _/event/referral/lg-1.svg
+728fd005293057fb859a805afd70971c0455306f  _/event/referral/lg-2.svg
 3217b68df1fc6d159ca06fc43c6adcb1e68befd3  _/favicon-1x.png
 59a988928f6ce611944ebb5137ace20371f2a54c  _/favicon-2x.png
 e8a293ba70fda88a82f550afe7c8dc370092d7f4  _/favicon.ico
@@ -67,8 +73,9 @@ f5787aa44117c23c500f6d2d2c45b6611ae0b9ba  _/support/ic-referral.png
 84ac62fa2551a1a633c9f430d165b865ba79732e  _download/ja-buzzad-intro.pdf
 94eb82286ee11b85d27381ca7bc99220dafc772b  _download/ja-honeyscreen-guide.zip
 416b9bdd2116978b70be8234332248a65154800e  _download/ko-buzzad-intro.pdf
+0df1b7b61c23ef0603dfb9bf254af3bbb9a5e79a  _download/ko-buzzscreen-guide.zip
 bd868f894fe70adfccf7ae02279bc6df5ff0f19c  _download/ko-buzzscreen-intro.pdf
-fa4414425e2c967c3fa4457bd3d4ffcf654aa69f  _download/ko-honeyscreen-guide.zip
+0df1b7b61c23ef0603dfb9bf254af3bbb9a5e79a  _download/ko-honeyscreen-guide.zip
 b591453671acac07e0715a27a31de1c1b239e35d  _download/zh-tw-buzzad-intro.pdf
 d3dc7f9242a485cb2e890afed3512ed878b9e3ef  _download/zh-tw-honeyscreen-guide.zip
 982559576d027c05fc49489ff8d6f5048113f9d5  en/advertise/bg-mid-v1.jpg

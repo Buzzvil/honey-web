@@ -1,0 +1,71 @@
+doctype
+html(lang="zh-TW")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title 如何獲得推薦點數
+        link(rel="icon", type="image/png", href="#{i}favicon-1x.png", sizes="16x16")
+        link(rel="icon", type="image/png", href="#{i}favicon-2x.png", sizes="32x32")
+        style * { box-sizing:border-box; margin:0rem; padding:0rem }
+    
+    body(style="background:#FAFAFA; color:#666666; font-family:Roboto,sans-serif")
+        div(style="background:#FFFFFF; display:table; margin-bottom:0.25rem; padding:1rem")
+            img(src="#{i}event/referral/ic-intro.svg", width="48", height="48", style="display:table-cell")
+            div(style="display:table-cell; font-weight:bold; padding-left:1rem; vertical-align:middle") 與家人朋友一起使用HoneyScreen，輕鬆享受高額點數回饋！
+        
+        div(style="background:#FFFFFF; margin:0.25rem 0.5rem; padding:1rem; text-align:center")
+            div(style="font-weight:bold") 送給朋友免費點數！
+            br
+            div 新會員註冊成功，
+            div
+                | 立即獲得
+                span(style="color:#FF7575; font-weight:bold") 300P
+                | 點數獎勵
+            br
+            br
+            img(src="#{i}event/referral/lg-1.svg", width="260", height="105")
+            br
+            br
+            br
+            div
+                img(src="#{i}event/referral/ic-warning.svg", width="18", height="16", style="vertical-align:middle")
+                span(style="color:#FF7575; margin-left:1rem") 新會員必須於註冊時填寫推薦碼
+        
+        div(style="background:#FFFFFF; margin:0.25rem 0.5rem; padding:1rem; text-align:center")
+            div(style="font-weight:bold") 與朋友一同賺取獎勵！
+            br
+            div 依照新會員的每日賺取點數計算，
+            div
+                | 您將獲得
+                span(style="color:#FF7575; font-weight:bold") 20%
+                | 的獎勵回饋！
+            br
+            br
+            img(src="#{i}event/referral/lg-2.svg", width="262", height="183")
+        
+        div(style="margin:0.25rem 0.375rem; text-align:center")
+            div(style="display:inline-block; padding:0rem 0.125rem; width:50%"): div(style="background:#FFFFFF; padding:1rem")
+                div(style="font-weight:bold") 何時收到獎勵？
+                img(src="#{i}event/referral/ic-time.svg", width="40", height="40", style="margin:0.5rem")
+                div 每日發放
+            div(style="display:inline-block; padding:0rem 0.125rem; width:50%"): div(style="background:#FFFFFF; padding:1rem")
+                div(style="font-weight:bold") 獎勵期間？
+                img(src="#{i}event/referral/ic-calendar.svg", width="40", height="40", style="margin:0.5rem")
+                div 新會員註冊起30天
+        
+        div(style="background:#FFFFFF; margin:0.25rem 0.5rem; padding:1rem")
+            div - 受邀請之新會員「必須」於註冊時填寫推薦碼，才能獲得推薦獎勵點數。
+            br
+            div - 受邀請之新會員若已使用過HoneyScreen，無法適用此活動。
+            br
+            div - 僅「鎖屏解鎖點數」與「任務活動點數」計入新會員的每日賺取點數。
+            div(style="color:#999999") (※ 推薦點數不計入。)
+            br
+            div - 若有不當使用的情形，您的帳號將會遭到停權並回收所有點數。
+        
+        script.
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create','#{gakey}','auto');ga('send','pageview');

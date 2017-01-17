@@ -36,12 +36,11 @@
         "privacy": "Privacy"
     },
     "contact": {
-        "adadmin": "https://pub.buzzad.io/ui/",
         "facebook": "https://www.facebook.com/Honeyscreen",
         "twitter": "https://twitter.com/honeyscreen",
         "blog": "http://blog.naver.com/honeyscreen",
-        "googlestore": "https://app.adjust.com/o9hp47",
-        "applestore": "https://app.adjust.com/o9hp47",
+        "googlestore": "https://play.google.com/store/apps/details?id=com.buzzvil.honeyscreen.zz",
+        "applestore": "",
         "support": "contact@honeyscreen.com",
         "video": "q7QCnjKtvQw"
     },

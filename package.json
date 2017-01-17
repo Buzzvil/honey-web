@@ -16,7 +16,7 @@
         "gulp-uglify": "~1.0.1",
         "highland": "~2.0.0",
         "jquery": "1.12.4",
-        "jquery-keystop": "~1.1.2",
+        "jquery-keystop": "1.2.0",
         "marked": "~0.3.2"
     },
     "private": true

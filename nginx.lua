@@ -4,8 +4,8 @@ local l10nObj = {
     ["en"] = "en",
     ["ko"] = "ko",
     ["ja"] = "ja",
-    ["zh"] = "zh-tw"
-    ["zh-hk"] = "en"
+    ["zh"] = "zh-tw",
+    ["zh-hk"] = "en",
 }
 
 -- parse options

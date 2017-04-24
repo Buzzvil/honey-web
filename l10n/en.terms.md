@@ -1,6 +1,6 @@
 ### I. ABOUT THIS AGREEMENT
 
-The following terms and conditions govern download and use of the Honeyscreen smartphone and mobile device application (“Honeyscreen” thereafter). Honeyscreen is owned and operated by Buzzvil Co., ltd, a company duly organized and validly existing under the laws of Republic of Korea  ("Company" thereafter).
+The following terms and conditions govern download and use of the HoneyScreen smartphone and mobile device application (“HoneyScreen” thereafter). HoneyScreen is owned and operated by Buzzvil Co., ltd, a company duly organized and validly existing under the laws of Republic of Korea  ("Company" thereafter).
 
 
 ### II. DEFINITION OF TERMS
@@ -9,7 +9,7 @@ The following terms and conditions govern download and use of the Honeyscreen sm
 
 ② "User” means an individual or a entity that signs up and uses Service provided by Company.
 
-③ “Advertiser” means an individual or a company that orders advertising campaigns which will be expressed through Honeyscreen.
+③ “Advertiser” means an individual or a company that orders advertising campaigns which will be expressed through HoneyScreen.
 
 ④ "Point (or Reward)" means a virtual currency that can be redeemed to purchase Store Items that Company or partner provides under rules and principles that Company defined.
 
@@ -17,7 +17,7 @@ The following terms and conditions govern download and use of the Honeyscreen sm
 
 ⑥ “Store Item” means service or benefit that Users can use his or her Point on, which is provided directly by Company or indirectly by 3rd parties via partnership of Company.
 
-⑦ "Trial User" means interim User who did not go through official sign-up process that Honeyscreen defined. Trial User is partially limited to use Honeyscreen.
+⑦ "Trial User" means interim User who did not go through official sign-up process that HoneyScreen defined. Trial User is partially limited to use HoneyScreen.
 
 
 ### III. CHANGE OF AGREEMENT
@@ -136,9 +136,9 @@ User shall not intentionally or inadvertently act as below.
 
 4. Harassing, threatening, defamatory, offensive, infringing or illegal messages or transmissions
 
-5. Modification of the software that is provided by Buzzvil to access the Service in any manner or form, or use of modified versions of the software, for any purposes including obtaining unauthorised access to the Service. 
+5. Modification of the software that is provided by Buzzvil to access the Service in any manner or form, or use of modified versions of the software, for any purposes including obtaining unauthorised access to the Service.
 
-6. No access or attempt to access an Account that User is not authorised to access. 
+6. No access or attempt to access an Account that User is not authorised to access.
 
 
 ### XIV. TRIAL LOGIN
@@ -153,18 +153,18 @@ User shall not intentionally or inadvertently act as below.
 
 ⑤ In case that User has Account with same device or phone number, Point that Trial User accumulate shall not be transferred.
 
-⑥ In case that User delete Honeyscreen from device during Trial Login period, Point that Trial User accumulate shall perish automatically.
+⑥ In case that User delete HoneyScreen from device during Trial Login period, Point that Trial User accumulate shall perish automatically.
 
 
 ### XV. INTELLECTUAL PROPERTY
 
-① User agrees that the Service, including but not limited to Honeyscreen, graphics, user interface, audio clips, video clips, editorial content, and the scripts and software used to implement the Service, contains proprietary information and material that is owned by Buzzvil and/or its licensors, and is protected by applicable intellectual property and other laws, including but not limited to copyright. User agrees that he or she will not use such proprietary information or materials in any way whatsoever except for use of the Service in compliance with this Agreement. No portion of the Service may be reproduced in any form or by any means, except as expressly permitted in these terms. User agrees not to modify, rent, lease, loan, sell, distribute, or create derivative works based on the Service in any manner, and User shall not exploit the Service in any unauthorized way whatsoever, including, but not limited to, by trespass or burdening network capacity.
+① User agrees that the Service, including but not limited to HoneyScreen, graphics, user interface, audio clips, video clips, editorial content, and the scripts and software used to implement the Service, contains proprietary information and material that is owned by Buzzvil and/or its licensors, and is protected by applicable intellectual property and other laws, including but not limited to copyright. User agrees that he or she will not use such proprietary information or materials in any way whatsoever except for use of the Service in compliance with this Agreement. No portion of the Service may be reproduced in any form or by any means, except as expressly permitted in these terms. User agrees not to modify, rent, lease, loan, sell, distribute, or create derivative works based on the Service in any manner, and User shall not exploit the Service in any unauthorized way whatsoever, including, but not limited to, by trespass or burdening network capacity.
 
-② Notwithstanding any other provision of this Agreement, Buzzvil and its licensors reserve the right to change, suspend, remove, or disable access to any Honeyscreen, content, or other materials comprising a part of the Service at any time without notice. In no event will Buzzvil be liable for making these changes. Buzzvil may also impose limits on the use of or access to certain features or portions of the Service, in any case and without notice or liability.
+② Notwithstanding any other provision of this Agreement, Buzzvil and its licensors reserve the right to change, suspend, remove, or disable access to any HoneyScreen, content, or other materials comprising a part of the Service at any time without notice. In no event will Buzzvil be liable for making these changes. Buzzvil may also impose limits on the use of or access to certain features or portions of the Service, in any case and without notice or liability.
 
 ③ All copyrights in and to the Service (including the compilation of content, postings, links to other Internet resources, and descriptions of those resources) and related software are owned by Buzzvil and/or its licensors, who reserve all their rights in law and equity. THE USE OF THE SOFTWARE OR ANY PART OF THE SERVICE, EXCEPT FOR USE OF THE SERVICE AS PERMITTED IN THIS AGREEMENT, IS STRICTLY PROHIBITED AND INFRINGES ON THE INTELLECTUAL PROPERTY RIGHTS OF OTHERS AND MAY SUBJECT USER TO CIVIL AND CRIMINAL PENALTIES, INCLUDING POSSIBLE MONETARY DAMAGES, FOR COPYRIGHT INFRINGEMENT.
 
-④ Buzzvil, the Buzzvil logo, Honeyscreen, and other Buzzvil trademarks, service marks, graphics, and logos used in connection with the Service are trademarks or registered trademarks of Buzzvil. in the U.S. and/or other countries. Other trademarks, service marks, graphics, and logos used in connection with the Service may be the trademarks of their respective owners. User is granted no right or license with respect to any of the aforesaid trademarks and any use of such trademarks.
+④ Buzzvil, the Buzzvil logo, HoneyScreen, and other Buzzvil trademarks, service marks, graphics, and logos used in connection with the Service are trademarks or registered trademarks of Buzzvil. in the U.S. and/or other countries. Other trademarks, service marks, graphics, and logos used in connection with the Service may be the trademarks of their respective owners. User is granted no right or license with respect to any of the aforesaid trademarks and any use of such trademarks.
 
 
 ### XVI. DISCONTINUATION OF SERVICE
@@ -181,7 +181,7 @@ User shall not intentionally or inadvertently act as below.
 
 ### XVIII. THIRD-PARTY MATERIALS
 
-① Certain content, products, and services available via Service may include materials from third parties. Honeyscreen may provide links to third-party websites as a convenience to User. User agrees that Honey is not responsible for examining or evaluating the content or accuracy and Honeyscreen does not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of 3rd parties. User agrees that he or she will not use any third-party materials in a manner that would infringe or violate the rights of any other party and that Service is not in any way responsible for any such use by User.
+① Certain content, products, and services available via Service may include materials from third parties. HoneyScreen may provide links to third-party websites as a convenience to User. User agrees that Honey is not responsible for examining or evaluating the content or accuracy and HoneyScreen does not warrant and will not have any liability or responsibility for any third-party materials or websites, or for any other materials, products, or services of 3rd parties. User agrees that he or she will not use any third-party materials in a manner that would infringe or violate the rights of any other party and that Service is not in any way responsible for any such use by User.
 
 
 ### XIX. PRIVACY POLICY

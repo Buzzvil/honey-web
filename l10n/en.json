@@ -2,7 +2,7 @@
     "meta": {
         "code": "en",
         "bucket": "com.honeyscreen.en",
-        "title": "Honeyscreen"
+        "title": "HoneyScreen"
     },
     "style": {
         "font-list": "'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif",
@@ -96,7 +96,7 @@
             ],
             "sub": [
                 "Your phone bill. Music streaming. Games. Movie tickets.",
-                "With Honeyscreen, experience more on mobile for free."
+                "With HoneyScreen, experience more on mobile for free."
             ]
         }
     },
@@ -118,8 +118,8 @@
                     "q": "Why do I get the message of “Purchase failure / limit has been exceeded”?",
                     "a": [
                         "If there is an error in purchasing a product, this is usually due to one of two reasons:",
-                        "The first reason is if your account and/or points have been suspended due to misuse of our service. If you believe this is the case, please send us an email with the email address and Nickname you registered with for your Honeyscreen account and your contact information, and we will follow up with further details.",
-                        "The second reason may be that you’ve changed your personal information or there is a temporary error. Please reinstall the app to continue using Honeyscreen as usual."
+                        "The first reason is if your account and/or points have been suspended due to misuse of our service. If you believe this is the case, please send us an email with the email address and Nickname you registered with for your HoneyScreen account and your contact information, and we will follow up with further details.",
+                        "The second reason may be that you’ve changed your personal information or there is a temporary error. Please reinstall the app to continue using HoneyScreen as usual."
                     ]
                 }, {
                     "q": "Do I get my coupon via SMS after I’ve purchased a product?",
@@ -151,12 +151,12 @@
                         "If you have not received your Referral Points, please confirm the following:",
                         "1. Has the person you referred ever listed any one else as a Referee?",
                         "2. Has the Referee Nickname been entered correctly?",
-                        "3. Is this the first time you’re signing up for Honeyscreen?",
+                        "3. Is this the first time you’re signing up for HoneyScreen?",
                         "",
                         "We only provide Referral Points one time for each mobile phone number and device.",
-                        "If you’ve ever signed up for Honeyscreen before and already listed a Referee, even if you delete your account and sign up again on the same device with a new Referee, you do not receive Referral Points a second time.",
+                        "If you’ve ever signed up for HoneyScreen before and already listed a Referee, even if you delete your account and sign up again on the same device with a new Referee, you do not receive Referral Points a second time.",
                         "Furthermore, if you create two accounts with the same device, the second account is not eligible for Referral Points.",
-                        "This is a measure to prevent misuse of Honeyscreen for multiple Referral Points, and we appreciate your understanding.",
+                        "This is a measure to prevent misuse of HoneyScreen for multiple Referral Points, and we appreciate your understanding.",
                         "",
                         "If this is not due to any of the above reasons, please email us with your Nickname and the Nickname(s) of whoever has listed you as a Referee."
                     ]
@@ -172,12 +172,12 @@
                 }, {
                     "q": "Is it possible to cancel my Referee?",
                     "a": [
-                        "Once you complete your registration, you are unable to edit or cancel your Referee Nickname. If you have determined that your Referee may be misusing Honeyscreen and would like to cancel your Referral, please include a screenshot and send us a report by email."
+                        "Once you complete your registration, you are unable to edit or cancel your Referee Nickname. If you have determined that your Referee may be misusing HoneyScreen and would like to cancel your Referral, please include a screenshot and send us a report by email."
                     ]
                 }, {
                     "q": "Where can I see my Referral Profiles, Referral Name Card, Messages, Gift Box, etc.?",
                     "a": [
-                        "Honeyscreen does not currently have any features to view, message, or send gifts to your Referrals. This is because there are occasionally people who use this information to misuse our service. We take strong actions against those that misuse Honeyscreen in this way. If you see any violations of Honeyscreen, please report the incident with a screenshot so that we can provide a better Honeyscreen user experience for you."
+                        "HoneyScreen does not currently have any features to view, message, or send gifts to your Referrals. This is because there are occasionally people who use this information to misuse our service. We take strong actions against those that misuse HoneyScreen in this way. If you see any violations of HoneyScreen, please report the incident with a screenshot so that we can provide a better HoneyScreen user experience for you."
                     ]
                 }, {
                     "q": "Is there a daily limit for how many Referral Points you can get?",
@@ -191,7 +191,7 @@
                 "list": [{
                     "q": "Please explain the weather information feature.",
                     "a": [
-                        "Honeyscreen provides current weather information and forecast as confirmed by the National Weather Service."
+                        "HoneyScreen provides current weather information and forecast as confirmed by the National Weather Service."
                     ]
                 }, {
                     "q": "Is the weather information updated in real time?",
@@ -201,12 +201,12 @@
                 }, {
                     "q": "Is the weather information updated based on my current location?",
                     "a": [
-                        "Honeyscreen provides weather information based on the location you selected when you created your account."
+                        "HoneyScreen provides weather information based on the location you selected when you created your account."
                     ]
                 }, {
                     "q": "What does it mean to “Sign up with Facebook”?",
                     "a": [
-                        "For those that want to sign up for Honeyscreen without entering in all their information, you’re able to start using Honeyscreen immediately with your Facebook account."
+                        "For those that want to sign up for HoneyScreen without entering in all their information, you’re able to start using HoneyScreen immediately with your Facebook account."
                     ]
                 }, {
                     "q": "Does this mean I can no longer use my previous account?",
@@ -214,31 +214,31 @@
                         "No. If you have previously registered with an email address, you can sign in with your existing email address and password."
                     ]
                 }, {
-                    "q": "Can I use Honeyscreen with both my Facebook account and with my email address?",
+                    "q": "Can I use HoneyScreen with both my Facebook account and with my email address?",
                     "a": [
-                        "Please only use one account. You are not able to use Honeyscreen with two accounts simultaneously, so by using two separate accounts, it will take you longer to accumulate points that you can redeem in the Store."
+                        "Please only use one account. You are not able to use HoneyScreen with two accounts simultaneously, so by using two separate accounts, it will take you longer to accumulate points that you can redeem in the Store."
                     ]
                 }, {
                     "q": "I clicked “Sign up with Facebook” but it says this email address is already in use.",
                     "a": [
-                        "It looks like you’ve already signed up for Honeyscreen! You will see this message if the email address that you originally used to register for Honeyscreen is the same as the email address you use for your Facebook account.",
+                        "It looks like you’ve already signed up for HoneyScreen! You will see this message if the email address that you originally used to register for HoneyScreen is the same as the email address you use for your Facebook account.",
                         "If this is your correct email address, please reset your password through the in-app menu and sign in with your existing account."
                     ]
                 }, {
                     "q": "If I switch to a different device, do my existing points disappear?",
                     "a": [
-                        "If you re-install Honeyscreen on your new device and log in with your account, you can continue using Honeyscreen with your existing data."
+                        "If you re-install HoneyScreen on your new device and log in with your account, you can continue using HoneyScreen with your existing data."
                     ]
                 }, {
-                    "q": "Does Honeyscreen use up a lot of battery life?",
+                    "q": "Does HoneyScreen use up a lot of battery life?",
                     "a": [
-                        "Using Honeyscreen may slightly increase your average battery consumption, but not by a significant account."
+                        "Using HoneyScreen may slightly increase your average battery consumption, but not by a significant account."
                     ]
                 }, {
-                    "q": "Does Honeyscreen use up a lot of my data?",
+                    "q": "Does HoneyScreen use up a lot of my data?",
                     "a": [
-                        "In order to ensure efficient data consumption for our users, Honeyscreen loads the lock screen images when you have access to a wifi connection.",
-                        "Only when there is no lock screen image ready for the next hour and you are not within a wifi connection will Honeyscreen inevitably use data to load the images.",
+                        "In order to ensure efficient data consumption for our users, HoneyScreen loads the lock screen images when you have access to a wifi connection.",
+                        "Only when there is no lock screen image ready for the next hour and you are not within a wifi connection will HoneyScreen inevitably use data to load the images.",
                         "Even in this case, we minimize the file size of the images to minimize our users’ data consumption.",
                         "For the most efficient data usage, we recommend that you enable access to a wifi connection at least once a day."
                     ]
@@ -254,15 +254,15 @@
                 }, {
                     "q": "How do I delete my account?",
                     "a": [
-                        "You are able to delete your account from the menu within the Honeyscreen app by going to Settings > Delete Account.",
+                        "You are able to delete your account from the menu within the HoneyScreen app by going to Settings > Delete Account.",
                         "Please note that once you delete your account, all of your personal information and data, including any accumulated points, cannot be recovered. In addition, after you’ve deleted your account, you will not be able to sign up for a new account for 3 months."
                     ]
                 }, {
                     "q": "Where can I view my Page or Profile?",
                     "a": [
-                        "Honeyscreen does not have a “My Page” section.",
+                        "HoneyScreen does not have a “My Page” section.",
                         "From the in-app menu, you can go to Settings to view your own profile and account information.",
-                        "In addition, for the privacy and security of personal data, Honeyscreen does not authorize access to profiles or user information other than your own."
+                        "In addition, for the privacy and security of personal data, HoneyScreen does not authorize access to profiles or user information other than your own."
                     ]
                 }, {
                     "q": "Can I change my email address or Nickname?",
@@ -274,16 +274,16 @@
             "abuse": {
                 "name": "Abuse",
                 "list": [{
-                    "q": "How do I report a violation or abuse of Honeyscreen?",
+                    "q": "How do I report a violation or abuse of HoneyScreen?",
                     "a": [
                         "Please send an email to contact@honeyscreen.com to report the nature of the violation and include a screenshot that can identify the user’s Nickname."
                     ]
                 }, {
                     "q": "What actions are taken once a violation has been reported?",
                     "a": [
-                        "Once we receive a report of abuse on Honeyscreen, we first review the report and take appropriate measures when the violation has been verified.",
+                        "Once we receive a report of abuse on HoneyScreen, we first review the report and take appropriate measures when the violation has been verified.",
                         "If we confirm that a user has violated our terms of service, we may take actions such as suspending the user’s account, freezing their points, or restricting them from creating a new account.",
-                        "We enforce strict restrictions for those who abuse or violate our service, and we appreciate your cooperation in reporting these cases. Help us make Honeyscreen better for you!"
+                        "We enforce strict restrictions for those who abuse or violate our service, and we appreciate your cooperation in reporting these cases. Help us make HoneyScreen better for you!"
                     ]
                 }]
             }
@@ -359,7 +359,7 @@
     
     "about": {
         "sub": [
-            "Honeyscreen aims to captivate users on their",
+            "HoneyScreen aims to captivate users on their",
             "smartphones’ first screens. Join us on this journey!"
         ]
     }

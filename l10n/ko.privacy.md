@@ -338,4 +338,5 @@
     <div class="col-sm-4 col-md-3">소프트스펠</div>
     <div class="col-sm-4 col-md-3">주식회사 하이브로</div>
     <div class="col-sm-4 col-md-3">위버플</div>
+    <div class="col-sm-4 col-md-3">GMO</div>
 </div></div>

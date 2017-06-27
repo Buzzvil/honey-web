@@ -37,7 +37,7 @@ end
 
 -- load locale
 ngx.redirect(
-    "http://" ..
+    "https://" ..
     (l10nKey or "ko") ..
     ".honeyscreen.com" ..
     string.gsub(ngx.var.request_uri, [[/+$]], "")

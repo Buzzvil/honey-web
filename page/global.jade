@@ -31,11 +31,11 @@ html(lang=meta.code)
         link(rel="stylesheet", href="/global.css")
         link(rel="icon", type="image/png", href="#{i}favicon-1x.png", sizes="16x16")
         link(rel="icon", type="image/png", href="#{i}favicon-2x.png", sizes="32x32")
-        link(rel="canonical", href="http://#{meta.key}.honeyscreen.com/#{pagePath}")
-        link(rel="alternate", href="http://en.honeyscreen.com/#{pagePath}", hreflang="en")
-        link(rel="alternate", href="http://ja.honeyscreen.com/#{pagePath}", hreflang="ja")
-        link(rel="alternate", href="http://ko.honeyscreen.com/#{pagePath}", hreflang="ko")
-        link(rel="alternate", href="http://zh-tw.honeyscreen.com/#{pagePath}", hreflang="zh-TW")
+        link(rel="canonical", href="https://#{meta.key}.honeyscreen.com/#{pagePath}")
+        link(rel="alternate", href="https://en.honeyscreen.com/#{pagePath}", hreflang="en")
+        link(rel="alternate", href="https://ja.honeyscreen.com/#{pagePath}", hreflang="ja")
+        link(rel="alternate", href="https://ko.honeyscreen.com/#{pagePath}", hreflang="ko")
+        link(rel="alternate", href="https://zh-tw.honeyscreen.com/#{pagePath}", hreflang="zh-TW")
         <!--[if lt IE 9]>
         script(src="/legacy.js")
         <![endif]-->
@@ -59,25 +59,25 @@ html(lang=meta.code)
                 
                 p.navbar-text
                     if contact.facebook
-                        a.ic.ic-social-facebook(href=contact.facebook, target="_blank")
+                        a.ic.ic-social-facebook(href=contact.facebook, target="_blank", rel="noopener")
                     if contact.twitter
-                        a.ic.ic-social-twitter(href=contact.twitter, target="_blank")
+                        a.ic.ic-social-twitter(href=contact.twitter, target="_blank", rel="noopener")
                     if contact.blog
-                        a.ic.ic-social-blog(href=contact.blog, target="_blank")
+                        a.ic.ic-social-blog(href=contact.blog, target="_blank", rel="noopener")
         
         block content
         
         footer: nav.container-fluid
             ul.first-child
-                li.first-child: a(href="//www.buzzvil.com") © Buzzvil
+                li.first-child: a(href="https://www.buzzvil.com") © Buzzvil
                 li: a(href="/terms") #{footer.terms}
                 li.last-child: a(href="/privacy") #{footer.privacy}
             
             ul.last-child
-                li.first-child: a(href="//en.honeyscreen.com/#{pagePath}") English
-                li: a(href="//ko.honeyscreen.com/#{pagePath}") 한국어
-                li: a(href="//ja.honeyscreen.com/#{pagePath}") 日本語
-                li.last-child: a(href="//zh-tw.honeyscreen.com/#{pagePath}") 繁體中文
+                li.first-child: a(href="https://en.honeyscreen.com/#{pagePath}") English
+                li: a(href="https://ko.honeyscreen.com/#{pagePath}") 한국어
+                li: a(href="https://ja.honeyscreen.com/#{pagePath}") 日本語
+                li.last-child: a(href="https://zh-tw.honeyscreen.com/#{pagePath}") 繁體中文
         
         script(src="/global.js", async)
         script.

@@ -1,137 +1,123 @@
-① You may be asked to provide your personal information anytime you are in contact with Buzzvil or a Buzzvil affiliated company ("Company" thereafter). Company may share this personal information with each other and use it consistent with this Privacy Policy. They may also combine it with other information to provide and improve our products, services, content, and advertising that Company provides ("Service" thereafter). 
+Buzzvil Co., Ltd. ("the Company") takes personal information of members very seriously and treats personal information with special care. The Company does not collect any sensitive personal information that may be a source of fundamental human rights violations and abides by relevant laws and regulations.
 
-② Company's Privacy Policy contains agenda as below.
+The Company shall ensure that the personal information of the member is not abused or leaked through the personal information policy. This Privacy Policy shall guide through the purpose and method of how the personal information is being used and the measures taken to protect personal information.
 
-1. What Company collect for personal information
+### 1. Personal Information
 
-2. Why Company collect personal information
+The Company collects/uses the following information for registration, customer support, and provision of services.
 
-3. How Company collect personal information
+1) Information collected to provide basic services
 
-4. How Company use service provider to protect personal information
+- Email address, password, nickname, advertising ID, device identification number (UDID or IMEI), year of birth, gender, region, marital status, etc.
+- Service usage history, access log, cookie, connection IP, bad usage record, payment record, and various personal information generated from the process of business process and personal tendency information about content / advertisement
 
-5. How Company use or disclose personal information to 3rd parties
+2) Additional information collected only when requested by the member
 
-6. How long Company retain and delete personal information
+The following information is used only for the specific purpose requested by the applicant. However, please note that the information gathered from surveys and participating ads may also be used for future advertising targeting purposes.
 
-7. How You can access and modify personal information
+- Survey participation: The following information will be collected when participating in surveys: gender, date of birth, residential area, postal code, household income, personal income, economic activity, final education, occupation, department / Total number, birthdate of children, presence of the vehicle, interest
+- Earn installable ad points: app install information
+- Point Cash Refund: Name and bank account information
+- Donation receipt issued: Resident registration number
+- Mobile phone information: Event product delivery
 
-8. What You should do
+### 2. Purpose of Collecting Personal Information
 
-9. Link site
+The Company collects personal information in order to provide smooth "service" based on the collected information. The collected information is used only for the purpose specified below and is not used for other purposes. When there are changes to the purpose of use, the changes will be reflected according to the agreed procedure under the consent of members.
 
-10. How Company protect personal information
+- Registration,  targeting ads, and content services (such as exposure ads, action ads, participation in surveys), member identification, rewards accumulation / use / settlement, customer support, service operation
+- Marketing activities such as events, marketing, research for service improvement that encourage the use of this service
 
-11. How You can contact us
+The company may provide information about the services (advertising participation, surveys, content, events, etc.) to members through a variety of methods (such as emails or push messages) for better service. However, if the member clarifies that he / she does not want to receive the service benefit information, the information will not be provided.
 
-12. How Company notifies You for Privacy Policy
+- Reject push messages: In-app settings -> Notification settings Off
+- Reject email: request by email at contact.all@honeyscreen.com
 
+### 3. How Personal Information is collected
 
-### 1. What Company collect for personal information
+The Company collects personal information through the following methods:
 
-① Company collects minimum amount of personal information to provide Service to You.
+- Registration and edit
+- E-mail
+- Written form
+- Participation in events
+- Provision from affiliates
+- Information generated through log analysis program
+- Collection of information by 'cookies'
+- Automatic collection through terminals
 
-* Basic Information  
-  E-mail address, Invitation ID, Password, Advertising ID, Unique Device Identifier, Information You provide when signing up (year of birth, sex, location, etc.), mobile phone number
+### 4. Disclosure of Personal Information to Third Parties
 
-* Additional Information collected during Service use or processing  
-  Service use log, log-in log, cookie, IP address, store transaction record, abusing record, etc.
+① The Company will not provide personal information of members to third parties without prior consent. However, in the case where it is absolutely necessary for the operation of services as described below and in cases required by law, personal information can be provided to the third party without prior consent of the member.
 
+- Advertiser and ad network vendors for ad performance metrics, customized ad serving, and customer service response
+- When participating in a survey campaign, survey companies
+- Cash redemptions, store purchases, donations, etc.
+- Prize providers when winning an event
+- Requests from investigative agencies in accordance with procedures and methods set forth in the Act for investigation purposes
+- If transfer of personal information is required due to acquisition(in which members will be notified in advance)
+- If the member agrees in advance
 
-### 2. Why Company collect personal information
+② Information collected when members participate in SSI survey campaigns is provided to SSI, the affiliate, which is stored on the US server.
 
-① Personal information we collect allows us to keep you posted on Buzzvil’s latest product announcements, updates, and upcoming events. If you don’t want to be on our mailing list, you can opt out anytime by updating your preferences. We also use personal information to help us create, develop, operate, deliver, and improve our products, services, content and advertising, and for loss prevention and anti-fraud purposes. We may use your personal information, including year of birth, to verify identity, assist with identification of users, and to determine appropriate services. From time to time, we may use your personal information to send important notices, such as communications about purchases and changes to our terms, conditions, and policies. We may also use personal information for internal purposes such as auditing, data analysis, and research to improve Buzzvil’s products, services, and customer communications.
+③ Members may request for withdrawal of provision of personal information to third parties. However, withdrawing provision of personal information to third parties will lead to discontinued usage of their website and any related information will be permanently deleted, unable to be recovered.
 
-② You are not required to provide personal information that we have requested, but, if you chose not to do so, in many cases we will not be able to provide you with our products or services or respond to any queries you may have.
+Email: contact@honeyscreen.com
 
-③ All Your personal information will not be used for other purposes and in case that Company changes purposes of collecting personal information, Company will request consent prior to using it.
+### 5. Storage of Personal Information
 
+① The Company stores and uses the member's personal information in accordance with the period of the member’s usage of the service or the related laws and regulations.
 
-### 3. How Company collect personal information
+② Even if the member leaves the service, the Company may keep the member's information for a certain period of time for the following purposes.
 
-Company collect personal information using method as mentioned below.
+- To complete the customer support service provided
+- To comply with applicable legal and regulatory obligations
+- To prevent the use or abuse of unauthorized unauthorized service
+- To coordinate membership or other disputes
 
-- Service Enrollment
+### 6. The Rights of Members and Legal Representatives and How they are Exercised
 
-- Written Document
+① The Company protects the rights of members and legal representatives as follows.
 
-- Event
+- Personal information may be viewed and requested a correction at any time. However, please note that some information cannot be modified.
+- Withdrawal of consent to provide personal information or termination of membership can be requested at any time.
+- In order to use and provide accurate personal information, member's personal information will not be used or provided until the modification is completed. If the wrong personal information is provided to a third party, they will be notified without delay and the information will be corrected.
 
-- Legitimate Disclosure by Partners
+② Membership information inquiries, change and termination requests can be made through the company-run HoneyScreen application. Other rights exercises can be made via written, telephone or email through the customer center.
 
-- Log Analysis Program
+### 7. Member Responsibility
 
-- Cookie
+Members must ensure that their emails and passwords are not leaked externally. If members experience any disadvantages using this service due to leakage of the email and password used in other online services, the company will not be responsible for any problems caused by this. Therefore, we strongly recommend using passwords that are not used by other online services when you sign up for this service.
 
-- Device
+② Please enter the latest and accurate personal information. The company is not responsible for the disadvantages caused by incorrect input of information by members.
 
+### 8. Caution Using Affiliate Link Sites
 
-### 4. How Company use service provider to protect personal information
+① The Company may provide the Members with a link to affiliate’s/company's websites or materials through the "Service" operated by the Company. In this case, the Company shall not be liable for the usefulness of the services or materials provided from external websites or for the transactions between members and the websites.
 
-① Buzzvil can share personal information with companies who provide services such as information processing, extending credit, fulfilling customer orders, delivering products to you, managing and enhancing customer data, providing customer service, assessing your interest in our products and services, and conducting customer research or satisfaction surveys. These companies are obligated to protect your information.
+② If you move to the link page or linked page, please check the policy of the newly visited internet site since the privacy policy of the relevant internet site is not related to the company.
 
+### 9. Technical Measures to Protect Personal Information
 
-### 5. How Company use or disclose personal information to 3rd parties
+① In handling personal information of members, the Company does its best to prevent the loss, theft, leakage, alteration or damage to personal information. In order to secure safety, the Company takes the following technical measures. However, in the event of loss, theft, leakage, alteration or damage of personal information caused by force majeure such as intrusion of a hacker or penetration of a new virus which cannot be prevented or dealt with, the Company is not responsible for.
 
-① At times Buzzvil may make certain personal information available to 3rd parties that work with Buzzvil to provide Service. Personal information will only be shared by Buzzvil to provide or improve our products, services and advertising; it will not be shared with 3rd parties for their marketing purposes.
+② Members’ personal information is protected by their ID and password, and important data such as file and transmission data and customer's collected information are protected by separate security function such as encryption.
 
-② However, personal information can be disclosed to 3rd parties for purposes other than mentioned at Article 5 Clause 1 due to below reasons
+③ The company uses vaccine programs to take measures to prevent damage from computer viruses. Vaccine programs are updated periodically, and if sudden viruses appear, we provide them as soon as they become available to prevent personal information from being compromised.
 
-- Consent of disclosure by You
+④ The company adopts a security device that can securely transmit personal information on the network using encryption algorithm.
 
-- By law, legal process, litigation, and/or requests from public and governmental authorities within or outside Your country of residence
+⑤ To control unauthorized access such as hacking, an intrusion prevention system is installed / operated. The access to the server is limited to the minimum number of people required for each role.
 
-- Business transfer of Company to 3rd parties (Separate prior notification will be held)
+### 10. Contact Information
 
-③ You can request withdraw of consent on disclosure of personal information via below contact. However, in case that withdrawal occurs, You will not be able to access to benefits provided by 3rd parties.
+If you have any questions about this Privacy Policy, or if you have any questions, comments or concerns regarding the processing of your personal information, please contact us at:
 
-- Webpage : http://www.honeyscreen.com
+- Email: contact@buzzvil.com
+- Mail: 3rd floor, Daelim Building, 272, Seokchon Lake, Songpa-gu, Seoul
 
-- E-mail : privacy@honeyscreen.com
+### 11. Changes to this Privacy policy and Notice
 
+The Company may change its privacy policy for a variety of reasons, such as to improve the member's process of personal information processing, to reflect changes to company services, or to comply with applicable laws. If the Company changes the Privacy Policy, it will notify members of the change using the Service or other reasonable means.
 
-### 6. How long Company retain and delete personal information
-
-① Company will retain your personal information for the period necessary to fulfill the purposes outlined in this Privacy Policy unless a longer retention period is required or permitted by law.
-
-
-### 7. How You can access and modify personal information
-
-① Company makes it easy for you to keep your personal information accurate, complete, and up to date. You can help ensure that Your contact information and preferences are accurate, complete, and up to date by logging in Service or sending e-mail to contact@honeyscreen.com. 
-
-② Company understand the importance of taking extra precautions to protect the privacy and safety of children using Service. Children under the age of 13, or equivalent minimum age in the relevant jurisdiction, are not permitted to sign up Service, unless their parent provided verifiable consent. If we learn that we have collected the personal information of a child under 13, or equivalent minimum age depending on jurisdiction, outside the above circumstances we will take steps to delete the information as soon as possible.
-
-
-### 8. What You should do
-
-① You have obligation to protect your personal information by yourself. To the case that You intentionally or inadvertently leaks Your personal information, Company is not legally obliged.
-
-② You also have obligation not to breach Privacy Policy on other people. Your code of conduct should comply with governing law in your residence.
-
-
-### 9. Link site
-
-① Company websites and Service may contain links to 3rd-party websites, products, and services. Our Service may also use or offer products or services from 3rd parties. Information collected by 3rd parties, which may include such things as location data or contact details, is governed by their privacy practices. We encourage you to learn about the privacy practices of those 3rd parties.
-
-
-### 10. How Company protect personal information
-
-① Company uses commercially reasonable efforts to the best of its ability, with integrity to protect Your personal information with technical support as below. However, Company shall not be liable for its failure to protect Your personal information by reason of a “Force Majeure Event”, which is defined as any event beyond the control of such Party, including, but not limited to, intrusion by hackers or newly developed viruses.
-
-② Company uses ID, password, encryption algorithm, vaccine program, and so on to protect Your personal information.
-
-③ To make sure your personal information is secure, we communicate our privacy and security guidelines to Buzzvil employees and strictly enforce privacy safeguards within the Company.
-
-
-### 11. How You can contact us
-
-① You can contact Company easiliy via below e-mail on Privacy-related matters.
-
-- E-mail : contact@honeyscreen.com
-
-- Webpage : http://www.honeyscreen.com
-
-
-### 12. How Company notifies You for Privacy Policy
-
-① Company notifies You for Privacy Policy on Company website. As revision or modification occurs from time to time, please constantly check when you visit website.
+Application date: June 28, 2017 (effective date: July 11, 2017)

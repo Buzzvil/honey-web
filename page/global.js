@@ -123,8 +123,8 @@ $("#support-buttons").on("click", "a", function () {
 ///////////////////////////////////////////////////////////////////////////////
 // TODO TEMP
 ///////////////////////////////////////////////////////////////////////////////
-if (!localStorage.terms201706) {
-    $(".modal").modal().find("button").first().click(function () {
-        localStorage.terms201706 = true;
+if (!localStorage.terms201707) {
+    $(".modal").modal().find("button:first").click(function () {
+        localStorage.terms201707 = true;
     });
 }

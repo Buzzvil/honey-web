@@ -66,28 +66,77 @@ block content
         h2.font-make-4: +break("maybe", index.outro.sub)
 
     //- TODO TEMP
-    if meta.key === "ko"
+    if meta.key === "ja"
         div.modal: div.modal-dialog: div.modal-content
               div.modal-body(style="font-size:80%")
-                p 안녕하세요. 허니팀 입니다.
-                p 허니스크린 개인정보취급방침이 2017년 6월 27일자로 다음과 같이 변경되어 사전 안내 드립니다. 이번 개인정보취급방침은 설문조사 광고 진행을 위한 내용 추가 및 개인정보 관련해 회원
-                p: b 1. 개인정보취급방침 주요 변경 사항
+                p ハニースクリーンサポートチームです。 2017年7月11日からハニースクリーンプライバシーポリシーが更新されます。
+                p: b ▶︎変更項目
                 ul
-                    li 1조 2항 신설 : 해당 신청자에 한해 추가로 수집하는 정보항목 추가
+                    li 第1条2項追加：申請者に限って収集する情報
                         ul
-                            li 설문조사 광고 참여, 설치형 광고 포인트 적립, 포인트 현금 환급, 이벤트 상품 전달 시 수집 정보 추가
-                    li 2조 '개인정보 수집목적' 내 내용 추가 : 푸시메시지 및 이메일 수신 거절 방법에 대한 안내 추가
-                    li 3조 '개인정보의 수집방법' 내 내용 추가 : 회원가입 및 수정 시 추가
-                    li 4조 '개인정보 제 3자 제공 및 동의' 항목 아래와 같이 내용 수정
+                            li アンケート、インストール型広告ポイント付与、キャンペーンの商品を届ける時に必要な携帯情報
+                    li 第2条個人情報の収集目的追加：プッシュメッセージ及びメール受信拒否の方法
+                    li 第3条個人情報の収集方法追加：会員登録及び修正時追加
+                    li 第4条個人情報の第三者への提供及び同意の項目を修正
                         ul
-                            li 제 3자 제공하는 업체에 대해 보다 구체적인 케이스 명시 (광고주, 광고 네트워크, 설문조사, 이벤트 경품업체 등)
-                            li SSI(설문조사 업체)의 설문조사 참여 시, 정보 공유에 대한 내용 추가
-                            li 제 3자 정보제공 철회에 대한 사항 추가
-                    li 기타 기존 개인정보처리방침의 내용 중 일부를 '한국 회원을 위한 부록'으로 이동
-                p: b 2. 시행일자 : 2017년 7월 11일
-                p 변경된 개인정보 취급방침 전문은 허니스크린 홈페이지 내(<a href="https://ko.honeyscreen.com/privacy">개인정보취급방침</a>)를 참고해 주세요.
-                p: b * 이의 및 문의 절차
-                p 문의사항은 <a href="mailto:contact@honeyscreen.com">contact@honeyscreen.com</a>을 통해 주시기 바라며, 본 개인정보취급방침에 동의하지 않으실 경우 회원 탈퇴를 통해 사용을 해지하실 수 있습니다.
+                            li 情報を提供する第三者について詳しく記載
+                            li SSIアンケート参加時、情報共有への内容追加
+                            li 個人情報第三者への提供を撤回の内容追加
+                p: b ▶︎実施日：2017年7月11日
+                p 更新されたプライバシーポリシーはアプリ内の”プライバシーポリシー”でご確認ください。
+                ul
+                    li 更新された利用規約に関する提議やお問い合わせはハニースクリーンお問い合わせ先(contact@honeyscreen.jp)までお願いします。
+                    li 更新された利用規約へ同意されない場合は退会できます。
+                    li 更新されら利用規約に関して提議がない場合は更新された利用規約に同意されたと見做します。
               div.modal-footer
-                button.btn.btn-default(type="button", data-dismiss="modal") #{temp.never}
-                button.btn.btn-primary(type="button", data-dismiss="modal") #{temp.close}
+                button.btn.btn-default(type="button", data-dismiss="modal") Never show again
+                button.btn.btn-primary(type="button", data-dismiss="modal") Close
+
+    if meta.key === "zh-tw"
+        div.modal: div.modal-dialog: div.modal-content
+              div.modal-body(style="font-size:80%")
+                p 您好，我們是 HoneyScreen。 2017年7月11日起將會更新 HoneyScreen 的隱私權聲明。
+                p: b ▶︎變更項目
+                ul
+                    li 第二條「個人資料的收集、處理及利用方式 」第一點追加
+                        ul
+                            li 個人資料蒐集所需項目
+                    li 新增第三條「個人資料收集目的」
+                    li 第四條「個人資料之保護」新增第三、四點
+                    li 第五條「與第三人共用個人資料之政策」新增第三、四、五點
+                        ul
+                            li 詳細記錄與第三人共用個資之情況
+                            li 參加SSI問卷調查時，個資共享之內容追加
+                            li 從第三人撤回會員個資之内容追加
+                p: b ▶︎施行日：2017年7月11日
+                ul
+                    li 更新後的隱私權聲明請在應用程式内的「隱私條款」內進行確認。
+                    li 對於更新後的隱私權聲明有任何疑問或建議，歡迎來信(contact.tw@honeyscreen.com)。
+                    li 若您不同意本隱私權保護政策，您可以停止使用本公司所提供之相關產品與服務。
+              div.modal-footer
+                button.btn.btn-default(type="button", data-dismiss="modal") Never show again
+                button.btn.btn-primary(type="button", data-dismiss="modal") Close
+
+    if meta.key === "en"
+        div.modal: div.modal-dialog: div.modal-content
+              div.modal-body(style="font-size:80%")
+                p Hello! This is to notify you that HoneyScreen's Privacy Policy has been updated on July 11th 2017. There has been some changes and additions to the Privacy Policy regarding survey participation. Please refer to the information below for the main changes.
+                p: b 1. Main Changes to the Privacy Policy
+                ul
+                    li Article 1 Clause 2 newly added: Additional collected information has been included for applicable members
+                        ul
+                            li data collected for: survey ad participation, install ad rewards, cash redemptions, winning events
+                    li Article 2 "Purpose of Collecting Information" : Instructions to reject push-messages and email
+                    li Article 3 "How Personal Information is Collected" : Registration and changes to personal information
+                    li Article 4 "Disclosure of Personal Information to Third Parties" edited as below:
+                        ul
+                            li More specific cases of third parties stated (Advertisers, ad networker, survey, event prize companies)
+                            li SSI (Survey providers), information shared when participating in surveys
+                            li Withdrawal of consent to disclosure of information to third parties
+                p: b 2. Effective from : July 11th 2017
+                p Please refer to the newly updated Privacy Policy on the HoneyScreen website.
+                p: b * Inquiries
+                p Please send your inquiries to contact.all@honeyscreen.com, and if you do not agree with the policy, you may terminate your account to discontinue your use.
+              div.modal-footer
+                button.btn.btn-default(type="button", data-dismiss="modal") Never show again
+                button.btn.btn-primary(type="button", data-dismiss="modal") Close

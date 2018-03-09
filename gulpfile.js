@@ -40,13 +40,16 @@ var l10nify = function (iter) {
 gulp.task("i18n", function () {
     (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach(function (key) {
         var json = fs.readFileSync("l10n/" + key + ".json", "utf8");
-        var terms = fs.readFileSync("l10n/" + key + ".terms.md", "utf8");
-        var privacy = fs.readFileSync("l10n/" + key + ".privacy.md", "utf8");
+        var md = fs.readdirSync("l10n");
         
         l10nObj[key] = JSON.parse(json);
         l10nObj[key].meta.key = key;
-        l10nObj[key].terms = marked(terms);
-        l10nObj[key].privacy = marked(privacy);
+
+        md.filter(function (name) {
+            return name.startsWith(key) && name.endsWith(".md");
+        }).forEach(function (name) {
+            l10nObj[key][name] = marked(fs.readFileSync("l10n/" + name, "utf8"));
+        });
     });
 });
 

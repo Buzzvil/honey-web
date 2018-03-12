@@ -20,6 +20,9 @@
 @import "node_modules/bootstrap/less/utilities";
 @import "node_modules/bootstrap/less/responsive-utilities";
 
+// TODO TEMP
+@import "node_modules/bootstrap/less/modals";
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // Bootstrap: Config
@@ -556,7 +559,7 @@ footer > nav > ul {
     margin: 0;
     padding: 0;
     
-    > li {
+    & > li {
         display: inline-block;
         margin: 19px 15px 20px 15px;
         
@@ -568,8 +571,9 @@ footer > nav > ul {
             margin-right: 0;
         }
         
-        > a:hover,
-        > a:focus {
+        & > a:hover,
+        & > a:focus,
+        & > a.active {
             color: @honey-link-alt;
         }
     }

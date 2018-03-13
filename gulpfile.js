@@ -97,7 +97,7 @@ gulp.task("pages", ["i18n"], l10nify(function (l10n) {
     
     opts.locals.i = IMAGES + "_/";
     opts.locals.I = IMAGES +  l10n + "/";
-    opts.locals.gakey = process.env.GANALYTICS_KEY;
+    opts.locals.gakey = process.env.GANALYTICS_KEY || "UA-38836648-1";
     
     return gulp.src(["page/!(global).jade", "l10n/" + l10n + ".*.jade"])
         .pipe(jade(opts))

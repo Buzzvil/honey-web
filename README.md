@@ -1,5 +1,5 @@
-http://honeyscreen.com
+https://honeyscreen.com
 
 ---
 
-© 2017 [Buzzvil](https://www.buzzvil.com), shared under the [MIT license](https://opensource.org/licenses/MIT).
+© 2018 [Buzzvil](https://www.buzzvil.com), shared under the [MIT license](https://opensource.org/licenses/MIT).

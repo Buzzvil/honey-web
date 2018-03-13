@@ -1,5 +1,5 @@
 {
-    "name": "honey-website",
+    "name": "honey-web",
     "version": "0.0.0",
     "dependencies": {
         "aws-sdk": "~2.0.31",

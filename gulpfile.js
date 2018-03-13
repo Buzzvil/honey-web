@@ -75,6 +75,10 @@ gulp.task("scripts", ["i18n"], l10nify(function (l10n) {
         "node_modules/bootstrap/js/transition.js",
         "node_modules/bootstrap/js/collapse.js",
         "node_modules/bootstrap/js/carousel.js",
+
+        // TODO TEMP
+        "node_modules/bootstrap/js/modal.js",
+
         "page/global.js"
     ]).pipe(concat("global.js"));
     
@@ -96,7 +100,7 @@ gulp.task("pages", ["i18n"], l10nify(function (l10n) {
     
     opts.locals.i = IMAGES + "_/";
     opts.locals.I = IMAGES +  l10n + "/";
-    opts.locals.gakey = process.env.GANALYTICS_KEY;
+    opts.locals.gakey = process.env.GANALYTICS_KEY || "UA-38836648-1";
     
     return gulp.src(["page/!(global).jade", "l10n/" + l10n + ".*.jade"])
         .pipe(jade(opts))

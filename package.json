@@ -1,5 +1,5 @@
 {
-    "name": "honey-website",
+    "name": "honey-web",
     "version": "0.0.0",
     "dependencies": {
         "aws-sdk": "~2.0.31",
@@ -17,7 +17,7 @@
         "highland": "~2.0.0",
         "jquery": "1.12.4",
         "jquery-keystop": "1.2.0",
-        "marked": "~0.3.2"
+        "marked": "0.3.17"
     },
     "private": true
 }

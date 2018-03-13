@@ -38,18 +38,22 @@ var l10nify = function (iter) {
 };
 
 gulp.task("i18n", function () {
+    var docs = fs.readdirSync("l10n");
+
     (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach(function (key) {
         var json = fs.readFileSync("l10n/" + key + ".json", "utf8");
-        var md = fs.readdirSync("l10n");
         
         l10nObj[key] = JSON.parse(json);
         l10nObj[key].meta.key = key;
+        l10nObj[key].markdown = {};
 
-        md.filter(function (name) {
+        docs.filter(function (name) {
             return name.startsWith(key) && name.endsWith(".md");
         }).forEach(function (name) {
-            l10nObj[key][name] = marked(fs.readFileSync("l10n/" + name, "utf8"));
+            l10nObj[key].markdown[name] = marked(fs.readFileSync("l10n/" + name, "utf8"));
         });
+
+        console.log(Object.keys(l10nObj[key].markdown));
     });
 });
 

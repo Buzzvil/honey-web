@@ -430,6 +430,17 @@
             "함께 하실 분을 기다립니다"
         ]
     },
+
+    "markdown": {
+        "terms": "ko.terms.json",
+        "privacy": {
+            "2014-06-20": "ko.privacy-2014-06-20.md",
+            "2014-12-04": "ko.privacy-2014-12-04.md",
+            "2015-11-19": "ko.privacy-2015-11-19.md",
+            "2017-07-11": "ko.privacy-2017-07-11.md",
+            "": "ko.privacy.md"
+        }
+    },
     
     "temp": {
         "never": "다시보지 않기",

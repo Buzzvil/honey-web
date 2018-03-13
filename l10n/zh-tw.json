@@ -342,5 +342,10 @@
         "sub": [
             "HoneyScreen 期待與您共創鎖屏畫面的無限可能！"
         ]
+    },
+
+    "markdown": {
+        "terms": "zh-tw.terms.md",
+        "privacy": "zh-tw.privacy.md"
     }
 }

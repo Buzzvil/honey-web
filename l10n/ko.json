@@ -432,14 +432,14 @@
     },
 
     "markdown": {
-        "terms": "ko.terms.json",
-        "privacy": {
-            "2014-06-20": "ko.privacy-2014-06-20.md",
-            "2014-12-04": "ko.privacy-2014-12-04.md",
-            "2015-11-19": "ko.privacy-2015-11-19.md",
-            "2017-07-11": "ko.privacy-2017-07-11.md",
-            "": "ko.privacy.md"
-        }
+        "terms": "ko.terms.md",
+        "privacy": [
+            { "key": "변경일 : 2014년 06월 20일", "val": "ko.privacy-2014-06-20.md" },
+            { "key": "변경일 : 2014년 12월 04일", "val": "ko.privacy-2014-12-04.md" },
+            { "key": "변경일 : 2015년 11월 19일", "val": "ko.privacy-2015-11-19.md" },
+            { "key": "변경일 : 2017년 07월 11일", "val": "ko.privacy-2017-07-11.md" },
+            { "key": "변경일 : 2018년 03월 08일", "val": "ko.privacy.md" }
+        ]
     },
     
     "temp": {

@@ -38,22 +38,23 @@ var l10nify = function (iter) {
 };
 
 gulp.task("i18n", function () {
-    var docs = fs.readdirSync("l10n");
-
-    (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach(function (key) {
-        var json = fs.readFileSync("l10n/" + key + ".json", "utf8");
+    (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach((locale) => {
+        const data = JSON.parse(fs.readFileSync("l10n/" + locale + ".json", "utf8"));
         
-        l10nObj[key] = JSON.parse(json);
-        l10nObj[key].meta.key = key;
-        l10nObj[key].markdown = {};
+        l10nObj[locale] = data;
+        l10nObj[locale].meta.key = locale;
 
-        docs.filter(function (name) {
-            return name.startsWith(key) && name.endsWith(".md");
-        }).forEach(function (name) {
-            l10nObj[key].markdown[name] = marked(fs.readFileSync("l10n/" + name, "utf8"));
-        });
+        for (const key in data.markdown) {
+            const page = data.markdown[key];
 
-        console.log(Object.keys(l10nObj[key].markdown));
+            if (Array.isArray(page)) {
+                for (const section of page) {
+                    section.val = marked(fs.readFileSync("l10n/" + section.val, "utf8"));
+                }
+            } else {
+                data.markdown[key] = marked(fs.readFileSync("l10n/" + page, "utf8"));
+            }
+        }
     });
 });
 

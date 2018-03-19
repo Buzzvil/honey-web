@@ -38,15 +38,23 @@ var l10nify = function (iter) {
 };
 
 gulp.task("i18n", function () {
-    (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach(function (key) {
-        var json = fs.readFileSync("l10n/" + key + ".json", "utf8");
-        var terms = fs.readFileSync("l10n/" + key + ".terms.md", "utf8");
-        var privacy = fs.readFileSync("l10n/" + key + ".privacy.md", "utf8");
+    (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach((locale) => {
+        const data = JSON.parse(fs.readFileSync("l10n/" + locale + ".json", "utf8"));
         
-        l10nObj[key] = JSON.parse(json);
-        l10nObj[key].meta.key = key;
-        l10nObj[key].terms = marked(terms);
-        l10nObj[key].privacy = marked(privacy);
+        l10nObj[locale] = data;
+        l10nObj[locale].meta.key = locale;
+
+        for (const key in data.markdown) {
+            const page = data.markdown[key];
+
+            if (Array.isArray(page)) {
+                for (const section of page) {
+                    section.val = marked(fs.readFileSync("l10n/" + section.val, "utf8"));
+                }
+            } else {
+                data.markdown[key] = marked(fs.readFileSync("l10n/" + page, "utf8"));
+            }
+        }
     });
 });
 

@@ -10,4 +10,18 @@ block content
         h1.font-make-1 #{footer.privacy}
         +scroller("other-text")
     
-    section.container-fluid#other-text !{privacy}
+    section.container-fluid#other-text
+        if Array.isArray(markdown.privacy)
+            each page, idx in markdown.privacy
+                div.privacy-archive(
+                    id="i-#{idx}",
+                    style=(idx !== markdown.privacy.length - 1 && "display:none"),
+                ) !{page.val}
+
+            hr
+
+            ul#privacy-archive
+                each page, idx in markdown.privacy
+                    li: a(href="#i-#{idx}") #{page.key}
+        else
+            | !{markdown.privacy}

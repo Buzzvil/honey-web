@@ -362,5 +362,10 @@
             "HoneyScreen aims to captivate users on their",
             "smartphones’ first screens. Join us on this journey!"
         ]
+    },
+
+    "markdown": {
+        "terms": "en.terms.md",
+        "privacy": "en.privacy.md"
     }
 }

@@ -12,6 +12,8 @@ var jade = require("gulp-jade");
 var less = require("gulp-less");
 var marked = require("marked");
 var uglify = require("gulp-uglify");
+var PORT = process.env.PORT || 9100;
+var L10N = process.env.L10N || "en";
 
 del.sync("dist");
 
@@ -24,11 +26,11 @@ var IMAGES = "/i-v2/";
 var putObject = hl.wrapCallback(new aws.S3().putObject.bind(new aws.S3()));
 
 var l10nObj = {};
-var l10nify = function (iter) {
-    return function (next) {
+var l10nify = function(iter) {
+    return function(next) {
         hl(Object.keys(l10nObj))
             .map(iter)
-            .map(function (val) {
+            .map(function(val) {
                 return hl(val).errors(hl.log);
             })
             .merge()
@@ -37,10 +39,12 @@ var l10nify = function (iter) {
     };
 };
 
-gulp.task("i18n", function () {
-    (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach((locale) => {
-        const data = JSON.parse(fs.readFileSync("l10n/" + locale + ".json", "utf8"));
-        
+gulp.task("i18n", function() {
+    (process.env.L10N || "en,ja,ko,zh-tw").split(",").forEach(locale => {
+        const data = JSON.parse(
+            fs.readFileSync("l10n/" + locale + ".json", "utf8")
+        );
+
         l10nObj[locale] = data;
         l10nObj[locale].meta.key = locale;
 
@@ -49,126 +53,156 @@ gulp.task("i18n", function () {
 
             if (Array.isArray(page)) {
                 for (const section of page) {
-                    section.val = marked(fs.readFileSync("l10n/" + section.val, "utf8"));
+                    section.val = marked(
+                        fs.readFileSync("l10n/" + section.val, "utf8")
+                    );
                 }
             } else {
-                data.markdown[key] = marked(fs.readFileSync("l10n/" + page, "utf8"));
+                data.markdown[key] = marked(
+                    fs.readFileSync("l10n/" + page, "utf8")
+                );
             }
         }
     });
 });
 
-gulp.task("styles", ["i18n"], l10nify(function (l10n) {
-    var opts = {
-        compress: true,
-        globalVars: l10nObj[l10n].style
-    };
-    
-    opts.globalVars.f = JSON.stringify("../file/_/");
-    opts.globalVars.i = JSON.stringify(IMAGES + "_/");
-    opts.globalVars.I = JSON.stringify(IMAGES + l10n + "/");
-    
-    return gulp.src("page/*.less")
-        .pipe(less(opts))
-        .pipe(gulp.dest("dist/" + l10n));
-}));
+gulp.task(
+    "styles",
+    ["i18n"],
+    l10nify(function(l10n) {
+        var opts = {
+            compress: true,
+            globalVars: l10nObj[l10n].style
+        };
 
-gulp.task("scripts", ["i18n"], l10nify(function (l10n) {
-    var global = gulp.src([
-        "node_modules/jquery/dist/jquery.min.js",
-        "node_modules/jquery-keystop/jquery.keystop.min.js",
-        "node_modules/bootstrap/js/transition.js",
-        "node_modules/bootstrap/js/collapse.js",
-        "node_modules/bootstrap/js/carousel.js",
+        opts.globalVars.f = JSON.stringify("../file/_/");
+        opts.globalVars.i = JSON.stringify(IMAGES + "_/");
+        opts.globalVars.I = JSON.stringify(IMAGES + l10n + "/");
 
-        // TODO TEMP
-        "node_modules/bootstrap/js/modal.js",
+        return gulp
+            .src("page/*.less")
+            .pipe(less(opts))
+            .pipe(gulp.dest("dist/" + l10n));
+    })
+);
 
-        "page/global.js"
-    ]).pipe(concat("global.js"));
-    
-    var legacy = gulp.src([
-        "page/legacy/shiv.js",
-        "page/legacy/respond.js"
-    ]).pipe(concat("legacy.js"));
-    
-    return hl([global, legacy])
-        .merge()
-        .pipe(uglify())
-        .pipe(gulp.dest("dist/" + l10n));
-}));
+gulp.task(
+    "scripts",
+    ["i18n"],
+    l10nify(function(l10n) {
+        var global = gulp
+            .src([
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/jquery-keystop/jquery.keystop.min.js",
+                "node_modules/bootstrap/js/transition.js",
+                "node_modules/bootstrap/js/collapse.js",
+                "node_modules/bootstrap/js/carousel.js",
 
-gulp.task("pages", ["i18n"], l10nify(function (l10n) {
-    var opts = {
-        locals: l10nObj[l10n]
-    };
-    
-    opts.locals.i = IMAGES + "_/";
-    opts.locals.I = IMAGES +  l10n + "/";
-    opts.locals.gakey = process.env.GANALYTICS_KEY || "UA-38836648-1";
-    
-    return gulp.src(["page/!(global).jade", "l10n/" + l10n + ".*.jade"])
-        .pipe(jade(opts))
-        .pipe(hl())
-        .doto(function (file) {
-            var name = file.relative.split(".");
-            
-            if (name.length === 2) {
-                file.path = file.base + name[0];
-            } else if (name.length === 3) {
-                file.path = file.base + "event/" + name[1];
-            }
-        })
-        .pipe(gulp.dest("dist/" + l10n));
-}));
+                // TODO TEMP
+                "node_modules/bootstrap/js/modal.js",
 
-gulp.task("upload", ["styles", "scripts", "pages"], l10nify(function (l10n) {
-    var type = {
-        "": "text/html; charset=UTF-8",
-        ".css": "text/css",
-        ".js": "application/javascript"
-    };
-    
-    return gulp.src("dist/" + l10n + "/**/*")
-        .pipe(gzip({ append: false }))
-        .pipe(hl())
-        .flatMap(function (file) {
-            return putObject({
-                Bucket: l10nObj[l10n].meta.bucket,
-                Key: file.relative,
-                Body: file.contents,
-                CacheControl: "public, max-age=7200",
-                ContentEncoding: "gzip",
-                ContentLanguage: l10nObj[l10n].meta.code,
-                ContentType: type[(file.relative.match(/\.[^.]+/) || [""])[0]]
+                "page/global.js"
+            ])
+            .pipe(concat("global.js"));
+
+        var legacy = gulp
+            .src(["page/legacy/shiv.js", "page/legacy/respond.js"])
+            .pipe(concat("legacy.js"));
+
+        return hl([global, legacy])
+            .merge()
+            .pipe(uglify())
+            .pipe(gulp.dest("dist/" + l10n));
+    })
+);
+
+gulp.task(
+    "pages",
+    ["i18n"],
+    l10nify(function(l10n) {
+        var opts = {
+            locals: l10nObj[l10n]
+        };
+
+        opts.locals.i = IMAGES + "_/";
+        opts.locals.I = IMAGES + l10n + "/";
+        opts.locals.gakey = process.env.GANALYTICS_KEY || "UA-38836648-1";
+
+        return gulp
+            .src(["page/!(global).jade", "l10n/" + l10n + ".*.jade"])
+            .pipe(jade(opts))
+            .pipe(hl())
+            .doto(function(file) {
+                var name = file.relative.split(".");
+
+                if (name.length === 2) {
+                    file.path = file.base + name[0];
+                } else if (name.length === 3) {
+                    file.path = file.base + "event/" + name[1];
+                }
+            })
+            .pipe(gulp.dest("dist/" + l10n));
+    })
+);
+
+gulp.task(
+    "upload",
+    ["styles", "scripts", "pages"],
+    l10nify(function(l10n) {
+        var type = {
+            "": "text/html; charset=UTF-8",
+            ".css": "text/css",
+            ".js": "application/javascript"
+        };
+
+        return gulp
+            .src("dist/" + l10n + "/**/*")
+            .pipe(gzip({ append: false }))
+            .pipe(hl())
+            .flatMap(function(file) {
+                return putObject({
+                    Bucket: l10nObj[l10n].meta.bucket,
+                    Key: file.relative,
+                    Body: file.contents,
+                    CacheControl: "public, max-age=7200",
+                    ContentEncoding: "gzip",
+                    ContentLanguage: l10nObj[l10n].meta.code,
+                    ContentType:
+                        type[(file.relative.match(/\.[^.]+/) || [""])[0]]
+                });
             });
-        });
-}));
+    })
+);
 
-gulp.task("files", function () {
+gulp.task("files", function() {
     del.sync("file/**/.DS_Store");
-    
-    return gulp.src("file/*/**")
+
+    return gulp
+        .src("file/*/**")
         .pipe(imagemin())
         .pipe(gulp.dest("file"))
         .pipe(hashsum({ dest: "file", filename: "index.txt" }));
 });
 
-gulp.task("watch", ["styles", "scripts", "pages"], function () {
+gulp.task("watch", ["styles", "scripts", "pages"], function() {
     gulp.watch("l10n/*.*", ["styles", "pages"]);
     gulp.watch("page/*.less", ["styles"]);
     gulp.watch("page/*.js", ["scripts"]);
     gulp.watch("page/*.jade", ["pages"]);
-    
+
     express()
-        .use(express.static("dist/" + process.env.L10N, {
-            index: "index",
-            setHeaders: function (res, path) {
-                if (!/\./.test(path)) {
-                    res.type("html");
+        .use(
+            express.static("dist/" + L10N, {
+                index: "index",
+                setHeaders: function(res, path) {
+                    if (!/\./.test(path)) {
+                        res.type("html");
+                    }
                 }
-            }
-        }))
+            })
+        )
         .use(IMAGES, express.static("file"))
-        .listen(9100);
+        .listen(PORT);
+    console.log("Using locale: " + L10N);
+    console.log("Listening at http://localhost:" + PORT);
 });

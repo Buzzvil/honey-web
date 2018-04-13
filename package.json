@@ -1,6 +1,11 @@
 {
     "name": "honey-web",
     "version": "0.0.0",
+    "scripts": {
+        "start": "gulp watch",
+        "dlimages": "node scripts/dlimages",
+        "deploy": "gulp upload"
+    },
     "dependencies": {
         "aws-sdk": "~2.0.31",
         "bootstrap": "3.3.7",

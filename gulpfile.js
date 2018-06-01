@@ -124,6 +124,7 @@ gulp.task(
             locals: l10nObj[l10n]
         };
 
+        opts.locals.locale = l10n;
         opts.locals.i = IMAGES + "_/";
         opts.locals.I = IMAGES + l10n + "/";
         opts.locals.gakey = process.env.GANALYTICS_KEY || "UA-38836648-1";

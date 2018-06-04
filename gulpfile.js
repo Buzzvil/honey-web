@@ -79,7 +79,7 @@ gulp.task(
             globalVars: l10nObj[l10n].style
         };
 
-        opts.globalVars.f = JSON.stringify("../file/_/");
+        opts.globalVars.f = JSON.stringify("../file/i-v2/_/");
         opts.globalVars.i = JSON.stringify(IMAGES + "_/");
         opts.globalVars.I = JSON.stringify(IMAGES + l10n + "/");
 
@@ -200,6 +200,7 @@ gulp.task("watch", ["styles", "scripts", "pages"], function() {
     gulp.watch("page/*.jade", ["pages"]);
 
     express()
+        .use("/", express.static("file"))
         .use(
             express.static("dist/" + L10N, {
                 index: "index",
@@ -210,7 +211,6 @@ gulp.task("watch", ["styles", "scripts", "pages"], function() {
                 }
             })
         )
-        .use("/", express.static("file"))
         .listen(PORT);
     console.log("Using locale: " + L10N);
     console.log("Listening at http://localhost:" + PORT);

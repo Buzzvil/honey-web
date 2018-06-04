@@ -11,16 +11,20 @@ var imagemin = require("gulp-imagemin");
 var jade = require("gulp-jade");
 var less = require("gulp-less");
 var marked = require("marked");
+var gulpS3 = require("gulp-s3-upload");
 var uglify = require("gulp-uglify");
+
+var awsConfig = require("./aws.config.json");
+
 var PORT = process.env.PORT || 9100;
 var L10N = process.env.L10N || "en";
 
 del.sync("dist");
 
-aws.config.update({
-    region: "ap-northeast-1"
-});
+aws.config.update(awsConfig);
+var s3 = gulpS3({ useIAM: true }, awsConfig);
 
+var FILES_BUCKET = "com.honeyscreen";
 var IMAGES = "/i-v2/";
 
 var putObject = hl.wrapCallback(new aws.S3().putObject.bind(new aws.S3()));
@@ -75,7 +79,7 @@ gulp.task(
             globalVars: l10nObj[l10n].style
         };
 
-        opts.globalVars.f = JSON.stringify("../file/_/");
+        opts.globalVars.f = JSON.stringify("../file/i-v2/_/");
         opts.globalVars.i = JSON.stringify(IMAGES + "_/");
         opts.globalVars.I = JSON.stringify(IMAGES + l10n + "/");
 
@@ -145,9 +149,24 @@ gulp.task(
     })
 );
 
+gulp.task("files", function() {
+    del.sync("file/**/.DS_Store");
+
+    return gulp
+        .src("file/**")
+        .pipe(imagemin())
+        .pipe(gulp.dest("file"))
+        .pipe(
+            s3({
+                Bucket: FILES_BUCKET,
+                ACL: "public-read"
+            })
+        );
+});
+
 gulp.task(
-    "upload",
-    ["styles", "scripts", "pages"],
+    "deploy",
+    ["files", "styles", "scripts", "pages"],
     l10nify(function(l10n) {
         var type = {
             "": "text/html; charset=UTF-8",
@@ -174,16 +193,6 @@ gulp.task(
     })
 );
 
-gulp.task("files", function() {
-    del.sync("file/**/.DS_Store");
-
-    return gulp
-        .src("file/*/**")
-        .pipe(imagemin())
-        .pipe(gulp.dest("file"))
-        .pipe(hashsum({ dest: "file", filename: "index.txt" }));
-});
-
 gulp.task("watch", ["styles", "scripts", "pages"], function() {
     gulp.watch("l10n/*.*", ["styles", "pages"]);
     gulp.watch("page/*.less", ["styles"]);
@@ -191,6 +200,7 @@ gulp.task("watch", ["styles", "scripts", "pages"], function() {
     gulp.watch("page/*.jade", ["pages"]);
 
     express()
+        .use("/", express.static("file"))
         .use(
             express.static("dist/" + L10N, {
                 index: "index",
@@ -201,7 +211,6 @@ gulp.task("watch", ["styles", "scripts", "pages"], function() {
                 }
             })
         )
-        .use(IMAGES, express.static("file"))
         .listen(PORT);
     console.log("Using locale: " + L10N);
     console.log("Listening at http://localhost:" + PORT);

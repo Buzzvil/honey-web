@@ -11,7 +11,6 @@ https://honeyscreen.com
 Run the following commands in project root to get started
 
 *   `npm i`
-*   `npm run dlimages`
 
 ### Development
 

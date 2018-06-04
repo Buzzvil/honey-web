@@ -16,9 +16,10 @@ block content
             download
         ) #{advertise.intro.intro}
         
-        div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
-            href="https://guide.buzzvil.com",
-        ) #{advertise.intro.guide}
+        if meta.key === "ko"
+            div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
+                href="https://guide.buzzvil.com/home",
+            ) #{advertise.intro.guide}
         
         +scroller("advertise-benefits")
     

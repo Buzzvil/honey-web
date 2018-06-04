@@ -3,7 +3,6 @@
     "version": "0.0.0",
     "scripts": {
         "start": "gulp watch",
-        "dlimages": "node scripts/dlimages",
         "deploy": "gulp deploy"
     },
     "dependencies": {

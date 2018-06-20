@@ -201,28 +201,29 @@ gulp.task("deploy", ["deploy-s3"], function(done) {
         "E1R9N0LC53KYI1", // ko
         "E2ZQ9P41RBE10E", // en
         "E3GHWCYV9EN104", // ja
-        "EP1V1GOZXRW4R"   // zh-tw
-    ].map(function (id) {
+        "EP1V1GOZXRW4R" // zh-tw
+    ].map(function(id) {
         return new Promise(function(resolve, reject) {
-            cloudfront.createInvalidation({
-                DistributionId: id,
-                InvalidationBatch: {
-                    CallerReference: time + id,
-                    Paths: {
-                        Quantity: 1,
-                        Items: [
-                            "/*"
-                        ]
+            cloudfront.createInvalidation(
+                {
+                    DistributionId: id,
+                    InvalidationBatch: {
+                        CallerReference: time + id,
+                        Paths: {
+                            Quantity: 1,
+                            Items: ["/*"]
+                        }
                     }
+                },
+                function(err, data) {
+                    if (err) {
+                        reject(err);
+                        return;
+                    }
+                    resolve(data);
                 }
-            }, function (err, data) {
-                if (err) {
-                    reject(err);
-                    return;
-                }
-                resolve(data);
-            });
-        })
+            );
+        });
     });
 
     Promise.all(invalidations)

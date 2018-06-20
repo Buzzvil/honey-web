@@ -417,10 +417,8 @@
                 "name": "Customer Service - 고객 문의",
                 "mail": "contact@honeyscreen.com"
             }, {
-                "name": "이창영 영업 이사 - 광고 의뢰 문의",
-                "mail": "ajay@buzzvil.com",
-                "tel": "070 4632 2137",
-                "fax": "02 6499 5513"
+                "name": "광고 의뢰 문의",
+                "mail": "sales@buzzvil.com"
             }],
             "address": "서울특별시 송파구 석촌호수로 272 (송파동 32, 대림빌딩 3층)",
             "maplink": "https://www.google.com/maps/place/272+Seokchonhosu-ro,+Songpa-gu,+Seoul,+South+Korea/@37.5099336,127.1059156,15z/data=!3m1!4b1!4m2!3m1!1s0x357ca59fc2df4013:0x27d10e76d956e776",

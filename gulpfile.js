@@ -191,7 +191,7 @@ gulp.task(
                     ContentType:
                         type[(file.relative.match(/\.[^.]+/) || [""])[0]]
                 });
-            })
+            });
     })
 );
 

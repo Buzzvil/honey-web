@@ -13,6 +13,7 @@ var less = require("gulp-less");
 var marked = require("marked");
 var gulpS3 = require("gulp-s3-upload");
 var uglify = require("gulp-uglify");
+var Promise = require("bluebird");
 
 var awsConfig = require("./aws.config.json");
 
@@ -28,6 +29,7 @@ var FILES_BUCKET = "com.honeyscreen";
 var IMAGES = "/i-v2/";
 
 var putObject = hl.wrapCallback(new aws.S3().putObject.bind(new aws.S3()));
+var cloudfront = new aws.CloudFront();
 
 var l10nObj = {};
 var l10nify = function(iter) {
@@ -165,7 +167,7 @@ gulp.task("files", function() {
 });
 
 gulp.task(
-    "deploy",
+    "deploy-s3",
     ["files", "styles", "scripts", "pages"],
     l10nify(function(l10n) {
         var type = {
@@ -189,9 +191,49 @@ gulp.task(
                     ContentType:
                         type[(file.relative.match(/\.[^.]+/) || [""])[0]]
                 });
-            });
+            })
     })
 );
+
+gulp.task("deploy", ["deploy-s3"], function(done) {
+    var time = Date.now();
+    var invalidations = [
+        "E1R9N0LC53KYI1", // ko
+        "E2ZQ9P41RBE10E", // en
+        "E3GHWCYV9EN104", // ja
+        "EP1V1GOZXRW4R"   // zh-tw
+    ].map(function (id) {
+        return new Promise(function(resolve, reject) {
+            cloudfront.createInvalidation({
+                DistributionId: id,
+                InvalidationBatch: {
+                    CallerReference: time + id,
+                    Paths: {
+                        Quantity: 1,
+                        Items: [
+                            "/*"
+                        ]
+                    }
+                }
+            }, function (err, data) {
+                if (err) {
+                    reject(err);
+                    return;
+                }
+                resolve(data);
+            });
+        })
+    });
+
+    Promise.all(invalidations)
+        .then(function(data) {
+            console.log(data);
+            done();
+        })
+        .catch(function(err) {
+            done(err || new Error("Error creating invalidations"));
+        });
+});
 
 gulp.task("watch", ["styles", "scripts", "pages"], function() {
     gulp.watch("l10n/*.*", ["styles", "pages"]);

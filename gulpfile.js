@@ -228,7 +228,6 @@ gulp.task("deploy", ["deploy-s3"], function(done) {
 
     Promise.all(invalidations)
         .then(function(data) {
-            console.log(data);
             done();
         })
         .catch(function(err) {

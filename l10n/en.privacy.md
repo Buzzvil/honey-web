@@ -9,7 +9,7 @@ The Company collects/uses the following information for registration, customer s
 1) Information collected to provide basic services
 
 - Email address, password, nickname, advertising ID, device identification number (UDID or IMEI), year of birth, gender, region, marital status, etc.
-- Service usage history, access log, cookie, connection IP, bad usage record, payment record, and various personal information generated from the process of business process and personal tendency information about content / advertisement
+- Service usage history, access log, package list, cookie, connection IP, bad usage record, payment record, and various personal information generated from the process of business process and personal tendency information about content / advertisement
 
 2) Additional information collected only when requested by the member
 

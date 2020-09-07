@@ -132,8 +132,8 @@ $("#privacy-archive").on("click", "a", function () {
 ///////////////////////////////////////////////////////////////////////////////
 // TODO TEMP
 ///////////////////////////////////////////////////////////////////////////////
-if (!localStorage.terms20180308) {
+if (!localStorage.terms20200831) {
     $(".modal").modal().find("button").first().click(function () {
-        localStorage.terms20180308 = true;
+        localStorage.terms20200831 = true;
     });
 }

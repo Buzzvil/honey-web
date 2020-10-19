@@ -9,12 +9,17 @@ block content
         div.blip.hidden-xs
         h2.font-make-3: +break("small", advertise.intro.sub)
         h1.font-make-1: +break("small", advertise.intro.big)
-        
-        div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
-            href="/i-download/#{meta.key}-buzzscreen-intro.pdf",
-            target="_blank",
-            download
-        ) #{advertise.intro.intro}
+
+        if meta.key === "ja"
+            div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
+                href="https://zeroheight.com/64592fca4/p/53cda0-",
+            ) #{advertise.intro.intro}
+        else
+            div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(
+                href="/i-download/#{meta.key}-buzzscreen-intro.pdf",
+                target="_blank",
+                download
+            ) #{advertise.intro.intro}
         
         if meta.key === "ko"
             div.btn-frame-outer: a.btn.btn-frame.btn-frame-big(

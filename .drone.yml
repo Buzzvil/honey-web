@@ -1,0 +1,22 @@
+---
+kind: pipeline
+type: kubernetes
+name: Deploy
+
+steps:
+- name: Deploy
+  image: node:8
+  commands:
+  - npm install
+  - npm run deploy
+  environment:
+    AWS_ACCESS_KEY_ID:
+      from_secret: aws_access_key_id
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: aws_secret_access_key
+
+trigger:
+  event:
+  - promote
+  target:
+  - production

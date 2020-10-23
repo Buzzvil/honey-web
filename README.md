@@ -20,5 +20,3 @@ https://honeyscreen.com
 # #dev-deployment channel
 > @kiki deploy honey-web to prod
 ```
-
-© 2018 [Buzzvil](https://www.buzzvil.com), shared under the [MIT license](https://opensource.org/licenses/MIT).

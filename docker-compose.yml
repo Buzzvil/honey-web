@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  honey-web:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "9100:9100"
+    environment:
+      - AWS_ACCESS_KEY_ID=local
+      - AWS_SECRET_ACCESS_KEY=local

@@ -8,7 +8,7 @@ steps:
   image: node:8
   commands:
   - npm install
-  - npm run deploy
+  - env | grep AWS_ACCESS_KEY_ID
   environment:
     AWS_ACCESS_KEY_ID:
       from_secret: aws_access_key_id

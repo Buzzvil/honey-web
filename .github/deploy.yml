@@ -1,0 +1,7 @@
+name: honey-web
+description: Honeyscreen Web Page
+repository: Buzzvil/honey-web
+environments:
+  prod:
+    name: prod
+    required_contexts: []

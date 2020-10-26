@@ -2,30 +2,21 @@ https://honeyscreen.com
 
 ---
 
-### Requirements
-
-*   Node v8.3.0+ (Older versions will likely work but untested)
-
 # Getting Started
-
-Run the following commands in project root to get started
-
-*   `npm i`
 
 ### Development
 
-To run dev server for testing run:
+* `docker-compose up` : Start local server.
 
-*   `npm start`
-
-You may set the `L10N` environment variable to view with different locales (`en` (default), `ko`, `ja`, `zh-tw`).
-
-*   example: `L10N=ko npm start`
+* `L10N={ko|en|ja|zh-tw} docker-compose up` : Start local server with different locales.
+  
+  * example : `L10N=ko docker-compose up`
 
 ### Deployment
 
-First set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables with proper keys for Honeyscreen. Then run:
+* Deployment can be done by using chatbot(@kiki) by initiating deploy command in [#dev-deployment](https://buzzvil.slack.com/archives/C6BLT25FD) channel.
 
-*   `npm run deploy`
-
-© 2018 [Buzzvil](https://www.buzzvil.com), shared under the [MIT license](https://opensource.org/licenses/MIT).
+```
+# #dev-deployment channel
+> @kiki deploy honey-web to prod
+```

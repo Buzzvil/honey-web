@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  honey-web:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "9100:9100"
+    environment:
+      - L10N=${L10N}

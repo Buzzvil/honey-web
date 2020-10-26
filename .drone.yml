@@ -17,6 +17,6 @@ steps:
 
 trigger:
   event:
-  - pull-request
+  - promote
   target:
   - prod
